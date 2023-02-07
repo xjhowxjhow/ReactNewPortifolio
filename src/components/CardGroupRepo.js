@@ -235,7 +235,7 @@ function CardGroupRepo({ title, text, image, image_background }) {
         
     <Card style={{backgroundImage: `url(${image_background})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
 
-        <Carousel itemPadding = {[0, 0]} enableSwipe = {true} enableAutoPlay = {true} autoPlaySpeed = {10000} transitionMs = {1000} verticalMode={false} focusOnSelect={true} disableArrowsOnEnd={true} >
+        <Carousel itemPadding = {[0, 0]} enableSwipe = {true} enableAutoPlay = {false} autoPlaySpeed = {10000} transitionMs = {1000} verticalMode={false} focusOnSelect={true} disableArrowsOnEnd={true} >
 
             <CardItem style={{backgroundImage: textsrepo1.background}}>
                 <CardContentLeft>
