@@ -39,7 +39,7 @@ function App() {
         <CardGroudpCarrer title={CardRightHomeSrc.titulo} text={CardRightHomeSrc.texto} image={CardRightHomeSrc.imagem} image_background={CardRightHomeSrc.image_background}/>
       </Container>
       <Container>
-       <CardSection textSection="Portfólio"/>
+       <CardSection textSection="Portifólio"/>
        </Container>
       <Container>
         <CardGroupRepo title={CardRightHomeSrc.titulo} text={CardRightHomeSrc.texto} image={CardRightHomeSrc.imagem} image_background={CardRightHomeSrc.image_background}/>
