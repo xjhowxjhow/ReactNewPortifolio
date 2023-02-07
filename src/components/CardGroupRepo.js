@@ -233,7 +233,7 @@ function CardGroupRepo({ title, text, image, image_background }) {
 
     return (
         
-    <Card style={{backgroundImage: `url(${image_background})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
+    <Card style={{backgroundImage: 'linear-gradient(122deg, #74e3bb, #a00acc)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
 
         <Carousel itemPadding = {[0, 0]} enableSwipe = {true} enableAutoPlay = {false} autoPlaySpeed = {10000} transitionMs = {1000} verticalMode={false} focusOnSelect={true} disableArrowsOnEnd={true} >
 
