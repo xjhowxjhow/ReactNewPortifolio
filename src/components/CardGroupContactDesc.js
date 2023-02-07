@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {SiFacebook,SiGithub,SiLinkedin} from "react-icons/si";
+
 
 
 // footer Contacts
@@ -30,38 +30,6 @@ const CardTtitle = styled.h1`
     font-size: 25px;
     font-weight: 700;
     color: #fff;
-    `
-
-const CardItemContent = styled.div`
-    width: 80%;
-    height: 80px;
-    gap: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: #fff;
-    border-radius: 5px;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-    z-index: 5;
-    &:hover {
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        transform: scale(1.05);
-        }
-
-    `
-
-const IconSocial = styled.div`
-
-margin-left: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 40px;
     `
 
 
