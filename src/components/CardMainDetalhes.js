@@ -8,6 +8,7 @@ const Card = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    
     width: 70%;
     height: 500px;
     background-color: #fff;
@@ -18,6 +19,8 @@ const Card = styled.div`
     align-items: center;
     justify-content: space-around;
     transition: all 0.2s ease-in-out;
+    
+    
     &:hover {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }`
@@ -29,7 +32,7 @@ const CardTitle = styled.h1`
     font-size: 32px;
     color: #fff;
     text-align: left;
-    filter: blur(0px);
+    
     
 
         
@@ -43,6 +46,7 @@ const CardText = styled.p`
     color:#fff;
     text-align: left;
     width: 80%;
+    
 `
 
 const CardImage = styled.img`

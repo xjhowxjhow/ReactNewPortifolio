@@ -4,26 +4,28 @@ import styled from 'styled-components';
 
 const Header = styled.header`
 
-    position: fixed;
     width: 100%;
-    height: 60px;
-    background-color:rgb(229, 229, 229);
-    color: rgb(1, 1, 1);
+    height: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    color: #191a21;
-    z-index: 100;
+    transition: all 0.2s ease-in-out;
 `
 
 const HeaderItems = styled.div`
     
+    width: 100%;
+    height: 100%;
     display: flex;
-    gap: 20px;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    padding: 0 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    gap: 20px;
+    
 `
 
 const HeaderButton = styled.button`
