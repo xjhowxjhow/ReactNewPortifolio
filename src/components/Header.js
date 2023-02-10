@@ -14,6 +14,15 @@ const Header = styled.header`
     align-items: center;
     justify-content: space-between;
     transition: all 0.2s ease-in-out;
+
+    @media screen and (max-width: 700px) {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        padding:5px 0px ;
+
+    }
+
 `
 
 const HeaderItems = styled.div`
@@ -25,6 +34,15 @@ const HeaderItems = styled.div`
     align-items: center;
     justify-content: center;
     gap: 20px;
+
+    @media screen and (max-width: 700px) {
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        margin-bottom: 20px;
+        
+    }
+
     
 `
 

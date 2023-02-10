@@ -31,7 +31,20 @@ const Card = styled.div`
     &:hover {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         
-        }`
+        }
+        
+    @media (max-width: 700px) {
+        width: 100%;
+        height: 100%;   
+        flex-direction: column;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding: 0px 0px;
+        
+
+        }
+        
+`
 
 
 
@@ -58,6 +71,15 @@ const CardItem = styled.div`
     background-repeat: no-repeat;
     margin-top:40px;
 
+    @media (max-width: 700px) {
+        width: 100%;
+        height: 100%;   
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px 0px;
+        
+        
+        }
     `
 
 
@@ -78,6 +100,13 @@ const CardContentLeft = styled.div`
     justify-content: space-around;
     gap: 20px;
     flex-wrap: wrap;
+
+    @media (max-width: 700px) {
+        width: 90%;
+        height: 300px;
+        
+        margin: 20px;
+    }
     `
 
 
@@ -95,6 +124,13 @@ const CardContentRight = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 700px) {
+        height: 600px;
+        width: 90%;
+
+
+        }
     `
 
 
@@ -108,7 +144,10 @@ const CardTitle = styled.h1`
     filter: blur(0px);
     animation: 1s ${props => props.isAnimation ? Animation : ''};
 
-        
+    @media (max-width: 700px) {
+        width: 90%;
+        font-size: 24px;
+        }
     
 `
 const CardSubDescription = styled.h1`
@@ -118,6 +157,11 @@ const CardSubDescription = styled.h1`
     width: 80%;
     font-weight: 100;
     animation: 1s ${props => props.isAnimation ? Animation : ''};
+
+    @media (max-width: 700px) {
+        width: 90%;
+        font-size: 16px;
+        }
 `
 
 const CardSubObjectives = styled.h1`
@@ -127,6 +171,12 @@ const CardSubObjectives = styled.h1`
     width: 80%;
     font-weight: 100;
     animation: 1s ${props => props.isAnimation ? Animation : ''};
+
+    @media (max-width: 700px) {
+        width: 90%;
+        font-size: 16px;
+        }
+
 `
 
 const CardSubUltilization = styled.h1`
@@ -136,6 +186,11 @@ const CardSubUltilization = styled.h1`
     font-weight: 100;
     width: 80%;
     animation: 1s ${props => props.isAnimation ? Animation : ''};
+
+    @media (max-width: 700px) {
+        width: 90%;
+        font-size: 16px;
+        }
 `
 
 const CardSubFunctions = styled.h1`
@@ -339,7 +394,7 @@ function CardGroupRepo({ title, text, image, image_background }) {
                     <MyGallery images={imgrepo5} />
                 </CardContentLeft>
                 {/* ocultta ao sair ovberflor */}
-                <CardContentRight style={{overflowY:'scroll', height:'500px',justifyContent:'flex-start'}}>
+                <CardContentRight style={{overflowY:'scroll', height:'500px',justifyContent:'flex-start'}} >
                     <CardTitle style={{color:'black'}}>{textsrepo5.titulo}</CardTitle>
                     <CardSubDescription style={{color:'black',fontWeight:'400'}}>{textsrepo5.texto1}</CardSubDescription>
                     <CardSubObjectives style={{color:'black',fontWeight:'400'}}>{textsrepo5.texto2}</CardSubObjectives>

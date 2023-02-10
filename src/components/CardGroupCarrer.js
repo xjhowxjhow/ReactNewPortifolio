@@ -25,7 +25,16 @@ const Card = styled.div`
     &:hover {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         
-        }`
+        }
+    @media (max-width: 700px) {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        }
+
+    `
 
 // LEFT SIDE
 
@@ -38,6 +47,15 @@ const CardContentLeft = styled.div`
     align-items: center;
     justify-content: center;
     gap: 20px;
+
+    @media (max-width: 700px) {
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        margin-bottom: 20px;
+        gap: 10px;
+        }
+
     
     `
 
@@ -57,6 +75,15 @@ const ItemContentLeft = styled.div`
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         transform: scale(1.05);
         }
+    @media (max-width: 700px) {
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        margin: 20px;
+        padding: 10px;
+        gap: 10px;
+        }
+    
 
     `
 
@@ -66,6 +93,10 @@ const ItemContentLeftText = styled.p`
     text-align: left;
     width: 80%;
     text-align: center;
+
+    @media (max-width: 700px) {
+        display:  none;
+        }
     `
 const ItemContentLeftImage = styled.img`
     width: 50px;
@@ -94,6 +125,15 @@ const CardContentRight = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
+    @media (max-width: 700px) {
+        width: 100%;
+        height: 700px;
+        flex-direction: column;
+        margin-bottom: 20px;
+        gap: 10px;
+        }
+
     `
 
 

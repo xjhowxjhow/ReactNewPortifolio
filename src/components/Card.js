@@ -17,7 +17,16 @@ const Card = styled.div`
     transition: all 0.2s ease-in-out;
     &:hover {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }`
+        }
+    
+    @media (max-width: 700px) {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 20px;
+        
+      }
+        
+`
 
 const CardTitle = styled.h1`
     font-size: 24px;
@@ -65,6 +74,7 @@ const CardButton = styled.button`
     &:hover {
         background-color: #333;
     }
+    
 `
 
 

@@ -18,7 +18,16 @@ const Card = styled.div`
     &:hover {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         
-        }`
+        }
+        
+    @media (max-width: 700px) {
+
+        flex-direction: column;
+        margin-bottom: 20px;
+        overflow-y: scroll;
+        }
+
+    `
 
 
 
@@ -31,6 +40,14 @@ const FooterAuthor = styled.div`
     align-items: center;
     justify-content: center;
     gap: 20px;
+    
+    @media (max-width: 700px) {
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        gap: 40px;
+        }
+
     
     `
 

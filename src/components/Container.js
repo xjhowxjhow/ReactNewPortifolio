@@ -19,6 +19,13 @@ function Container(props) {
       justify-content: space-between;
       /* flex-wrap: wrap; */
       gap: 20px;
+      
+      @media (max-width: 700px) {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        margin: 10px;
+      }
 
   `;
 

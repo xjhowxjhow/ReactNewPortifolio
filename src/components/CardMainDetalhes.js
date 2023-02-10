@@ -23,7 +23,15 @@ const Card = styled.div`
     
     &:hover {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }`
+        }
+        @media (max-width: 700px) {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 20px;
+        
+      }
+        
+    `
 
 
 
