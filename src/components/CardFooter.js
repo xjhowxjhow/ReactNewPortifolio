@@ -25,6 +25,7 @@ const Card = styled.div`
         flex-direction: column;
         margin-bottom: 20px;
         overflow-y: scroll;
+        
         }
 
     `
@@ -45,7 +46,8 @@ const FooterAuthor = styled.div`
         width: 100%;
         height: 100%;
         flex-direction: row;
-        gap: 40px;
+        gap: 100px;
+        justify-content: flex-start;
         }
 
     

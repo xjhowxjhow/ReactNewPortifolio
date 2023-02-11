@@ -27,7 +27,11 @@ const Card = styled.div`
     justify-content: center;
     transition: all 0.2s ease-in-out;
     flex-grow: 1;
-    
+    background-image: linear-gradient(122deg, #74e3bb, #a00acc);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
     &:hover {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         
@@ -40,6 +44,11 @@ const Card = styled.div`
         margin-bottom: 20px;
         margin-top: 20px;
         padding: 0px 0px;
+        background-image: none;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+
+        &:hover {
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
         
 
         }
@@ -288,7 +297,7 @@ function CardGroupRepo({ title, text, image, image_background }) {
 
     return (
         
-    <Card style={{backgroundImage: 'linear-gradient(122deg, #74e3bb, #a00acc)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
+    <Card>
 
         <Carousel itemPadding = {[0, 0]} enableSwipe = {true} enableAutoPlay = {false} autoPlaySpeed = {10000} transitionMs = {1000} verticalMode={false} focusOnSelect={true} disableArrowsOnEnd={true} >
 

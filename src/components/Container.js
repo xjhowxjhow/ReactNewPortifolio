@@ -22,9 +22,9 @@ function Container(props) {
       
       @media (max-width: 700px) {
         flex-direction: column;
-        width: 100%;
+        width: 90%;
         height: 100%;
-        margin: 10px;
+        
       }
 
   `;

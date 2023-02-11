@@ -23,7 +23,7 @@ const Card = styled.div`
         width: 100%;
         height: 100%;
         margin-bottom: 20px;
-        
+
       }
         
 `
@@ -55,8 +55,9 @@ const GroupButton = styled.div`
     gap: 10px;
     justify-content: left;
     width: 100%;
-    padding: 0 20px;
+    padding:  20px;
     margin-left: 20px;
+
 
 `   
 

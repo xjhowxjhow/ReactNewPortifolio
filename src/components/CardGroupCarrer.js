@@ -182,8 +182,8 @@ const CardImage = styled.img`
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     border-radius: 10px;
     margin-bottom: 20px;
     animation: 1s ${props => props.isAnimation ? Animation : ''};

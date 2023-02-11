@@ -23,7 +23,12 @@ const Card = styled.div`
     &:hover {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         
-        }`
+        }
+    @media screen and (max-width: 700px) {
+        width: 100%;
+        justify-content: center;
+    }
+    `
 
 
 const CardTtitle = styled.h1`
