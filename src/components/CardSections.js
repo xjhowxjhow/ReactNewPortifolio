@@ -41,7 +41,7 @@ const CardSectionText = styled.h1`
 
 function CardSection({textSection}) {
     return (
-        <Card>
+        <Card className='CardSection'>
             <GridSection>
                 <CardSectionText>{textSection}</CardSectionText>
             </GridSection>

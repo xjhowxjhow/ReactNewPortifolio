@@ -11,7 +11,9 @@ import CardGroupContactDesc from './components/CardGroupContactDesc';
 import CardFooter from './components/CardFooter';
 import CardSection from './components/CardSections';
 import './App.css';
-
+import {ThemeProvider} from "styled-components";
+import { GlobalStyles } from "./components/globalStyles";
+import { lightTheme, darkTheme } from "./components/Themes"
 
 // variaveis src
 import { CardRightHomeSrc, CardleftHomeSrc } from './global_texts/textos';
@@ -20,11 +22,24 @@ import { CardRightHomeSrc, CardleftHomeSrc } from './global_texts/textos';
 
 
 function App() {
+
+  const [theme, setTheme] = React.useState('light');
+
+  const themeToggler = () => {
+    console.log('themeToggler')
+    theme === 'light' ? setTheme('dark') : setTheme('light')
+  }
+
+
+
   return (
+
+    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+      <GlobalStyles/>
     <div className="App">
       {/* <HeaderComponent/> */}
       <Container>
-        <HeaderComponent/>
+        <HeaderComponent themeToggler={themeToggler}/>
       </Container>
 
        
@@ -59,8 +74,11 @@ function App() {
       <Container>
         <CardFooter/>
       </Container>
-
+      
+      
+    
     </div>
+    </ThemeProvider>
   );
 }
 

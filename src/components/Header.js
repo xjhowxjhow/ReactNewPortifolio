@@ -14,11 +14,10 @@ const Header = styled.header`
     align-items: center;
     justify-content: space-between;
     transition: all 0.2s ease-in-out;
-
+    
     @media screen and (max-width: 700px) {
         width: 100%;
         height: 100%;
-        flex-direction: column;
         padding:5px 0px ;
 
     }
@@ -39,7 +38,7 @@ const HeaderItems = styled.div`
         width: 100%;
         height: 100%;
         flex-direction: row;
-        margin-bottom: 20px;
+        
         
     }
 
@@ -79,23 +78,58 @@ const HeaderLogo = styled.div`
 
 `
 
+const TogleTheme = styled.button`
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.2s ease-in-out;
+    font-size: 20px;
+    &:hover {
+        border-bottom: 1px solid rgba(0, 0, 0, 1);
+    }
+`
 
 
 
 
 
 
-const HeaderComponent = () => {
+
+const HeaderComponent = (themeToggler) => {
+
+    const icons = ['🌙', '☀️'];
+
+    const [icon, setIcon] = React.useState(icons[0]);
+    // function themeToggler() {
+
+    
+    function function_export (){
+        themeToggler.themeToggler();
+        if (icon === icons[0]) {
+            setIcon(icons[1]);
+        }
+        else {
+            setIcon(icons[0]);
+        }
+        
+        
+
+    }
+
+
     return (
-        <Header>
+        <Header className='CardHeader'>
             <HeaderLogo src="https://avatars.githubusercontent.com/u/58306583?v=4"></HeaderLogo>
             <HeaderItems>
-                <HeaderButton href="/">Home</HeaderButton>
-                <HeaderButton href="/">Carrer</HeaderButton>
-                <HeaderButton href="/">Skills</HeaderButton>
-                <HeaderButton href="/">Projects</HeaderButton>
-                <HeaderButton href="/">Contact</HeaderButton>
+                <HeaderButton className='Header_bts' href="/">Carrer</HeaderButton>
+                <HeaderButton className='Header_bts' href="/">Skills</HeaderButton>
+                <HeaderButton className='Header_bts' href="/">Projects</HeaderButton>
+                <HeaderButton className='Header_bts' href="/">Contact</HeaderButton>
             </HeaderItems>
+            <TogleTheme className='Header_bts' href="/"onClick={function_export}>{icon}</TogleTheme>
         </Header>
     )
 }

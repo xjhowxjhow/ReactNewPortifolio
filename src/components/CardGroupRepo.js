@@ -50,9 +50,8 @@ const Card = styled.div`
         &:hover {
             box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
         
-
         }
-        
+    }
 `
 
 
@@ -86,6 +85,7 @@ const CardItem = styled.div`
         flex-direction: column;
         margin: 0px;
         padding: 0px 0px;
+        border-radius: 0px;
         
         
         }
@@ -297,7 +297,7 @@ function CardGroupRepo({ title, text, image, image_background }) {
 
     return (
         
-    <Card>
+    <Card className='card'>
 
         <Carousel itemPadding = {[0, 0]} enableSwipe = {true} enableAutoPlay = {false} autoPlaySpeed = {10000} transitionMs = {1000} verticalMode={false} focusOnSelect={true} disableArrowsOnEnd={true} >
 

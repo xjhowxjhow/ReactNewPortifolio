@@ -30,11 +30,8 @@ const Card = styled.div`
 
 const CardTitle = styled.h1`
     font-size: 24px;
-    color: #333;
 
-    &:hover {
-        color: #f00;
-    }
+    
 `
 
 const CardText = styled.p`
@@ -81,7 +78,7 @@ const CardButton = styled.button`
 
 function CardComponent({title, text, image,button1, button2} ) {
     return (
-        <Card>
+        <Card className='card'>
             <CardTitle>{title}</CardTitle>
             <CardImage src={image} />
             <CardText>{}</CardText>

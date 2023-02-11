@@ -53,7 +53,8 @@ const CardContentLeft = styled.div`
         height: 100%;
         flex-direction: row;
         margin-bottom: 20px;
-        gap: 10px;
+        gap: 0px;
+        justify-content: center;
         }
 
     
@@ -289,7 +290,7 @@ function CardGroudpCarrer({ title, text, image, image_background }) {
     };
 
     return (
-    <Card style={{backgroundImage:state.back_color}}>
+    <Card style={{backgroundImage:state.back_color}} className='card'>
 
         <CardContentLeft>
 

@@ -48,6 +48,7 @@ const FooterAuthor = styled.div`
         flex-direction: row;
         gap: 100px;
         justify-content: flex-start;
+        margin-left: 20px;
         }
 
     
@@ -57,7 +58,7 @@ const FooterAuthor = styled.div`
 
 function CardFooter() {
     return (
-        <Card>
+        <Card  className='CardFooter'>
             <FooterAuthor>
                 <p>Created by:
                     <span>Jhonatan Deni</span>
