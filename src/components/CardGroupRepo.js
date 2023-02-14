@@ -44,6 +44,7 @@ const Card = styled.div`
         margin-bottom: 20px;
         margin-top: 20px;
         padding: 0px 0px;
+        background-image: none;
         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
 
         &:hover {
