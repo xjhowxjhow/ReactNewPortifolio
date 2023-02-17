@@ -36,48 +36,48 @@ function App() {
 
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <GlobalStyles/>
-    <div className="App">
-      {/* <HeaderComponent/> */}
-      <Container>
-        <HeaderComponent themeToggler={themeToggler}/>
-      </Container>
-
-       
-      <Container>
-        <CardComponent title={CardleftHomeSrc.titulo} text={CardleftHomeSrc.texto} image={CardleftHomeSrc.imagem} button1={CardleftHomeSrc.botao} button2={CardleftHomeSrc.botao2}/>
-        <CardMainComponent title={CardRightHomeSrc.titulo} text={CardRightHomeSrc.texto} image={CardRightHomeSrc.imagem} image_background={CardRightHomeSrc.image_background}/>
-      </Container>
-      <Container>
-       <CardSection textSection="Experiências"/>
-       </Container>
-      <Container>
-        <CardGroudpCarrer title={CardRightHomeSrc.titulo} text={CardRightHomeSrc.texto} image={CardRightHomeSrc.imagem} image_background={CardRightHomeSrc.image_background}/>
-      </Container>
-      <Container>
-       <CardSection textSection="Portifólio"/>
-       </Container>
-      <Container>
-        <CardGroupRepo title={CardRightHomeSrc.titulo} text={CardRightHomeSrc.texto} image={CardRightHomeSrc.imagem} image_background={CardRightHomeSrc.image_background}/>
-      </Container>
-
-      <Container>
-       <CardSection textSection="Contatos"/>
-       </Container>
-
-      <Container>
-        <CardGroupContactSocial/>
-        <CardGroupContactInfo/>
-        <CardGroupContactDesc/>
-      </Container>
-      
-      
-      <Container>
-        <CardFooter/>
-      </Container>
-      
-      
+      <div className="App">
+        {/* <HeaderComponent/> */}
+        <Container>
+          <HeaderComponent themeToggler={themeToggler}/>
+        </Container>
     
-    </div>
+         
+        <Container>
+          <CardComponent title={CardleftHomeSrc.titulo} text={CardleftHomeSrc.texto} image={CardleftHomeSrc.imagem} button1={CardleftHomeSrc.botao} button2={CardleftHomeSrc.botao2}/>
+          <CardMainComponent title={CardRightHomeSrc.titulo} text={CardRightHomeSrc.texto} image={CardRightHomeSrc.imagem} image_background={CardRightHomeSrc.image_background}/>
+        </Container>
+        <Container>
+         <CardSection textSection="Experiências"/>
+         </Container>
+        <Container>
+          <CardGroudpCarrer title={CardRightHomeSrc.titulo} text={CardRightHomeSrc.texto} image={CardRightHomeSrc.imagem} image_background={CardRightHomeSrc.image_background}/>
+        </Container>
+        <Container>
+         <CardSection textSection="Portifólio"/>
+         </Container>
+        <Container>
+          <CardGroupRepo title={CardRightHomeSrc.titulo} text={CardRightHomeSrc.texto} image={CardRightHomeSrc.imagem} image_background={CardRightHomeSrc.image_background}/>
+        </Container>
+    
+        <Container>
+         <CardSection textSection="Contatos"/>
+         </Container>
+    
+        <Container>
+          <CardGroupContactSocial/>
+          <CardGroupContactInfo/>
+          <CardGroupContactDesc/>
+        </Container>
+        
+        
+        <Container>
+          <CardFooter/>
+        </Container>
+        
+        
+      
+      </div>
     </ThemeProvider>
   );
 }

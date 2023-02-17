@@ -10,7 +10,7 @@ import styled from 'styled-components';
 const Card = styled.div`
     width: 100%;
     height: 400px;
-    
+    background-image: linear-gradient(69deg, #601485, #3d2962);
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -53,7 +53,7 @@ const Text = styled.h1`
 
 function CardGroupContactDesc() {
     return (
-        <Card style={{backgroundImage:'linear-gradient(69deg, #601485, #3d2962)'}}>
+        <Card className='cardcontactdesc'>
             <CardTtitle>Info</CardTtitle>
             <Text>
             Este é o meu portfólio pessoal, onde compartilho meus projetos e ideias. Todos os trabalhos apresentados são de minha autoria.

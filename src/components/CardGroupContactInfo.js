@@ -21,7 +21,7 @@ const Card = styled.div`
     align-items: center;
     justify-content: space-around;
     transition: all 0.2s ease-in-out;
-    
+    background-image:linear-gradient(108deg, #5039a3, #c51422);
     &:hover {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         
@@ -99,7 +99,7 @@ const TextItem = styled.h1`
 function CardGroupContactInfo() {
 
     return (
-        <Card style={{backgroundImage:'linear-gradient(108deg, #5039a3, #c51422)'}}>
+        <Card className='cardcontactinfo'>
             <CardTtitle>Contato</CardTtitle>
 
 

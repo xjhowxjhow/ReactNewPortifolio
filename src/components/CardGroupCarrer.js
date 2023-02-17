@@ -290,7 +290,7 @@ function CardGroudpCarrer({ title, text, image, image_background }) {
     };
 
     return (
-    <Card style={{backgroundImage:state.back_color}} className='card'>
+    <Card style={{backgroundImage:state.back_color}}>
 
         <CardContentLeft>
 

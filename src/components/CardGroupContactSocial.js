@@ -16,7 +16,7 @@ const Card = styled.div`
     align-items: center;
     justify-content: space-around;
     transition: all 0.2s ease-in-out;
-    
+    background-image:linear-gradient(10deg, #63bcd9, #53408b);
     &:hover {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         
@@ -82,28 +82,28 @@ function CardGroupContactSocial() {
 
 
     return (
-        <Card style={{backgroundImage:'linear-gradient(10deg, #63bcd9, #53408b)'}}>
+        <Card className='cardcontactsocial'>
             <CardTtitle>Redes Sociais</CardTtitle>
-            <CardItemContent href='https://github.com/xjhowxjhow'>
+            <CardItemContent href='https://github.com/xjhowxjhow' className='btn_social1'>
                 <IconSocial>
                     <SiGithub style={{color:'666666'}}/>
                 </IconSocial>
-                <TextSocial>GitHub</TextSocial>
+                <TextSocial className='textsocial'>GitHub</TextSocial>
                 
             </CardItemContent>
 
-            <CardItemContent href='https://www.linkedin.com/in/jhonatan-deni/'>
+            <CardItemContent href='https://www.linkedin.com/in/jhonatan-deni/' className='btn_social2'>
                 <IconSocial>
                     <SiLinkedin style={{color:'0a66c2'}}/>
                 </IconSocial>
-                <TextSocial>LinkedIn</TextSocial>
+                <TextSocial  className='textsocial' >LinkedIn</TextSocial>
                 
             </CardItemContent>
-            <CardItemContent>
+            <CardItemContent className='btn_social3'>
                 <IconSocial>
                     <SiFacebook style={{color:'046de6'}}/>
                 </IconSocial>
-                <TextSocial>Facebook</TextSocial>
+                <TextSocial className='textsocial'>Facebook</TextSocial>
                 
             </CardItemContent>
         </Card>
