@@ -39,15 +39,15 @@ export const CardleftCarrerSrc = {
     back_color2: 'radial-gradient(circle, #6f3768, #7a386a, #85396b, #903a6b, #9b3b6b)',
 
     empresa3: 'Nexo CS EHS Software',
-    cargo3:'Estagiário De Integrações ETL',
-    texto3:'Hoje Estagiário de Integrações, minha primeira oportunidade de ingressar na área de TI. Atuo na presente empresa realizando a Integraçao de DataBases de novos clientes e realizando a Extração Transformação e Carga (ETL - Extract Transform Load ) para nosso padrão. Juntamente com as ferramentas como PDI (Pentaho Data Integration) e Python , para abranger maior eficiência nos processos.',
+    cargo3:'Analista de Programação Trainee',
+    texto3:'Trabalhando no dia a dia com técnicas ETL para garantir a integração/exportação de dados confiável e eficiente . Usando ferramentas como PDI, Python, Java e JavaScript e consumo de diferentes tipos de Web Services, como API REST, RESTful e SOAP.',
     habilidades3: 'SQL, ETL, Pentaho Data Integration, DataBases, Integrações, Oracle, Python, API Rest/ Soap WebServices',
     fotoempresa3: 'https://s3.amazonaws.com/gupy5/production/companies/1924/career/2918/images/2021-03-04_16-23_logo.png',
     back_color3:'radial-gradient(circle, #467e9f, #3e7092, #376285, #305578, #29486b)',
 
     universidade1: 'Universidade Estacio de Sá',
     curso1:'Análise e Desenvolvimento de Sistemas',
-    texto4:'Atualmente estou cursando o 4º período do curso de Análise e Desenvolvimento de Sistemas na Universidade Estácio de Sá. O curso tem como objetivo formar profissionais capacitados para atuar na área de desenvolvimento de sistemas, com conhecimentos em programação, análise e modelagem de sistemas, banco de dados, engenharia de software, entre outros. O curso é dividido em 8 semestres, sendo 4 semestres de disciplinas teóricas e 4 semestres de disciplinas práticas. O curso é dividido em 8 semestres, sendo 4 semestres de disciplinas teóricas e 4 semestres de disciplinas práticas.',
+    texto4:'Atualmente estou cursando o 4º período do curso de Análise e Desenvolvimento de Sistemas na Universidade Estácio de Sá. O curso tem como objetivo formar profissionais capacitados para atuar na área de desenvolvimento de sistemas, com conhecimentos em programação, análise e modelagem de sistemas, banco de dados, engenharia de software, entre outros. O curso é dividido em 8 semestres, sendo 4 semestres de disciplinas teóricas e 4 semestres de disciplinas práticas.',
     habilidades4:'',
     fotouniversidade1: 'https://logodownload.org/wp-content/uploads/2014/12/estacio-logo-1.png',
     back_color4: 'linear-gradient(to right, #5d9fa9, #6ca7ad, #7bafb1, #8ab6b6, #98bebb)',
