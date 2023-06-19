@@ -95,30 +95,15 @@ const TogleTheme = styled.button`
 
 
 
+const HeaderComponent = ({ themeToggler }) => {
+    const [icon, setIcon] = React.useState('🌙');
 
-
-
-const HeaderComponent = (themeToggler) => {
-
-    const icons = ['🌙', '☀️'];
-
-    const [icon, setIcon] = React.useState(icons[0]);
-    // function themeToggler() {
-
-    
-    function function_export (){
-        themeToggler.themeToggler();
-        if (icon === icons[0]) {
-            setIcon(icons[1]);
-        }
-        else {
-            setIcon(icons[0]);
-        }
-        
-        
-
+    function toggleTheme() {
+        console.log('click');
+        themeToggler();
+        setIcon(icon === '🌙' ? '☀️' : '🌙');
+        console.log(icon);
     }
-
 
     return (
         <Header className='CardHeader'>
@@ -129,9 +114,10 @@ const HeaderComponent = (themeToggler) => {
                 <HeaderButton className='Header_bts' href="/">Projects</HeaderButton>
                 <HeaderButton className='Header_bts' href="/">Contact</HeaderButton>
             </HeaderItems>
-            <TogleTheme className='Header_bts' href="/"onClick={function_export}>{icon}</TogleTheme>
+            <TogleTheme className='Header_bts' href="/" onClick={toggleTheme}>{icon}</TogleTheme>
         </Header>
-    )
+    );
 }
+
 
 export default HeaderComponent

@@ -3,7 +3,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { fadeInLeft } from 'react-animations';
 import {imagesrepo1,imagesrepo2,imagesrepo3,imagesrepo4,imagesrepo5,imagesrepo6, TextsRepo1,TextsRepo2,TextsRepo3,TextsRepo4,TextsRepo5,TextsRepo6} from '../global_texts/textos';
-import { FaGithub,FaPython, FaNodeJs} from "react-icons/fa";
+import { FaGithub,FaPython, FaNodeJs,FaYoutube,FaHome} from "react-icons/fa";
 import {SiFacebooklive,SiJavascript,SiHtml5,SiCss3,SiSqlite,SiQt,SiMicrosoftsqlserver,SiFastapi,SiCsharp} from "react-icons/si";
 import Carousel from 'react-elastic-carousel';
 import MyGallery from './Galery';
@@ -237,6 +237,7 @@ const CardLinkLayout = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+    gap: 5px;
     `
 
 
@@ -318,6 +319,12 @@ function CardGroupRepo({ title, text, image, image_background }) {
                     <CardLinkLayout>
                         <CardButtonLink href= {textsrepo1.link} target="_blank" image={textsrepo1.image_link}>
                             <FaGithub/>
+                        </CardButtonLink>
+                        <CardButtonLink href= {textsrepo1.link_yt} target="_blank">
+                            <FaYoutube style={{color: '#c4302b'}}/>
+                        </CardButtonLink>
+                        <CardButtonLink href= {textsrepo1.libk_site} target="_blank">
+                            <FaHome style={{color: '#0068ba'}}/>
                         </CardButtonLink>
                     </CardLinkLayout>
                 </CardContentRight>

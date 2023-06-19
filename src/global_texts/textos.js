@@ -105,8 +105,10 @@ export const TextsRepo1 = {
     texto3:'Com esta ferramenta, os usuários terão uma visão ampla de suas finanças, organização e gerenciamento, permitindo-lhes tomar decisões informadas e controlar seu dinheiro de maneira eficiente.',
     teconologias:'Python, PySide2, SQLite',
     link:'https://github.com/xjhowxjhow/HomeAplication1.0',
-    background:'radial-gradient(circle, #964ea5, #863d9d, #752c95, #631a8d, #4f0386)'
-    
+    background:'radial-gradient(circle, #964ea5, #863d9d, #752c95, #631a8d, #4f0386)',
+    link_yt:'https://youtu.be/8hCQ1AKJnbc',
+    libk_site:'https://homeapplication.netlify.app/'
+
 }
 
 export const imagesrepo2 = [
