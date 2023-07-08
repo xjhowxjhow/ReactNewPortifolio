@@ -2,9 +2,12 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { fadeInLeft } from 'react-animations';
-import {imagesrepo1,imagesrepo2,imagesrepo3,imagesrepo4,imagesrepo5,imagesrepo6, TextsRepo1,TextsRepo2,TextsRepo3,TextsRepo4,TextsRepo5,TextsRepo6} from '../global_texts/textos';
+import {imagesrepo1,imagesrepo2,imagesrepo3,imagesrepo4,imagesrepo5,imagesrepo6,imagesrepo7, TextsRepo1,TextsRepo2,TextsRepo3,TextsRepo4,TextsRepo5,TextsRepo6,TextsRepo7} from '../global_texts/textos';
 import { FaGithub,FaPython, FaNodeJs,FaYoutube,FaHome} from "react-icons/fa";
-import {SiFacebooklive,SiJavascript,SiHtml5,SiCss3,SiSqlite,SiQt,SiMicrosoftsqlserver,SiFastapi,SiCsharp} from "react-icons/si";
+import {SiFacebooklive,SiJavascript,SiHtml5,SiCss3,SiSqlite,SiQt,SiMicrosoftsqlserver,SiFastapi,SiCsharp,SiReact,SiExpo
+} from "react-icons/si";
+
+
 import Carousel from 'react-elastic-carousel';
 import MyGallery from './Galery';
 // Estilização do componente
@@ -288,6 +291,7 @@ function CardGroupRepo({ title, text, image, image_background }) {
     const textsrepo4 = TextsRepo4;
     const textsrepo5 = TextsRepo5;
     const textsrepo6 = TextsRepo6;
+    const textsrepo7 = TextsRepo7;
 
     const imgrepo1 = imagesrepo1;
     const imgrepo2 = imagesrepo2;
@@ -295,6 +299,7 @@ function CardGroupRepo({ title, text, image, image_background }) {
     const imgrepo4 = imagesrepo4;
     const imgrepo5 = imagesrepo5;
     const imgrepo6 = imagesrepo6;
+    const imgrepo7 = imagesrepo7;
 
     return (
         
@@ -374,6 +379,28 @@ function CardGroupRepo({ title, text, image, image_background }) {
                 </CardContentRight>
             </CardItem>
 
+            <CardItem style={{backgroundImage: textsrepo7.background}}>
+                <CardContentLeft>
+                    <MyGallery images={imgrepo7} />
+                </CardContentLeft>
+
+                <CardContentRight>
+                    <CardTitle>{textsrepo7.titulo}</CardTitle>
+                    <CardSubDescription >{textsrepo7.texto1}</CardSubDescription>
+                    <CardSubTechnologies >  
+                        <SiReact/>
+                        <SiExpo/>
+                        <SiJavascript/>
+                        <SiHtml5/>
+                        <SiCss3/>
+                    </CardSubTechnologies>
+                    <CardLinkLayout style={{gap:'5px'}}>
+                        <CardButtonLink href= {textsrepo7.link} target="_blank">
+                            <FaGithub/>
+                        </CardButtonLink>
+                    </CardLinkLayout>
+                </CardContentRight>
+            </CardItem>
 
             <CardItem style={{backgroundImage: textsrepo4.background}}>
                 <CardContentLeft>
@@ -460,6 +487,9 @@ function CardGroupRepo({ title, text, image, image_background }) {
                     </CardLinkLayout>
                 </CardContentRight>
             </CardItem>
+
+
+                        
 
         </Carousel>
 

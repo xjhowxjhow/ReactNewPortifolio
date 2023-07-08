@@ -274,3 +274,48 @@ export const TextsRepo6 = {
     background:'linear-gradient(to right, #b0e0e6, #79bed6, #4a9ac9, #3375b7, #3e4c9c)',
     teconologias:'C#, SQL Server, API IBGE'
 }
+
+
+
+
+
+export const TextsRepo7 = {
+    titulo:'ReactNativeExpo-Bank6C',
+    texto1:'meu primeiro projeto para Android e iOS, desenvolvido utilizando React Native e Expo. Trata-se de uma "réplica" do aplicativo C6 Bank, que considero um dos aplicativos bancários mais bem projetados. Neste projeto, explorei diversas características importantes. Uma delas é a autenticação biométrica, que permite aos usuários acessarem sua "conta" utilizando a impressão digital. Além disso, implementei a funcionalidade de "Drag and Drop", que permite ao usuário escolher o layout mais adequado para a sua navegação, com a capacidade de visualizar em tempo real as mudanças nos componentes.',
+    link:'https://github.com/xjhowxjhow/ReactNativeExpo-Bank6C',
+    background:'linear-gradient(90deg, hsla(0, 0%, 18%, 1) 0%, hsla(0, 0%, 22%, 1) 100%)',
+    teconologias:'React-Native, Expo,'
+
+}
+
+export const imagesrepo7 = [
+{
+    original: '/repoimages/repo7/1.png',
+    thumbnail: '/repoimages/repo7/1.png',
+    },
+{
+    original: '/repoimages/repo7/2.png',
+    thumbnail: '/repoimages/repo7/2.png',
+    },
+{
+    original: '/repoimages/repo7/3.png',
+    thumbnail: '/repoimages/repo7/3.png',
+    },
+{
+    original: '/repoimages/repo7/4.png',
+    thumbnail: '/repoimages/repo7/4.png',
+    },
+{
+    original: '/repoimages/repo7/5.png',
+    thumbnail: '/repoimages/repo7/5.png',
+    },
+{
+    original: '/repoimages/repo7/6.png',
+    thumbnail: '/repoimages/repo7/6.png',
+    },
+{
+    original: '/repoimages/repo7/7.png',
+    thumbnail: '/repoimages/repo7/7.png',
+    }
+];
+
