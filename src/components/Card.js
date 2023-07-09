@@ -8,6 +8,10 @@ const Card = styled.div`
     width: 30%;
     height: 500px;
     background-color: #fff;
+    background-image: url(${props => props.src});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);    
     display: flex;
@@ -76,9 +80,9 @@ const CardButton = styled.button`
 `
 
 
-function CardComponent({title, text, image,button1, button2} ) {
+function CardComponent({title, text, image,button1, button2,img_back} ) {
     return (
-        <Card className='card'>
+        <Card className='card' src={img_back}>
             <CardTitle>{title}</CardTitle>
             <CardImage src={image} />
             <CardText>{}</CardText>

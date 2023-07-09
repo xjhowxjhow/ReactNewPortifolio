@@ -6,7 +6,7 @@ export const CardleftHomeSrc = {
     imagem :'https://avatars.githubusercontent.com/u/58306583?v=4',
     botao: 'Github',
     botao2: 'Linkedin',
-
+    image_background: '/repovideo/city.gif',
 }
 
 // 
@@ -14,9 +14,9 @@ export const CardleftHomeSrc = {
 export const CardRightHomeSrc = {
     titulo: 'Sobre mim',
     texto: 'Um apaixonado por tecnologia e desenvolvimento de software. Possuo ampla experiência na construção de soluções incríveis e funcionais tanto para a web quanto para desktops. Como um profissional dedicado, estou sempre em busca de aprimorar minhas habilidades e oferecer soluções criativas e inovadoras aos meus clientes. Além disso, gosto de trabalhar em equipe e colaborar com outros profissionais para alcançarmos juntos o sucesso de cada projeto. Seja bem-vindo ao meu portfólio!',
-    imagem: 'https://picsum.photos/200/300',
+    imagem: '/repovideo/coffe-gif.gif',
     // random images from https://picsum.photos/
-    image_background: 'https://picsum.photos/1270/500',
+    image_background: '/repovideo/foot.gif',
 }
 
 // exemplo para acessar o texto do título: Cardapresentacao.titulo
@@ -40,8 +40,8 @@ export const CardleftCarrerSrc = {
 
     empresa3: 'Nexo CS EHS Software',
     cargo3:'Analista de Programação Trainee',
-    texto3:'Trabalhando no dia a dia com técnicas ETL para garantir a integração/exportação de dados confiável e eficiente . Usando ferramentas como PDI, Python, Java e JavaScript e consumo de diferentes tipos de Web Services, como API REST, RESTful e SOAP.',
-    habilidades3: 'SQL, ETL, Pentaho Data Integration, DataBases, Integrações, Oracle, Python, API Rest/ Soap WebServices',
+    texto3:'Responsável por desenvolver projetos de integração e exportação de dados como: APis Rest, DataLake, implementação de fluxos de dados automatizados/ integridade de dados.',
+    habilidades3: ' GitLab · Java · JavaScript · Pentaho · Hoop · PL/SQL · Python · API REST · SOAP · Serviços Web RESTful · Git',
     fotoempresa3: 'https://s3.amazonaws.com/gupy5/production/companies/1924/career/2918/images/2021-03-04_16-23_logo.png',
     back_color3:'radial-gradient(circle, #467e9f, #3e7092, #376285, #305578, #29486b)',
 

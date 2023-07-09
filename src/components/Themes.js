@@ -16,7 +16,6 @@ export const darkTheme = {
     CardFooter: '#262626',
     CardHeader: '#262626',
     Header_bts : '#FFF',
-    card:'linear-gradient(69deg, rgb(35, 35, 35), rgb(40, 40, 40))',
     cardcontactdesc: 'linear-gradient(69deg, rgb(35, 35, 35), rgb(40, 40, 40))',
     cardcontactinfo:' linear-gradient(108deg, #383838, #2f2f2f)',
     cardcontactsocial:'linear-gradient(108deg, rgb(92, 92, 92), rgb(59, 59, 59))',

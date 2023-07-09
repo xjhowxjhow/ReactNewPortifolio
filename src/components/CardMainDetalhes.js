@@ -50,11 +50,22 @@ const CardTitle = styled.h1`
 `
 
 const CardText = styled.p`
-    font-size: 20px;
+    font-size: 25px;
     color:#fff;
     text-align: left;
     width: 80%;
-    
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 10px;
+    &:hover {
+         transform: scale(1.1);
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+         transition: all 0.2s ease-in-out;
+         background-color: rgba(0, 0, 0, 0.8);
+    }
+
+
+        
 `
 
 const CardImage = styled.img`
