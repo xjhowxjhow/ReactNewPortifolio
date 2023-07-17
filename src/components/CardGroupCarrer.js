@@ -76,6 +76,9 @@ const ItemContentLeft = styled.div`
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         transform: scale(1.05);
         }
+        &:active {
+            background-color: rgba(0, 0, 0, 0.5)
+        }
     @media (max-width: 700px) {
         width: 100%;
         height: 100%;

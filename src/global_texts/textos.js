@@ -13,7 +13,7 @@ export const CardleftHomeSrc = {
 
 export const CardRightHomeSrc = {
     titulo: 'Sobre mim',
-    texto: 'Um apaixonado por tecnologia e desenvolvimento de software. Possuo ampla experiência na construção de soluções incríveis e funcionais tanto para a web quanto para desktops. Como um profissional dedicado, estou sempre em busca de aprimorar minhas habilidades e oferecer soluções criativas e inovadoras aos meus clientes. Além disso, gosto de trabalhar em equipe e colaborar com outros profissionais para alcançarmos juntos o sucesso de cada projeto. Seja bem-vindo ao meu portfólio!',
+    texto: 'Um apaixonado por tecnologia e desenvolvimento de software.<br><br> Possuo ampla experiência na construção de soluções incríveis e funcionais tanto para a web quanto para desktops.<br><br> Como um profissional dedicado, estou sempre em busca de aprimorar minhas habilidades e oferecer soluções criativas e inovadoras aos meus clientes. Além disso, gosto de trabalhar em equipe e colaborar com outros profissionais para alcançarmos juntos o sucesso de cada projeto. <br><br>Seja bem-vindo ao meu portfólio!',
     imagem: '/repovideo/coffe-gif.gif',
     // random images from https://picsum.photos/
     image_background: '/repovideo/foot.gif',
@@ -40,14 +40,14 @@ export const CardleftCarrerSrc = {
 
     empresa3: 'Nexo CS EHS Software',
     cargo3: 'Analista de Programação Trainee',
-    texto3: '• Data integration e Export Data | Pentaho Data Integration/ PySpark/ Hadoop <br>• Implementação de fluxos de dados automatizados | ETL/ ELT/ WBS SOAP/ REST <br>• Desenvolvimento de RESTful APIs | FastAPi <br>• Configuração de pipelines de CI/CD • POO | Python| PyQT UI Data <br>• PL/SQL/ Developer (Procedural Language/Structured Query Language)',
+    texto3: '• Data integration e Export Data | Pentaho Data Integration/ PySpark/ Hadoop <br>• Implementação de fluxos de dados automatizados | ETL/ ELT/ WBS SOAP/ REST <br>• Desenvolvimento de RESTful APIs | FastAPi <br>• Configuração de pipelines de CI/CD <br>• POO | Python| PyQT UI Data <br>• PL/SQL/ Developer (Procedural Language/Structured Query Language)',
     habilidades3: ' GitLab · Java · JavaScript · Pentaho · Hoop · PL/SQL · Python · API REST · SOAP · Serviços Web RESTful · Git',
     fotoempresa3: 'https://s3.amazonaws.com/gupy5/production/companies/1924/career/2918/images/2021-03-04_16-23_logo.png',
     back_color3: 'radial-gradient(circle, #467e9f, #3e7092, #376285, #305578, #29486b)',
 
     universidade1: 'Universidade Estacio de Sá',
     curso1: 'Análise e Desenvolvimento de Sistemas',
-    texto4: 'Atualmente estou cursando o 4º período do curso de Análise e Desenvolvimento de Sistemas na Universidade Estácio de Sá. O curso tem como objetivo formar profissionais capacitados para atuar na área de desenvolvimento de sistemas, com conhecimentos em programação, análise e modelagem de sistemas, banco de dados, engenharia de software, entre outros. O curso é dividido em 8 semestres, sendo 4 semestres de disciplinas teóricas e 4 semestres de disciplinas práticas.',
+    texto4: 'Atualmente estou cursando o 4º período do curso de Análise e Desenvolvimento de Sistemas na Universidade Estácio de Sá.<br><br> O curso tem como objetivo formar profissionais capacitados para atuar na área de desenvolvimento de sistemas, com conhecimentos em programação, análise e modelagem de sistemas, banco de dados, engenharia de software, entre outros.<br> O curso é dividido em 5 semestres, sendo 2 semestres de disciplinas teóricas e 3 semestres de disciplinas práticas.',
     habilidades4: '',
     fotouniversidade1: 'https://logodownload.org/wp-content/uploads/2014/12/estacio-logo-1.png',
     back_color4: 'linear-gradient(to right, #5d9fa9, #6ca7ad, #7bafb1, #8ab6b6, #98bebb)',
@@ -65,7 +65,7 @@ export const CardleftSkillsSrcRefatorado = {
     backend: {
         name_left: 'Back-End',
         icon_left: 'https://img.icons8.com/color/48/000000/python--v1.png',
-        back_color: 'linear-gradient(300deg,#000000,#292929,#4e4e4e,#000000,#292929,#4e4e4e)',
+        back_color: 'linear-gradient(-45deg, #4c4c4c, #262626, #000000, #4b4b4b)',
         // back items
         items: [
             {
@@ -74,7 +74,7 @@ export const CardleftSkillsSrcRefatorado = {
                 // right
                 text: 'Componente Em Desenvolvimento ;).',
                 skills: '..',
-                color: 'radial-gradient(circle, #467e9f, #3e7092, #376285, #305578, #29486b)',
+                color: 'linear-gradient(-45deg, #4c4c4c, #262626, #000000, #4b4b4b)',
             },
             {
                 item: 'PL/SQL',
@@ -111,14 +111,23 @@ export const CardleftSkillsSrcRefatorado = {
                 color: 'radial-gradient(circle, #467e9f, #3e7092, #376285, #305578, #29486b)',
             },
             {
-                item: 'HTML',
-                icon: 'https://img.icons8.com/color/48/000000/html-5--v1.png',
+                item: 'React',
+                icon: 'https://img.icons8.com/color/48/000000/react-native.png',
                 // right
                 text: 'Componente Em Desenvolvimento ;)',
-
                 skills: '',
                 color: 'radial-gradient(circle, #467e9f, #3e7092, #376285, #305578, #29486b)',
             },
+            {
+                item: 'Qt Design',
+                icon: 'https://img.icons8.com/48/2cb74e/qt',
+                // right
+                text: 'Componente Em Desenvolvimento ;)',
+                skills: '',
+                color: 'radial-gradient(circle, #467e9f, #3e7092, #376285, #305578, #29486b)',
+            }
+            
+            
         ],
     },
     // 3 mobile
@@ -137,6 +146,14 @@ export const CardleftSkillsSrcRefatorado = {
                 skills: '..',
                 color: 'radial-gradient(circle, #467e9f, #3e7092, #376285, #305578, #29486b)',
             },
+            {
+                item:'Expo',
+                icon:'https://img.icons8.com/color/48/000000/expo.png',
+                // right
+                text: 'Componente Em Desenvolvimento ;)',
+                skills: '',
+                color: 'radial-gradient(circle, #467e9f, #3e7092, #376285, #305578, #29486b)',
+            }
         ],
     },
 

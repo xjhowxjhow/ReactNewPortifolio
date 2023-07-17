@@ -50,7 +50,7 @@ const CardTitle = styled.h1`
 `
 
 const CardText = styled.p`
-    font-size: 25px;
+    font-size: 20px;
     color:#fff;
     text-align: left;
     width: 80%;
@@ -76,10 +76,12 @@ const CardImage = styled.img`
 `
 
 function CardMainComponent({title, text, image,image_background}) {
+    const parse = require('html-react-parser');
+
     return (
         <Card src={image_background}>
             <CardTitle>{title}</CardTitle>
-            <CardText>{text}</CardText>
+            <CardText>{parse(text)}</CardText>
             <CardImage src={image}/>
         </Card>
     );

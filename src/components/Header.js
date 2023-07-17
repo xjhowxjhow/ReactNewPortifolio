@@ -109,6 +109,7 @@ const HeaderComponent = ({ themeToggler }) => {
         <Header className='CardHeader'>
             <HeaderLogo src="https://avatars.githubusercontent.com/u/58306583?v=4"></HeaderLogo>
             <HeaderItems>
+                <HeaderButton className='Header_bts' href="/">About</HeaderButton>
                 <HeaderButton className='Header_bts' href="/">Carrer</HeaderButton>
                 <HeaderButton className='Header_bts' href="/">Skills</HeaderButton>
                 <HeaderButton className='Header_bts' href="/">Projects</HeaderButton>
