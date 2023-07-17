@@ -11,7 +11,11 @@ import CardGroupContactInfo from './components/CardGroupContactInfo';
 import CardGroupContactDesc from './components/CardGroupContactDesc';
 import CardFooter from './components/CardFooter';
 import CardSection from './components/CardSections';
+import CardGroupSkills from './components/CardGroupSkills';
 import './App.css';
+
+
+
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./components/globalStyles";
 import { lightTheme, darkTheme } from "./components/Themes"
@@ -64,9 +68,19 @@ function App() {
                 <Container>
                     <CardGroudpCarrer title={CardRightHomeSrc.titulo} text={CardRightHomeSrc.texto} image={CardRightHomeSrc.imagem} image_background={CardRightHomeSrc.image_background} />
                 </Container>
+
+                <Container>
+                    <CardSection textSection="Skills" />
+                </Container>
+
+                <Container>
+                    <CardGroupSkills title={CardRightHomeSrc.titulo} text={CardRightHomeSrc.texto} image={CardRightHomeSrc.imagem} image_background={CardRightHomeSrc.image_background} />
+                </Container>
+
                 <Container>
                     <CardSection textSection="Portifólio" />
                 </Container>
+
                 <Container>
                     <CardGroupRepo title={CardRightHomeSrc.titulo} text={CardRightHomeSrc.texto} image={CardRightHomeSrc.imagem} image_background={CardRightHomeSrc.image_background} />
                 </Container>
@@ -74,6 +88,7 @@ function App() {
                 <Container>
                     <CardSection textSection="Contatos" />
                 </Container>
+                
 
                 <Container>
                     <CardGroupContactSocial />

@@ -53,4 +53,20 @@
   
 }
 
+@media  screen and (max-width: 1366px) {
+    /* insert styles here */
+    .App{
+        zoom: 0.6;
+      }
+      .rec-arrow {
+        margin: 0px;
+        padding: 0px;
+      }
+    
+      .rec  .rec-slider-container{
+        margin: 0px;
+        padding: 0px;
+       
+      }    
+}
 /* dark Mode */

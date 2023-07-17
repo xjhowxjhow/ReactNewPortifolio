@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { fadeInLeft } from 'react-animations';
-import {CardleftCarrerSrc} from '../global_texts/textos';
+import { CardleftCarrerSrc } from '../global_texts/textos';
 
 
 // Estilização do componente
@@ -109,7 +109,7 @@ const ItemContentLeftImage = styled.img`
     
     
     `
-    
+
 
 
 
@@ -199,8 +199,8 @@ function CardGroudpCarrer({ title, text, image, image_background }) {
         subTitle: CardleftCarrerSrc.cargo3,
         text: CardleftCarrerSrc.texto3,
         skills: CardleftCarrerSrc.habilidades3,
-        bkg_img : CardleftCarrerSrc.fotoempresa3,
-        back_color:CardleftCarrerSrc.back_color3,
+        bkg_img: CardleftCarrerSrc.fotoempresa3,
+        back_color: CardleftCarrerSrc.back_color3,
     });
 
     //ESTADO / SETA ESTADO CURRENT ITEM
@@ -209,125 +209,125 @@ function CardGroudpCarrer({ title, text, image, image_background }) {
     // ESTADO / SETA ESTADO ANIMACAO
     const [isAnimation, setIsAnimation] = useState(false);
 
-
+    const parse = require('html-react-parser');
 
     const handleClick = id => {
         switch (id) {
-        case 'btn1carrer':
-            setState({
-                title: CardleftCarrerSrc.empresa1,
-                subTitle: CardleftCarrerSrc.cargo1,
-                text: CardleftCarrerSrc.texto1,
-                skills: CardleftCarrerSrc.habilidades1,
-                bkg_img : CardleftCarrerSrc.fotoempresa1,
-                back_color:CardleftCarrerSrc.back_color1,
-            });
-            
-            //SETA ESTADO TRUE E DEPOIS FALSE
-            setActiveButton(id);
-            setIsAnimation(true);
-            setTimeout(() => {
-                setIsAnimation(false);
-            }, 1000);
+            case 'btn1carrer':
+                setState({
+                    title: CardleftCarrerSrc.empresa1,
+                    subTitle: CardleftCarrerSrc.cargo1,
+                    text: CardleftCarrerSrc.texto1,
+                    skills: CardleftCarrerSrc.habilidades1,
+                    bkg_img: CardleftCarrerSrc.fotoempresa1,
+                    back_color: CardleftCarrerSrc.back_color1,
+                });
 
-            
-        break;
-        case 'btn2carrer':
-            setState({
-                title: CardleftCarrerSrc.empresa2,
-                subTitle: CardleftCarrerSrc.cargo2,
-                text: CardleftCarrerSrc.texto2,
-                skills: CardleftCarrerSrc.habilidades2,
-                bkg_img : CardleftCarrerSrc.fotoempresa2,
-                back_color:CardleftCarrerSrc.back_color2,
-            });
-
-            //SETA ESTADO TRUE E DEPOIS FALSE
-            setActiveButton(id);
-            setIsAnimation(true);
-            setTimeout(() => {
-                setIsAnimation(false);
-            }, 1000);
-
-        break;
-        case 'btn3carrer':
-            setState({
-                title: CardleftCarrerSrc.universidade1,
-                subTitle: CardleftCarrerSrc.curso1,
-                text: CardleftCarrerSrc.texto4,
-                skills: CardleftCarrerSrc.habilidades4,
-                bkg_img : CardleftCarrerSrc.fotouniversidade1,
-                back_color:CardleftCarrerSrc.back_color4,
-            });
-
-            setActiveButton(id);
-            setIsAnimation(true);
-            setTimeout(() => {
-                setIsAnimation(false);
-            }, 1000);
+                //SETA ESTADO TRUE E DEPOIS FALSE
+                setActiveButton(id);
+                setIsAnimation(true);
+                setTimeout(() => {
+                    setIsAnimation(false);
+                }, 1000);
 
 
-        break;
-        case 'btn4carrer':
-            setState({
-                title: CardleftCarrerSrc.empresa3,
-                subTitle: CardleftCarrerSrc.cargo3,
-                text: CardleftCarrerSrc.texto3,
-                skills: CardleftCarrerSrc.habilidades3,
-                bkg_img : CardleftCarrerSrc.fotoempresa3,
-                back_color:CardleftCarrerSrc.back_color3,
-            });
+                break;
+            case 'btn2carrer':
+                setState({
+                    title: CardleftCarrerSrc.empresa2,
+                    subTitle: CardleftCarrerSrc.cargo2,
+                    text: CardleftCarrerSrc.texto2,
+                    skills: CardleftCarrerSrc.habilidades2,
+                    bkg_img: CardleftCarrerSrc.fotoempresa2,
+                    back_color: CardleftCarrerSrc.back_color2,
+                });
 
-            setActiveButton(id);
-            setIsAnimation(true);
-            setTimeout(() => {
-                setIsAnimation(false);
-            }, 1000);
-        break;
+                //SETA ESTADO TRUE E DEPOIS FALSE
+                setActiveButton(id);
+                setIsAnimation(true);
+                setTimeout(() => {
+                    setIsAnimation(false);
+                }, 1000);
+
+                break;
+            case 'btn3carrer':
+                setState({
+                    title: CardleftCarrerSrc.universidade1,
+                    subTitle: CardleftCarrerSrc.curso1,
+                    text: CardleftCarrerSrc.texto4,
+                    skills: CardleftCarrerSrc.habilidades4,
+                    bkg_img: CardleftCarrerSrc.fotouniversidade1,
+                    back_color: CardleftCarrerSrc.back_color4,
+                });
+
+                setActiveButton(id);
+                setIsAnimation(true);
+                setTimeout(() => {
+                    setIsAnimation(false);
+                }, 1000);
+
+
+                break;
+            case 'btn4carrer':
+                setState({
+                    title: CardleftCarrerSrc.empresa3,
+                    subTitle: CardleftCarrerSrc.cargo3,
+                    text: CardleftCarrerSrc.texto3,
+                    skills: CardleftCarrerSrc.habilidades3,
+                    bkg_img: CardleftCarrerSrc.fotoempresa3,
+                    back_color: CardleftCarrerSrc.back_color3,
+                });
+
+                setActiveButton(id);
+                setIsAnimation(true);
+                setTimeout(() => {
+                    setIsAnimation(false);
+                }, 1000);
+                break;
             default:
-        break;
+                break;
         }
     };
 
     return (
-    <Card style={{backgroundImage:state.back_color}}>
+        <Card style={{ backgroundImage: state.back_color }}>
 
-        <CardContentLeft>
+            <CardContentLeft>
 
-        <ItemContentLeft onClick={() => handleClick('btn4carrer')} id="btn4carrer" style={{ backgroundColor: activeButton === 'btn4carrer' ? 'rgb(155 231 255)' : '' }}>
-            <ItemContentLeftImage src={CardleftCarrerSrc.fotoempresa3} />
-            <ItemContentLeftText>{CardleftCarrerSrc.empresa3}</ItemContentLeftText>
-        </ItemContentLeft>
+                <ItemContentLeft onClick={() => handleClick('btn4carrer')} id="btn4carrer" style={{ backgroundColor: activeButton === 'btn4carrer' ? 'rgb(155 231 255)' : '' }}>
+                    <ItemContentLeftImage src={CardleftCarrerSrc.fotoempresa3} />
+                    <ItemContentLeftText>{CardleftCarrerSrc.empresa3}</ItemContentLeftText>
+                </ItemContentLeft>
 
-        <ItemContentLeft onClick={() => handleClick('btn1carrer')} id="btn1carrer" style={{ backgroundColor: activeButton === 'btn1carrer' ? 'rgba(255, 232 , 101,1)' : '' }}>
-            <ItemContentLeftImage src={CardleftCarrerSrc.fotoempresa1} />
-            <ItemContentLeftText>{CardleftCarrerSrc.empresa1}</ItemContentLeftText>
-        </ItemContentLeft>
+                <ItemContentLeft onClick={() => handleClick('btn1carrer')} id="btn1carrer" style={{ backgroundColor: activeButton === 'btn1carrer' ? 'rgba(255, 232 , 101,1)' : '' }}>
+                    <ItemContentLeftImage src={CardleftCarrerSrc.fotoempresa1} />
+                    <ItemContentLeftText>{CardleftCarrerSrc.empresa1}</ItemContentLeftText>
+                </ItemContentLeft>
 
-        <ItemContentLeft onClick={() => handleClick('btn2carrer')} id="btn2carrer"  style={{ backgroundColor: activeButton === 'btn2carrer' ? 'rgba(255, 179, 251,1)' : '' }}>
-            <ItemContentLeftImage src={ CardleftCarrerSrc.fotoempresa2 } />
-            <ItemContentLeftText>{CardleftCarrerSrc.empresa2}</ItemContentLeftText>
-        </ItemContentLeft>
+                <ItemContentLeft onClick={() => handleClick('btn2carrer')} id="btn2carrer" style={{ backgroundColor: activeButton === 'btn2carrer' ? 'rgba(255, 179, 251,1)' : '' }}>
+                    <ItemContentLeftImage src={CardleftCarrerSrc.fotoempresa2} />
+                    <ItemContentLeftText>{CardleftCarrerSrc.empresa2}</ItemContentLeftText>
+                </ItemContentLeft>
 
-        <ItemContentLeft onClick={() => handleClick('btn3carrer')} id="btn3carrer" style={{ backgroundColor: activeButton === 'btn3carrer' ? 'rgba(104, 255, 241,0.28)' : '' }}>
-            <ItemContentLeftImage src={CardleftCarrerSrc.fotouniversidade1} />
-            <ItemContentLeftText>{CardleftCarrerSrc.universidade1}</ItemContentLeftText>
-        </ItemContentLeft>
+                <ItemContentLeft onClick={() => handleClick('btn3carrer')} id="btn3carrer" style={{ backgroundColor: activeButton === 'btn3carrer' ? 'rgba(104, 255, 241,0.28)' : '' }}>
+                    <ItemContentLeftImage src={CardleftCarrerSrc.fotouniversidade1} />
+                    <ItemContentLeftText>{CardleftCarrerSrc.universidade1}</ItemContentLeftText>
+                </ItemContentLeft>
 
 
-        </CardContentLeft>
-        {/* transicao */}
+            </CardContentLeft>
+            {/* transicao */}
 
-        <CardContentRight>
-            <CardTitle isAnimation={isAnimation} id="title-carrer">{state.title}</CardTitle>
-            <CardSubTitle isAnimation={isAnimation} id="title-sub">{state.subTitle}</CardSubTitle>
-            <CardText isAnimation={isAnimation} id="title-text-carrer">{state.text}</CardText>
-            <SkillsEnvolved isAnimation={isAnimation} id="skills">{state.skills}</SkillsEnvolved>
-            <CardImage isAnimation={isAnimation}  src={state.bkg_img} />
-        </CardContentRight>
+            <CardContentRight>
+                <CardTitle isAnimation={isAnimation} id="title-carrer">{state.title}</CardTitle>
+                <CardSubTitle isAnimation={isAnimation} id="title-sub">{state.subTitle}</CardSubTitle>
+                <CardText isAnimation={isAnimation} id="title-text-carrer">{parse(state.text)}</CardText>
+                <SkillsEnvolved isAnimation={isAnimation} id="skills">{state.skills}</SkillsEnvolved>
+                <CardImage isAnimation={isAnimation} src={state.bkg_img} />
+            </CardContentRight>
         </Card>
     );
 }
-    
+
 
 export default CardGroudpCarrer;
