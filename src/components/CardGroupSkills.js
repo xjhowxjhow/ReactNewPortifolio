@@ -282,7 +282,7 @@ function CardGroupSkills() {
         subTitle: '',
         text: '',
         skills: [],
-        bkg_img: 'https://img.icons8.com/color/48/000000/developer.png',
+        bkg_img: 'https://img.icons8.com/?size=48&id=19800&format=png',
         //gif
         back_color: 'linear-gradient(-45deg, #4c4c4c, #262626, #000000, #4b4b4b)'
     });
@@ -290,7 +290,7 @@ function CardGroupSkills() {
     const [subItensStateData, setSubItensStateData] = useState({
         title: 'Skills',
         subTitle: ' Aqui voce vai encontrar as skills que eu tenho',
-        text: ' Selecione uma das opções ao lado para ver as skills que eu tenho acordo com a categoria selecionada',
+        text: ' Selecione uma das opções acima para ver as Skills que possuo de acordo com a categoria',
         skills: [],
         bkg_img: '',
         back_color: '',
