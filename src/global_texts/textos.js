@@ -41,7 +41,7 @@ export const CardleftCarrerSrc = {
     empresa3: 'Nexo CS EHS Software',
     cargo3: 'Analista de Programação Trainee',
     texto3: '• Data integration e Export Data | Pentaho Data Integration/ PySpark/ Hadoop <br>• Implementação de fluxos de dados automatizados | ETL/ ELT/ WBS SOAP/ REST <br>• Desenvolvimento de RESTful APIs | FastAPi | Flask <br>• Configuração de pipelines de CI/CD <br>• POO | Python| PyQT UI Data <br>• PL/SQL/ Developer (Procedural Language/Structured Query Language)',
-    habilidades3: ' GitLab · Java · JavaScript · Pentaho · Hoop · PL/SQL · Python · API REST · SOAP · Serviços Web RESTful · Git',
+    habilidades3: ' GitLab · Python · JavaScript · Pentaho · Hoop · PL/SQL · Python · API REST · SOAP · Serviços Web RESTful · Git',
     fotoempresa3: 'https://s3.amazonaws.com/gupy5/production/companies/1924/career/2918/images/2021-03-04_16-23_logo.png',
     back_color3: 'radial-gradient(circle, #467e9f, #3e7092, #376285, #305578, #29486b)',
 
