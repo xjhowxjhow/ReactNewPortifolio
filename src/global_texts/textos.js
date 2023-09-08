@@ -346,9 +346,8 @@ export const TextsRepo5 = {
     texto6: '• Guichês/salas personalizáveis: É possível personalizar o nome e função dos guichês e salas.',
     texto7: '• Cronologia de senhas: O sistema mantém a ordem de chegada das senhas, garantindo um fluxo correto.',
     texto8: '• Exibição de senhas: É possível exibir a senha por número ou nome do cliente, conforme a preferência do atendente.',
-    texto9: '• Obs: Projeto nao disponivel no GitHub, pois sera utilizado em um projeto real.',
     teconologias: 'Node.js, Express, HandleBars, Socket.io',
-    link: '',
+    link: 'https://github.com/xjhowxjhow/PAINEL_HOST',
     background: 'radial-gradient(circle, #d3d1d3, #dedcde, #e8e8e9, #f4f3f4, #ffffff)'
 }
 

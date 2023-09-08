@@ -447,7 +447,6 @@ function CardGroupRepo({ title, text, image, image_background }) {
                     <CardSubFunctions style={{color:'black',fontWeight:'400'}}>{textsrepo5.texto6}</CardSubFunctions>
                     <CardSubFunctions style={{color:'black',fontWeight:'400'}}>{textsrepo5.texto7}</CardSubFunctions>
                     <CardSubFunctions style={{color:'black',fontWeight:'400'}}>{textsrepo5.texto8}</CardSubFunctions>
-                    <CardSubFunctions style={{color:'black',fontWeight:'700'}}>{textsrepo5.texto9}</CardSubFunctions>
 
 
 
@@ -459,6 +458,13 @@ function CardGroupRepo({ title, text, image, image_background }) {
                         <SiSqlite/>
 
                     </CardSubTechnologies>
+
+                    <CardLinkLayout style={{gap:'5px'}}>
+                        <CardButtonLink href= {textsrepo5.link} target="_blank">
+                            <FaGithub/>
+                        </CardButtonLink>
+                    </CardLinkLayout>
+
 
                 </CardContentRight>
             </CardItem>

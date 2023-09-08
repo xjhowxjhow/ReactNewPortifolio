@@ -292,7 +292,7 @@ function CardGroupSkills() {
         subTitle: ' Aqui voce vai encontrar as skills que eu tenho',
         text: ' Selecione uma das opções acima para ver as Skills que possuo de acordo com a categoria',
         skills: [],
-        bkg_img: '',
+        bkg_img: 'https://img.icons8.com/?size=48&id=19800&format=png',
         back_color: '',
     });
 
@@ -342,7 +342,7 @@ function CardGroupSkills() {
                     subTitle: '',
                     text: 'Default Text',
                     skills: [],
-                    bkg_img: '',
+                    bkg_img: 'https://img.icons8.com/?size=48&id=19800&format=png',
                     back_color: '',
                 };
                 break;
