@@ -24,28 +24,28 @@ export const CardRightHomeSrc = {
 
 
 export const CardleftCarrerSrc = {
-    empresa1: 'Parla! / Abai Group',
+    empresa1: '<div style="text-align:center;">Parla! / Abai Group<br> <custom style="font-size:15px;">mai de 2019 - jan de 2021 · 1 ano 9 meses</custom></div>',
     cargo1: 'Suporte Tecnico',
     texto1: 'Analista de atendimento de Suporte técnico via Chat. /Suporte ao cliente /Omnichannel (Chat, Sms, E-Mail, Ura)',
     fotoempresa1: 'https://www.abaigroup.com/wp-content/uploads/2022/11/abai-logo-x2.jpg',
     habilidades1: '',
     back_color1: 'linear-gradient(to right, #00254b, #552d63, #9a305b, #c24f3a, #c28500)',
 
-    empresa2: 'Teleperformance',
+    empresa2: '<div style="text-align:center;">Teleperformance <br>  <custom style="font-size:15px;">mar de 2021 - nov de 2022 · 1 ano 9 meses</custom></div>',
     cargo2: 'Backoffice Suporte ao Cliente II',
     texto2: 'Suporte ao cliente de programas de desenvolvimento:<br><br> • Microsoft Visual Studio<br> • Azure<br> • Active Directory<br> • Suporte a licenças por volume para empresas e instituições.',
     fotoempresa2: 'https://connekt-file.s3.amazonaws.com/gestor/logo/e0867bb0-cb2c-11e9-84bc-0933e15efe3b7193b95f-31ec-4b2e-8125-76438f547329.png',
     habilidades2: '',
     back_color2: 'radial-gradient(circle, #6f3768, #7a386a, #85396b, #903a6b, #9b3b6b)',
 
-    empresa3: 'Nexo CS EHS Software',
+    empresa3: 'Nexo CS EHS Software <br> nov de 2022 - Atualmente',
     cargo3: 'Analista de Programação Trainee',
     texto3: '• Data integration e Export Data | Pentaho Data Integration/ PySpark/ Hadoop <br>• Implementação de fluxos de dados automatizados | ETL/ ELT/ WBS SOAP/ REST <br>• Desenvolvimento de RESTful APIs | FastAPi | Flask <br>• Configuração de pipelines de CI/CD <br>• POO | Python| PyQT UI Data <br>• PL/SQL/ Developer (Procedural Language/Structured Query Language)',
     habilidades3: ' GitLab · Python · JavaScript · Pentaho · Hoop · PL/SQL · API REST · SOAP · Serviços Web RESTful · Git',
     fotoempresa3: 'https://s3.amazonaws.com/gupy5/production/companies/1924/career/2918/images/2021-03-04_16-23_logo.png',
     back_color3: 'radial-gradient(circle, #467e9f, #3e7092, #376285, #305578, #29486b)',
 
-    universidade1: 'Universidade Estacio de Sá',
+    universidade1: 'Universidade Estacio de Sá<br> nov de 2021 - atualmente',
     curso1: 'Análise e Desenvolvimento de Sistemas',
     texto4: 'Atualmente estou cursando o 4º período do curso de Análise e Desenvolvimento de Sistemas na Universidade Estácio de Sá.<br><br> O curso tem como objetivo formar profissionais capacitados para atuar na área de desenvolvimento de sistemas, com conhecimentos em programação, análise e modelagem de sistemas, banco de dados, engenharia de software, entre outros.<br> O curso é dividido em 5 semestres, sendo 2 semestres de disciplinas teóricas e 3 semestres de disciplinas práticas.',
     habilidades4: '',

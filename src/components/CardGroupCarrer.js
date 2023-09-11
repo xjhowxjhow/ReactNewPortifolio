@@ -299,22 +299,22 @@ function CardGroudpCarrer({ title, text, image, image_background }) {
 
                 <ItemContentLeft onClick={() => handleClick('btn4carrer')} id="btn4carrer" style={{ backgroundColor: activeButton === 'btn4carrer' ? 'rgb(155 231 255)' : '' }}>
                     <ItemContentLeftImage src={CardleftCarrerSrc.fotoempresa3} />
-                    <ItemContentLeftText>{CardleftCarrerSrc.empresa3}</ItemContentLeftText>
+                    <ItemContentLeftText>{parse(CardleftCarrerSrc.empresa3)}</ItemContentLeftText>
                 </ItemContentLeft>
 
                 <ItemContentLeft onClick={() => handleClick('btn1carrer')} id="btn1carrer" style={{ backgroundColor: activeButton === 'btn1carrer' ? 'rgba(255, 232 , 101,1)' : '' }}>
                     <ItemContentLeftImage src={CardleftCarrerSrc.fotoempresa1} />
-                    <ItemContentLeftText>{CardleftCarrerSrc.empresa1}</ItemContentLeftText>
+                    <ItemContentLeftText>{parse(CardleftCarrerSrc.empresa1)}</ItemContentLeftText>
                 </ItemContentLeft>
 
                 <ItemContentLeft onClick={() => handleClick('btn2carrer')} id="btn2carrer" style={{ backgroundColor: activeButton === 'btn2carrer' ? 'rgba(255, 179, 251,1)' : '' }}>
                     <ItemContentLeftImage src={CardleftCarrerSrc.fotoempresa2} />
-                    <ItemContentLeftText>{CardleftCarrerSrc.empresa2}</ItemContentLeftText>
+                    <ItemContentLeftText>{parse(CardleftCarrerSrc.empresa2)}</ItemContentLeftText>
                 </ItemContentLeft>
 
                 <ItemContentLeft onClick={() => handleClick('btn3carrer')} id="btn3carrer" style={{ backgroundColor: activeButton === 'btn3carrer' ? 'rgba(104, 255, 241,0.28)' : '' }}>
                     <ItemContentLeftImage src={CardleftCarrerSrc.fotouniversidade1} />
-                    <ItemContentLeftText>{CardleftCarrerSrc.universidade1}</ItemContentLeftText>
+                    <ItemContentLeftText>{parse(CardleftCarrerSrc.universidade1)}</ItemContentLeftText>
                 </ItemContentLeft>
 
 
@@ -322,7 +322,7 @@ function CardGroudpCarrer({ title, text, image, image_background }) {
             {/* transicao */}
 
             <CardContentRight>
-                <CardTitle isAnimation={isAnimation} id="title-carrer">{state.title}</CardTitle>
+                <CardTitle isAnimation={isAnimation} id="title-carrer">{parse(state.title)}</CardTitle>
                 <CardSubTitle isAnimation={isAnimation} id="title-sub">{state.subTitle}</CardSubTitle>
                 <CardText isAnimation={isAnimation} id="title-text-carrer">{parse(state.text)}</CardText>
                 <SkillsEnvolved isAnimation={isAnimation} id="skills">{state.skills}</SkillsEnvolved>
