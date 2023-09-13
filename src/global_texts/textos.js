@@ -72,15 +72,114 @@ export const CardleftSkillsSrcRefatorado = {
                 item: 'Python',
                 icon: 'https://img.icons8.com/color/48/000000/python--v1.png',
                 // right
-                text: 'Componente Em Desenvolvimento ;).',
-                skills: '..',
+                text: (
+
+                    <div style={{ textAlign: 'left', display: 'flex', gap: '2px', flexDirection: 'column', width: '100%', alignItems: 'flex-start' }}>
+                        <h1 style={{ fontSize: '25px' }}>FrameWorks:</h1>
+
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                            <h1 style={{ fontSize: '15px' }}>• PySide2 | PySide6 - PyQT5 | PyQT6:</h1>
+                            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '' }}>
+                                <h1 style={{ fontSize: '15px', fontWeight: 'lighter', wordWrap: 'inherit' }}>
+                                    Uma das minhas favoritas e principal Framework que utilizo para Interface Graficas em Python.
+                                    <br />
+                                    Tenho vasto conhecimento na manipulação de Widgets da Framework, e também na manipulação de Threads/ThreadPools e Signals/Slots para desenvolvimento de aplicacoes de processamento em paralelo.
+                                    Consigo transformar qualquer bloco de codigo que utilizem qualquer Bilioteca Python desde que a versao Suporte QT em interface grafica usando o mesmo trazendo aplicacoes CLI para GUI. de uma forma simples e rapida.
+                                </h1>
+                            </div>
+                            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}></div>
+                            <h1 style={{ fontSize: '15px' }}>• FastAPI / Flask</h1>
+                            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '' }}>
+                                <h1 style={{ fontSize: '15px', fontWeight: 'lighter', wordWrap: 'inherit' }}>
+                                    Um dos micros-Framework que utilizo para desenvolvimento rapido para pequenas solucoes de APIs em Python.
+                                    <br />
+                                    Tenho conhecimento na manipulação de rotas, autenticação, segurança, documentação, testes, etc.
+                                    Utilizei muito para criação de pequenos services para integracao de Dados| ETL utilizando Pentaho Data Integration, onde tambem alem de dados para processamento de arquivos.
+                                    Inclusive tenho no meu repositorio um exeplo de projeto que foi realizado FastAPI para consumir RFC(Remote Function Call) |BAPI (Business Application Programming Interface) do ERP SAP
+                                    Link do repositorio: <a href="https://github.com/xjhowxjhow/OpenAPI-SAP-RFC-ABAPi-Python-Connector-PyRFC">OpenAPI-SAP-RFC-ABAPi-Python-Connector-PyRFC</a>
+                                </h1>
+                            </div>
+                        </div>
+                        <h1 style={{ fontSize: '25px' }}>Bibliotecas:</h1>
+                        <div>
+                            <h1 style={{ fontSize: '15px' }}> • Pandas </h1>
+                            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '' }}>
+                                <h1 style={{ fontSize: '15px', fontWeight: 'lighter', wordWrap: 'inherit' }}>
+                                    Gostaria de destacar esta biblioteca que é uma das minhas favoritas e a que mais utilizo para a manipulação de dados. Eu a utilizo principalmente para trabalhar com DataFrames.
+                                    Também é minha escolha quando é necessário criar uma interface em conjunto com o PySide2, especialmente para manipulação de dados em tabelas QTableWidget.
+                                    Dependendo da complexidade e do tamanho dos dados, utilizo uma combinação do Pandas com Threads| ThreadPools. Isso me permite dividir os DataFrames em partes e processá-los em paralelo, utilizando a orientação a objetos do Python para serializar e deserializar os dados.
+                                    Tenho experiência em lidar com várias operações em DataFrames, como Series, GroupBy, Merge, Join, Concat, entre outras se tratando de ETL.
+                                </h1>
+                            </div>
+                            <h1 style={{ fontSize: '20px' }}>Demais Utilizados no meu Dia a Dia:</h1>
+                            <h1 style={{ fontSize: '15px' }}>PySpark, Numpy, Matplotlib, Requests, BeautifulSoup, Sqlite3, Cx_Oracle</h1>
+                        </div>
+                    </div>
+                ),
+                skills: 'print("Hello Python 🐍")',
                 color: 'linear-gradient(-45deg, #4c4c4c, #262626, #000000, #4b4b4b)',
             },
             {
-                item: 'PL/SQL',
+                item: 'SQL',
                 icon: 'https://img.icons8.com/color/48/000000/sql.png',
                 // right
-                text: 'Componente Em Desenvolvimento ;).',
+                text: (<div style={{ textAlign: 'left', display: 'flex', gap: '2px', flexDirection: 'column', width: '100%', alignItems: 'flex-start' }}>
+                    <h1 style={{ fontSize: '25px' }}>Banco de Dados:</h1>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                        <h1 style={{ fontSize: '15px' }}>• Conhecimentos e Experiencias</h1>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '' }}>
+                            <h1 style={{ fontSize: '15px', fontWeight: 'lighter', wordWrap: 'inherit' }}>
+                                Tenho experiência e conhecimento em gerenciamento de bancos de dados, com ênfase em sistemas tanto relacionais quanto não relacionais.
+                                Minha experiência abrange plataformas como Oracle 11G, MongoDB e SQLite, nas quais participei ativamente de diversos projetos de ETL utilizando a ferramenta Pentaho Data Integration.
+                                Hoje atuo diretamente com Oracle.
+                            </h1>
+                        </div>
+                        <h1 style={{ fontSize: '15px' }}>• PL/SQL</h1>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '' }}>
+                            <h1 style={{ fontSize: '15px', fontWeight: 'lighter', wordWrap: 'inherit' }}>
+                                - Possuo um breve conhecimento em desenvolvimento de Stored Procedurese e Functions, pois normalmente realizo apenas algumas revições de bancos legados, e aprimoramento da performance.
+                                <br />
+                                - Realização de chamadas de Procedures e Functions.
+                                <br />
+                                - Depuracao utilizando o PL/SQL Developer como DBMS Output, para analise de For Loops, blocos de codigo, etc.
+                                <br />
+                            </h1>
+                        </div>
+                        <h1 style={{ fontSize: '15px' }}>• Triggers | Views </h1>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '' }}>
+                            <h1 style={{ fontSize: '15px', fontWeight: 'lighter', wordWrap: 'inherit' }}>
+                                - Normamente no meu dia a dia utilizado para Projetos ETL para integracoes | Exportacoes| Monitoramento | Desenvolvimento de dados no modelo 'Delta'.
+                                <br />
+                                - Criacao de Triggers para monitoramento de tabelas, e criacao de logs de alteracoes.
+                                <br />
+                                - Manutenção de Views para visualizacao de dados de forma mais simples e rapida.
+                                <br />
+                            </h1>
+                        </div>
+                        <h1 style={{ fontSize: '15px' }}>• Oracle + Pentaho Data Integration</h1>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '' }}>
+                            <h1 style={{ fontSize: '15px', fontWeight: 'lighter', wordWrap: 'inherit' }}>
+                                Queria destacar a Ferramenta de ETL PDI (Pentaho Data Integration) pois é uma das ferramentas que mais utilizo no meu dia a dia, para construção de ETLs para integracao de dados, exportacao de dados, monitoramento de dados, etc.
+                                Hoje crio e dou manutencao em diversos projetos de ETLs para integracao de dados de diversas fontes ERP, CRM,algumas delas:
+                                <br />
+                                <br />
+                                - SAP SuccessFactors (HCM)
+                                <br />
+                                - Oracle Integration  Cloud
+                                <br />
+                                - Sankhya
+                                <br />
+                                - Senior
+                                <br />
+                                - TOTVS
+                                <br />
+                                <br />
+                                Em todos esses projetos, o SQL desempenha um papel fundamental, seja para integração de dados, desenvolvimento de softwares com microservices de dados ou definição de fluxos de regras de negócios para atender às variadas necessidades dos clientes.
+
+                            </h1>
+                        </div>
+                    </div>
+                </div>),
                 skills: '..',
                 color: 'radial-gradient(circle, #467e9f, #3e7092, #376285, #305578, #29486b)',
             },
@@ -126,15 +225,15 @@ export const CardleftSkillsSrcRefatorado = {
                 skills: '',
                 color: 'radial-gradient(circle, #467e9f, #3e7092, #376285, #305578, #29486b)',
             }
-            
-            
+
+
         ],
     },
     // 3 mobile
     mobile: {
         name_left: 'Mobile',
         icon_left: 'https://img.icons8.com/color/48/000000/react-native.png',
-        back_color:'linear-gradient(221deg,#274cdb,#891fa4,#469495)',
+        back_color: 'linear-gradient(221deg,#274cdb,#891fa4,#469495)',
         // mobile items
         items: [
             {
@@ -147,8 +246,8 @@ export const CardleftSkillsSrcRefatorado = {
                 color: 'radial-gradient(circle, #467e9f, #3e7092, #376285, #305578, #29486b)',
             },
             {
-                item:'Expo',
-                icon:'https://img.icons8.com/color/48/000000/expo.png',
+                item: 'Expo',
+                icon: 'https://img.icons8.com/color/48/000000/expo.png',
                 // right
                 text: 'Componente Em Desenvolvimento ;)',
                 skills: '',

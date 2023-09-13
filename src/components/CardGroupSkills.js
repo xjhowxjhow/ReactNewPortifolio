@@ -5,6 +5,7 @@ import { fadeInLeft, fadeInUp } from 'react-animations';
 import { CardleftSkillsSrcRefatorado } from '../global_texts/textos';
 import { BsTerminal, BsGrid1X2 } from 'react-icons/bs'
 import { AiOutlineMobile } from 'react-icons/ai'
+const parse = require('html-react-parser');
 
 
 
@@ -201,13 +202,13 @@ const ItemContentLeftImage = styled.img`
 //  RIGHT SIDE
 
 const CardContentRight = styled.div`
-    width: 70%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: flex-start;
+    overflow-y: auto;
     @media (max-width: 700px) {
         width: 100%;
         height: 700px;
@@ -215,6 +216,24 @@ const CardContentRight = styled.div`
         margin-bottom: 20px;
         gap: 10px;
         }
+    
+    /* scroll color widht */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    /* scroll color */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
 
     `
 
@@ -290,7 +309,7 @@ function CardGroupSkills() {
     const [subItensStateData, setSubItensStateData] = useState({
         title: 'Skills',
         subTitle: ' Aqui voce vai encontrar as skills que eu tenho',
-        text: ' Selecione uma das opções acima para ver as Skills que possuo de acordo com a categoria',
+        text: parse(' Selecione uma das opções acima para ver as Skills que possuo de acordo com a categoria'),
         skills: [],
         bkg_img: 'https://img.icons8.com/?size=48&id=19800&format=png',
         back_color: '',
@@ -371,7 +390,7 @@ function CardGroupSkills() {
                     back_color: CardleftSkillsSrcRefatorado.backend.back_color,
                 };
                 break;
-            case 'Java':
+            case 'SQL':
                 newState = {
                     title: CardleftSkillsSrcRefatorado.backend.items[1].item,
                     subTitle: '',
@@ -381,7 +400,7 @@ function CardGroupSkills() {
                     back_color: CardleftSkillsSrcRefatorado.backend.back_color,
                 };
                 break;
-            case 'PL/SQL':
+            case 'Node.js':
                 newState = {
                     title: CardleftSkillsSrcRefatorado.backend.items[2].item,
                     subTitle: '',
@@ -454,7 +473,7 @@ function CardGroupSkills() {
                     {subItensStateData.subTitle}
                 </CardSubTitle>
                 <CardText isAnimation={isAnimation} id="title-text-carrer">
-                    {parse(subItensStateData.text)}
+                    {subItensStateData.text}
 
                 </CardText>
                 <SkillsEnvolved isAnimation={isAnimation} id="skills">
