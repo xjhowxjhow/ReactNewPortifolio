@@ -2,10 +2,11 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { fadeInLeft } from 'react-animations';
-import {imagesrepo1,imagesrepo2,imagesrepo3,imagesrepo4,imagesrepo5,imagesrepo6,imagesrepo7, TextsRepo1,TextsRepo2,TextsRepo3,TextsRepo4,TextsRepo5,TextsRepo6,TextsRepo7} from '../global_texts/textos';
+import {imagesrepo1,imagesrepo2,imagesrepo3,imagesrepo4,imagesrepo5,imagesrepo6,imagesrepo7,imagesrepo8, TextsRepo1,TextsRepo2,TextsRepo3,TextsRepo4,TextsRepo5,TextsRepo6,TextsRepo7,TextsRepo8} from '../global_texts/textos';
 import { FaGithub,FaPython, FaNodeJs,FaYoutube,FaHome} from "react-icons/fa";
 import {SiFacebooklive,SiJavascript,SiHtml5,SiCss3,SiSqlite,SiQt,SiMicrosoftsqlserver,SiFastapi,SiCsharp,SiReact,SiExpo
 } from "react-icons/si";
+
 
 
 import Carousel from 'react-elastic-carousel';
@@ -284,6 +285,7 @@ const CardButtonLink = styled.a`
 
 function CardGroupRepo({ title, text, image, image_background }) {
     
+    const parse = require('html-react-parser');
     // Textos
     const textsrepo1 = TextsRepo1;
     const textsrepo2 = TextsRepo2;
@@ -292,6 +294,8 @@ function CardGroupRepo({ title, text, image, image_background }) {
     const textsrepo5 = TextsRepo5;
     const textsrepo6 = TextsRepo6;
     const textsrepo7 = TextsRepo7;
+    const textsrepo8 = TextsRepo8;
+
 
     const imgrepo1 = imagesrepo1;
     const imgrepo2 = imagesrepo2;
@@ -300,6 +304,7 @@ function CardGroupRepo({ title, text, image, image_background }) {
     const imgrepo5 = imagesrepo5;
     const imgrepo6 = imagesrepo6;
     const imgrepo7 = imagesrepo7;
+    const imgrepo8 = imagesrepo8;
 
     return (
         
@@ -334,6 +339,27 @@ function CardGroupRepo({ title, text, image, image_background }) {
                     </CardLinkLayout>
                 </CardContentRight>
             </CardItem>
+
+
+            <CardItem style={{backgroundImage: TextsRepo8.background}}>
+                <CardContentLeft>
+                    <MyGallery images={imgrepo8} />
+                </CardContentLeft>
+                <CardContentRight>
+                    <CardTitle>{textsrepo8.titulo}</CardTitle>
+                    <CardSubDescription>{parse(textsrepo8.texto1)}</CardSubDescription>
+                    <CardSubTechnologies>
+                        <FaPython/>
+                        <SiQt/>
+                    </CardSubTechnologies>
+                    <CardLinkLayout>
+                        <CardButtonLink href= {textsrepo8.link} target="_blank" image={textsrepo8.image_link}>
+                            <FaGithub/>
+                        </CardButtonLink>
+                    </CardLinkLayout>
+                </CardContentRight>
+            </CardItem>
+
 
             <CardItem style={{backgroundImage: textsrepo2.background}}>
                 <CardContentLeft>
@@ -495,7 +521,7 @@ function CardGroupRepo({ title, text, image, image_background }) {
             </CardItem>
 
 
-                        
+
 
         </Carousel>
 

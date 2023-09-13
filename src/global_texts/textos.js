@@ -517,4 +517,38 @@ export const imagesrepo7 = [
 
 
 
+export const TextsRepo8 = {
+    titulo: 'Crud GuiDbBOOT OpenSea',
+    texto1:'Freelancer <br/><br/>O cliente solicitou uma interface para visualização gráfica do seu banco de dados, onde são armazenadas as configurações de seu Bot de NFTs via OpenSea, lista de compras, vendas e alvos para trade.<br/> <br/>Toda a modelagem e entrada de dados foram oferecidas pelo banco de dados do cliente.Minha responsabilidade foi transferir em tempo real os dados do banco para a interface construída. <br/><br/> Foi solicitado com três critérios:<br/><br/> 1 - Página CRUD: Responsável por adicionar, remover, atualizar e criar coleções de itens de preços para o Bot do cliente operar, juntamente com a API da OpenSea para buscar informações e coleta de dados para adição na sua biblioteca de alvos. <br/><br/>2 - Página de configuração: Configurações armazenadas em JSON, para que o bot opere de acordo com o definido.<br/><br/> 3 - Página de dashboard: Visualização dos valores ganhos, vendidos e lucro. Uma visão geral do funcionamento do bot.',
+    link: 'https://github.com/xjhowxjhow/GuiDBCrudBoot-V1',
+    background: 'radial-gradient(circle, #21252b, #272b31, #2c3037, #32363d, #383c43)',
+    teconologias: 'Python, PySide2, SQLite, OpenSea API'
+}
 
+export const imagesrepo8 = [
+    {
+        original: '/repoimages/repo8/1.png',
+        thumbnail: '/repoimages/repo8/1.png',
+    },
+    {
+        original: '/repoimages/repo8/2.png',
+        thumbnail: '/repoimages/repo8/2.png',
+    },
+    {
+        original: '/repoimages/repo8/3.png',
+        thumbnail: '/repoimages/repo8/3.png',
+    },
+    {
+        original: '/repoimages/repo8/4.png',
+        thumbnail: '/repoimages/repo8/4.png',
+    },
+    {
+        original: '/repoimages/repo8/5.png',
+        thumbnail: '/repoimages/repo8/5.png',
+    },
+    {
+        original: '/repoimages/repo8/6.png',
+        thumbnail: '/repoimages/repo8/6.png',
+    } 
+];
+    
