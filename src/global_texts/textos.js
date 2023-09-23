@@ -19,7 +19,6 @@ export const CardRightHomeSrc = {
     image_background: '/repovideo/foot.gif',
 }
 
-// exemplo para acessar o texto do título: Cardapresentacao.titulo
 
 
 
