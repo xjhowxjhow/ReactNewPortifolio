@@ -3,9 +3,10 @@
 export const CardleftHomeSrc = {
     titulo: 'Olá, Sou o Jhonatan',
     texto: 'This is the first card',
-    imagem: 'https://avatars.githubusercontent.com/u/58306583?v=4',
-    botao: 'Github',
-    botao2: 'Linkedin',
+    // imagem: 'https://avatars.githubusercontent.com/u/58306583?v=4',
+    imagem: '/user.png',
+    botao: 'Hello',
+    botao2: 'World',
     image_background: '/repovideo/city.gif',
 }
 
@@ -179,7 +180,7 @@ export const CardleftSkillsSrcRefatorado = {
                         </div>
                     </div>
                 </div>),
-                skills: '..',
+                skills: 'DELETE FROM TABLE WHERE 1 = 0 -- Never;',
                 color: 'radial-gradient(circle, #467e9f, #3e7092, #376285, #305578, #29486b)',
             },
             {

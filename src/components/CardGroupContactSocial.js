@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {SiFacebook,SiGithub,SiLinkedin} from "react-icons/si";
+import {SiGithub,SiLinkedin,SiYoutube} from "react-icons/si";
 
 
 // footer Contacts
@@ -99,11 +99,11 @@ function CardGroupContactSocial() {
                 <TextSocial  className='textsocial' >LinkedIn</TextSocial>
                 
             </CardItemContent>
-            <CardItemContent className='btn_social3'>
+            <CardItemContent  href='https://www.youtube.com/@jhonatan79500' className='btn_social3'>
                 <IconSocial>
-                    <SiFacebook style={{color:'046de6'}}/>
+                    <SiYoutube style={{color:'ff0000'}}/>
                 </IconSocial>
-                <TextSocial className='textsocial'>Facebook</TextSocial>
+                <TextSocial className='textsocial'>Youtube Channel</TextSocial>
                 
             </CardItemContent>
         </Card>
