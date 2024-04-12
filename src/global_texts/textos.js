@@ -39,7 +39,7 @@ export const CardleftCarrerSrc = {
     back_color2: 'radial-gradient(circle, #6f3768, #7a386a, #85396b, #903a6b, #9b3b6b)',
 
     empresa3: 'Nexo CS EHS Software <br> nov de 2022 - Atualmente',
-    cargo3: 'Analista de Programação Trainee',
+    cargo3: 'Analista de Programação Junior',
     texto3: '• Data integration e Export Data | Pentaho Data Integration/ PySpark/ Hadoop <br>• Implementação de fluxos de dados automatizados | ETL/ ELT/ WBS SOAP/ REST <br>• Desenvolvimento de RESTful APIs | FastAPi | Flask <br>• Configuração de pipelines de CI/CD <br>• POO | Python| PyQT UI Data <br>• PL/SQL/ Developer (Procedural Language/Structured Query Language)',
     habilidades3: ' GitLab · Python · JavaScript · Pentaho · Hoop · PL/SQL · API REST · SOAP · Serviços Web RESTful · Git',
     fotoempresa3: 'https://attachments.gupy.io/production/companies/1924/career/2918/images/2021-03-04_16-23_logo.png',
