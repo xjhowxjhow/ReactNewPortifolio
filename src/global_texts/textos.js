@@ -616,14 +616,70 @@ export const certifications = {
             "link_certificacao": "https://cursos.alura.com.br/degree/certificate/cb49a154-beda-4175-921b-ea4965e5eae2",
             "imgs": [
                 {
-                    original: '/certimages/cert_1.png',
-                    thumbnail: '/certimages/cert_1.png',
+                    original: '/certimages/cert_2.png',
+                    thumbnail: '/certimages/cert_2.png',
                 },
                 {
-                    original: '/certimages/cert_1_back.png',
-                    thumbnail: '/certimages/cert_1_back.png',
+                    original: '/certimages/cert_2_back.png',
+                    thumbnail: '/certimages/cert_2_back.png',
                 },
             ]
         },
+        {
+            "nome": "PROGRAMAÇÃO PARA DISPOSITIVOS MÓVEIS",
+            "descricao": "Certificação para desenvolvimento da competência PROGRAMAÇÃO PARA DISPOSITIVOS MÓVEIS",
+            "emissor": "Universidade Estácio de Sá",
+            "data_emissao": "2024-07-29",
+            "validade": "-",
+            "nivel": "Intermediário",
+            "modalidade": "Online",
+            "requisitos": [
+                "Experiência com Node.js",
+                "Conhecimentos em React Native",
+                "Conhecimento em Expo",
+                "Conhecimento em JavaScript",
+                "Conhecimento em HTML e CSS"
+
+            ],
+            "link_certificacao": "https://certificado.estacio.br/5f568d6fa7639d624864801",
+            "imgs": [
+                {
+                    original: '/certimages/cert_3.png',
+                    thumbnail: '/certimages/cert_3.png',
+                },
+                {
+                    original: '/certimages/cert_3_back.png',
+                    thumbnail: '/certimages/cert_3_back.png',
+                },
+            ]
+        },
+        {
+            "nome": "ALGORITMOS ESCALÁVEIS",
+            "descricao": "Certificação para desenvolvimento da competência PROGRAMAÇÃO DE ALGORITMOS ESCALÁVEIS",
+            "emissor": "Universidade Estácio de Sá",
+            "data_emissao": "2024-01-09",
+            "validade": "-",
+            "nivel": "Intermediário",
+            "modalidade": "Online",
+            "requisitos": [
+                "Lógica de programação",
+                "Desing Patterns",
+                "Estrutura de Dados",
+                "Linguagem de Programação C",
+                "Paradigmas de Programação POO"
+
+            ],
+            "link_certificacao": "https://certificado.estacio.br/0a3e7f2825c311709e17aec",
+            "imgs": [
+                {
+                    original: '/certimages/cert_4.png',
+                    thumbnail: '/certimages/cert_4.png',
+                },
+                {
+                    original: '/certimages/cert_4_back.png',
+                    thumbnail: '/certimages/cert_4_back.png',
+                },
+            ]
+        }
     ]
 }
