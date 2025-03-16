@@ -12,6 +12,7 @@ import CardGroupContactDesc from './components/CardGroupContactDesc';
 import CardFooter from './components/CardFooter';
 import CardSection from './components/CardSections';
 import CardGroupSkills from './components/CardGroupSkills';
+import CardGroupCertificacao from './components/CardGroupCertificacao';
 import './App.css';
 
 
@@ -21,7 +22,7 @@ import { GlobalStyles } from "./components/globalStyles";
 import { lightTheme, darkTheme } from "./components/Themes"
 
 // variaveis src
-import { CardRightHomeSrc, CardleftHomeSrc } from './global_texts/textos';
+import { CardRightHomeSrc, CardleftHomeSrc, certifications } from './global_texts/textos';
 
 
 
@@ -67,6 +68,14 @@ function App() {
                 </Container>
                 <Container>
                     <CardGroudpCarrer title={CardRightHomeSrc.titulo} text={CardRightHomeSrc.texto} image={CardRightHomeSrc.imagem} image_background={CardRightHomeSrc.image_background} />
+                </Container>
+
+                <Container>
+                    <CardSection textSection="Certificações" />
+                </Container>
+
+                <Container>
+                    <CardGroupCertificacao certificacoes={certifications}/>
                 </Container>
 
                 <Container>

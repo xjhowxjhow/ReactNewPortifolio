@@ -14,7 +14,7 @@ export const CardleftHomeSrc = {
 
 export const CardRightHomeSrc = {
     titulo: 'Sobre mim',
-    texto: 'Um apaixonado por tecnologia e desenvolvimento de software.<br><br> Possuo ampla experiência na construção de soluções incríveis e funcionais tanto para a web quanto para desktops.<br><br> Como um profissional dedicado, estou sempre em busca de aprimorar minhas habilidades e oferecer soluções criativas e inovadoras aos meus clientes. Além disso, gosto de trabalhar em equipe e colaborar com outros profissionais para alcançarmos juntos o sucesso de cada projeto. <br><br>Seja bem-vindo ao meu portfólio!',
+    texto: 'Engenheiro de Dados com experiência em coleta, armazenamento e integração de dados. Atualmente, trabalho na NEXOCS/Vela Sustainability Technologies, onde meu foco diário é desenvolver soluções de DataLake/Lakehouse para integrações entre sistemas diversos. Sou formado em Análise e Desenvolvimento de Sistemas pela Universidade Estácio de Sá. <br><br>Seja bem-vindo ao meu portfólio!',
     imagem: '/repovideo/coffe-gif.gif',
     // random images from https://picsum.photos/
     image_background: '/repovideo/foot.gif',
@@ -39,15 +39,15 @@ export const CardleftCarrerSrc = {
     back_color2: 'radial-gradient(circle, #6f3768, #7a386a, #85396b, #903a6b, #9b3b6b)',
 
     empresa3: 'Nexo CS EHS Software <br> nov de 2022 - Atualmente',
-    cargo3: 'Analista de Programação Junior',
-    texto3: '• Data integration e Export Data | Pentaho Data Integration/ PySpark/ Hadoop <br>• Implementação de fluxos de dados automatizados | ETL/ ELT/ WBS SOAP/ REST <br>• Desenvolvimento de RESTful APIs | FastAPi | Flask <br>• Configuração de pipelines de CI/CD <br>• POO | Python| PyQT UI Data <br>• PL/SQL/ Developer (Procedural Language/Structured Query Language)',
-    habilidades3: ' GitLab · Python · JavaScript · Pentaho · Hoop · PL/SQL · API REST · SOAP · Serviços Web RESTful · Git',
+    cargo3: 'Data Enginner Jr.',
+    texto3: '• Data Integration | Pentaho Data Integration | Apache Spark/Airflow/Hop <br>• Data Analytics | JupyterLab | Streamlit<br>• Data Flow Automation | ETL/ELT | WBS | SOAP | REST<br>•  RESTful API Development | FastAPI | Flask • POO Python | Object-Oriented Programming | Python | PyQt | PySide | Pandas <br>•  SQL Querying and Development | PL/SQL | Oracle',
+    habilidades3: ' Azure DevOps · Airflow · Python · JavaScript · Pentaho · Hoop · PL/SQL · API REST · SOAP · Serviços Web RESTful · Git  ',
     fotoempresa3: 'https://attachments.gupy.io/production/companies/1924/career/2918/images/2021-03-04_16-23_logo.png',
     back_color3: 'radial-gradient(circle, #467e9f, #3e7092, #376285, #305578, #29486b)',
 
-    universidade1: 'Universidade Estacio de Sá<br> nov de 2021 - atualmente',
+    universidade1: 'Curso Superior de Tecnologia (CST) Estacio de Sá<br> nov de 2021 - 2024',
     curso1: 'Análise e Desenvolvimento de Sistemas',
-    texto4: 'Atualmente estou cursando o 4º período do curso de Análise e Desenvolvimento de Sistemas na Universidade Estácio de Sá.<br><br> O curso tem como objetivo formar profissionais capacitados para atuar na área de desenvolvimento de sistemas, com conhecimentos em programação, análise e modelagem de sistemas, banco de dados, engenharia de software, entre outros.<br> O curso é dividido em 5 semestres, sendo 2 semestres de disciplinas teóricas e 3 semestres de disciplinas práticas.',
+    texto4: 'Finalizado! O curso tem como objetivo formar profissionais capacitados para atuar na área de desenvolvimento de sistemas, com conhecimentos em programação, análise e modelagem de sistemas, banco de dados, engenharia de software, entre outros.<br>É dividido em 5 semestres, sendo 2 semestres de disciplinas teóricas e 3 semestres de disciplinas práticas.',
     habilidades4: '',
     fotouniversidade1: 'https://logodownload.org/wp-content/uploads/2014/12/estacio-logo-1.png',
     back_color4: 'linear-gradient(to right, #5d9fa9, #6ca7ad, #7bafb1, #8ab6b6, #98bebb)',
@@ -78,6 +78,23 @@ export const CardleftSkillsSrcRefatorado = {
                         <h1 style={{ fontSize: '35px' }}>FrameWorks:</h1>
 
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+
+                            <h1 style={{ fontSize: '20px' }}>•  Azure Databricks (Spark | Pyspark) :</h1>
+                            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '' }}>
+                                <h1 style={{ fontSize: '20px', fontWeight: 'lighter', wordWrap: 'inherit' }}>
+                                    - Trabalhando com processamento de dados em larga escala, normalmente utilizo para processamento de dados utilizando a linguagem Python com a api (Pyspark), processando dados em DataFrames, manipulando dados em RDDs, e tambem utilizando a API SQL para manipulacao de dados.
+                                    <br />
+                                    - Conhecimento nas principais soluções de ETL utilizando o Azure Databricks, como ingestão de dados, transformação de dados, e exportação de dados e recursos sendo:
+                                    <br />
+                                    - Azure Data Factory (ADF)
+                                    <br />
+                                    - Unit Catalog (UC)
+                                    <br />
+                                    - Configuração de Jobs e Clusters para processamento de dados em larga escala.
+                                </h1>
+                            </div>
+
+
                             <h1 style={{ fontSize: '20px' }}>• PySide2 | PySide6 - PyQT5 | PyQT6:</h1>
                             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '' }}>
                                 <h1 style={{ fontSize: '20px', fontWeight: 'lighter', wordWrap: 'inherit' }}>
@@ -95,8 +112,7 @@ export const CardleftSkillsSrcRefatorado = {
                                     <br />
                                     Tenho conhecimento na manipulação de rotas, autenticação, segurança, documentação, testes, etc.
                                     Utilizei muito para criação de pequenos services para integracao de Dados| ETL utilizando Pentaho Data Integration, onde tambem alem de dados para processamento de arquivos.
-                                    Inclusive tenho no meu repositorio um exeplo de projeto que foi realizado FastAPI para consumir RFC(Remote Function Call) |BAPI (Business Application Programming Interface) do ERP SAP
-                                    Link do repositorio: <a href="https://github.com/xjhowxjhow/OpenAPI-SAP-RFC-ABAPi-Python-Connector-PyRFC">OpenAPI-SAP-RFC-ABAPi-Python-Connector-PyRFC</a>
+
                                 </h1>
                             </div>
                         </div>
@@ -519,7 +535,7 @@ export const imagesrepo7 = [
 
 export const TextsRepo8 = {
     titulo: 'Crud GuiDbBOOT OpenSea',
-    texto1:'Freelancer <br/><br/>O cliente solicitou uma interface para visualização gráfica do seu banco de dados, onde são armazenadas as configurações de seu Bot de NFTs via OpenSea, lista de compras, vendas e alvos para trade.<br/> <br/>Toda a modelagem e entrada de dados foram oferecidas pelo banco de dados do cliente.Minha responsabilidade foi transferir em tempo real os dados do banco para a interface construída. <br/><br/> Foi solicitado com três critérios:<br/><br/> 1 - Página CRUD: Responsável por adicionar, remover, atualizar e criar coleções de itens de preços para o Bot do cliente operar, juntamente com a API da OpenSea para buscar informações e coleta de dados para adição na sua biblioteca de alvos. <br/><br/>2 - Página de configuração: Configurações armazenadas em JSON, para que o bot opere de acordo com o definido.<br/><br/> 3 - Página de dashboard: Visualização dos valores ganhos, vendidos e lucro. Uma visão geral do funcionamento do bot.',
+    texto1: 'Freelancer <br/><br/>O cliente solicitou uma interface para visualização gráfica do seu banco de dados, onde são armazenadas as configurações de seu Bot de NFTs via OpenSea, lista de compras, vendas e alvos para trade.<br/> <br/>Toda a modelagem e entrada de dados foram oferecidas pelo banco de dados do cliente.Minha responsabilidade foi transferir em tempo real os dados do banco para a interface construída. <br/><br/> Foi solicitado com três critérios:<br/><br/> 1 - Página CRUD: Responsável por adicionar, remover, atualizar e criar coleções de itens de preços para o Bot do cliente operar, juntamente com a API da OpenSea para buscar informações e coleta de dados para adição na sua biblioteca de alvos. <br/><br/>2 - Página de configuração: Configurações armazenadas em JSON, para que o bot opere de acordo com o definido.<br/><br/> 3 - Página de dashboard: Visualização dos valores ganhos, vendidos e lucro. Uma visão geral do funcionamento do bot.',
     link: 'https://github.com/xjhowxjhow/GuiDBCrudBoot-V1',
     background: 'radial-gradient(circle, #21252b, #272b31, #2c3037, #32363d, #383c43)',
     teconologias: 'Python, PySide2, SQLite, OpenSea API'
@@ -549,6 +565,65 @@ export const imagesrepo8 = [
     {
         original: '/repoimages/repo8/6.png',
         thumbnail: '/repoimages/repo8/6.png',
-    } 
+    }
 ];
-    
+
+
+
+
+export const certifications = {
+    "certificacoes": [
+        {
+            "nome": "BI e Data Warehouse com Pentaho",
+            "descricao": "Certificação para profissionais que desejam comprovar conhecimentos em Business Intelligence e Data Warehouse com a ferramenta Pentaho.",
+            "emissor": "Alura",
+            "data_emissao": "2024-07-16",
+            "validade": "-",
+            "nivel": "Avançado",
+            "modalidade": "Online",
+            "requisitos": [
+                "Experiência com Pentaho",
+                "Conhecimentos em ETL",
+                "Conhecimento em Data Warehouse",
+                "Conhecimento em SQL e modelagem de dados"
+            ],
+            "link_certificacao": "https://cursos.alura.com.br/degree/certificate/8566e346-3a78-4cf3-bc45-3bac5fb38a7b?lang",
+            "imgs": [
+                {
+                    original: '/certimages/cert_1.png',
+                    thumbnail: '/certimages/cert_1.png',
+                },
+                {
+                    original: '/certimages/cert_1_back.png',
+                    thumbnail: '/certimages/cert_1_back.png',
+                },
+            ]
+        },
+        {
+            "nome": "Apache Airflow",
+            "descricao": "Certificação para profissionais que desejam comprovar conhecimentos em Apache Airflow.",
+            "emissor": "Alura",
+            "data_emissao": "2024-02-19",
+            "validade": "-",
+            "nivel": "Intermediário",
+            "modalidade": "Online",
+            "requisitos": [
+                "Experiência com Python",
+                "Conhecimentos em ETL",
+                "Conhecimento em Docker e Kubernetes",
+                "Celery"
+            ],
+            "link_certificacao": "https://cursos.alura.com.br/degree/certificate/cb49a154-beda-4175-921b-ea4965e5eae2",
+            "imgs": [
+                {
+                    original: '/certimages/cert_1.png',
+                    thumbnail: '/certimages/cert_1.png',
+                },
+                {
+                    original: '/certimages/cert_1_back.png',
+                    thumbnail: '/certimages/cert_1_back.png',
+                },
+            ]
+        },
+    ]
+}
