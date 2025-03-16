@@ -11,6 +11,8 @@ import {SiFacebooklive,SiJavascript,SiHtml5,SiCss3,SiSqlite,SiQt,SiMicrosoftsqls
 
 import Carousel from 'react-elastic-carousel';
 import MyGallery from './Galery';
+
+
 // Estilização do componente
 // aninmacao
 
