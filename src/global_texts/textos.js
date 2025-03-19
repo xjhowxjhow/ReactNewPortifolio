@@ -574,28 +574,26 @@ export const imagesrepo8 = [
 export const certifications = {
     "certificacoes": [
         {
-            "nome": "BI e Data Warehouse com Pentaho",
-            "descricao": "Certificação para profissionais que desejam comprovar conhecimentos em Business Intelligence e Data Warehouse com a ferramenta Pentaho.",
+            "nome": "Engenharia de dados com Azure Databricks",
+            "descricao": "A formação de Databricks busca preparar estudantes para trabalhar com Ciência de Dados e Engenharia de Dados, utilizando recursos do Apache Spark e linguagens como Python e SQL e processamento em nuvem.",
             "emissor": "Alura",
-            "data_emissao": "2024-07-16",
-            "validade": "-",
-            "nivel": "Avançado",
-            "modalidade": "Online",
-            "requisitos": [
-                "Experiência com Pentaho",
-                "Conhecimentos em ETL",
-                "Conhecimento em Data Warehouse",
-                "Conhecimento em SQL e modelagem de dados"
+            "data_emissao": "2025-03-19",
+            "topicos": [
+                "ETL/ELT com Azure Databricks",
+                "SPARK SQL",
+                "Databricks Workflows",
+                "Data Lake",
+                "Cloud Computing (Azure) Azure Key Vault | Azure Data Factory| Azure Data Lake Storage Gen2",
             ],
-            "link_certificacao": "https://cursos.alura.com.br/degree/certificate/8566e346-3a78-4cf3-bc45-3bac5fb38a7b?lang",
+            "link_certificacao": "https://cursos.alura.com.br/degree/certificate/5c4b1139-ffc4-4349-b040-ccbefccbdd2a",
             "imgs": [
                 {
-                    original: '/certimages/cert_1.png',
-                    thumbnail: '/certimages/cert_1.png',
+                    original: '/certimages/cert_5.png',
+                    thumbnail: '/certimages/cert_5.png',
                 },
                 {
-                    original: '/certimages/cert_1_back.png',
-                    thumbnail: '/certimages/cert_1_back.png',
+                    original: '/certimages/cert_5_back.png',
+                    thumbnail: '/certimages/cert_5_back.png',
                 },
             ]
         },
@@ -604,10 +602,7 @@ export const certifications = {
             "descricao": "Certificação para profissionais que desejam comprovar conhecimentos em Apache Airflow.",
             "emissor": "Alura",
             "data_emissao": "2024-02-19",
-            "validade": "-",
-            "nivel": "Intermediário",
-            "modalidade": "Online",
-            "requisitos": [
+            "topicos": [
                 "Experiência com Python",
                 "Conhecimentos em ETL",
                 "Conhecimento em Docker e Kubernetes",
@@ -626,19 +621,41 @@ export const certifications = {
             ]
         },
         {
+            "nome": "BI e Data Warehouse com Pentaho",
+            "descricao": "Certificação para profissionais que desejam comprovar conhecimentos em Business Intelligence e Data Warehouse com a ferramenta Pentaho.",
+            "emissor": "Alura",
+            "data_emissao": "2024-07-16",
+            "topicos": [
+                "Pentaho Data Integration",
+                "ETL/ELT",
+                "Data Warehouse",
+                "SQL e modelagem de dados",
+                "Data Lake",
+
+            ],
+            "link_certificacao": "https://cursos.alura.com.br/degree/certificate/8566e346-3a78-4cf3-bc45-3bac5fb38a7b?lang",
+            "imgs": [
+                {
+                    original: '/certimages/cert_1.png',
+                    thumbnail: '/certimages/cert_1.png',
+                },
+                {
+                    original: '/certimages/cert_1_back.png',
+                    thumbnail: '/certimages/cert_1_back.png',
+                },
+            ]
+        },
+        {
             "nome": "PROGRAMAÇÃO PARA DISPOSITIVOS MÓVEIS",
             "descricao": "Certificação para desenvolvimento da competência PROGRAMAÇÃO PARA DISPOSITIVOS MÓVEIS",
             "emissor": "Universidade Estácio de Sá",
             "data_emissao": "2024-07-29",
-            "validade": "-",
-            "nivel": "Intermediário",
-            "modalidade": "Online",
-            "requisitos": [
-                "Experiência com Node.js",
-                "Conhecimentos em React Native",
-                "Conhecimento em Expo",
-                "Conhecimento em JavaScript",
-                "Conhecimento em HTML e CSS"
+            "topicos": [
+                "Node.js",
+                "React Native",
+                "Expo",
+                "JavaScript",
+                "HTML e CSS"
 
             ],
             "link_certificacao": "https://certificado.estacio.br/5f568d6fa7639d624864801",
@@ -661,7 +678,7 @@ export const certifications = {
             "validade": "-",
             "nivel": "Intermediário",
             "modalidade": "Online",
-            "requisitos": [
+            "topicos": [
                 "Lógica de programação",
                 "Desing Patterns",
                 "Estrutura de Dados",
