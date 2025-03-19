@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import {FaExternalLinkAlt} from 'react-icons/fa';
-import { SiPython, SiSqlite, SiQt, SiReact, SiExpo, SiJavascript, SiHtml5, SiCss3, SiMicrosoftsqlserver, SiFastapi, SiCsharp } from 'react-icons/si';
 import Carousel from 'react-elastic-carousel';
 import MyGallery from './Galery';
 
@@ -88,17 +87,7 @@ const CardListItem = styled.li`
   margin-bottom: 5px;
 `;
 
-const Technologies = styled.div`
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
-  
-  & > span {
-    margin-right: 10px;
-    font-size: 24px;
-    color: #fff;
-  }
-`;
+
 
 const Links = styled.div`
   display: flex;
@@ -147,32 +136,12 @@ function CardGroupCertificacao({ certificacoes }) {
               <CardParagraph>{parse(certificacao.descricao)}</CardParagraph>
               <CardParagraph><strong>Emissor:</strong> {certificacao.emissor}</CardParagraph>
               <CardParagraph><strong>Data de Emissão:</strong> {certificacao.data_emissao}</CardParagraph>
-              <CardParagraph><strong>Validade:</strong> {certificacao.validade}</CardParagraph>
-              <CardParagraph><strong>Nível:</strong> {certificacao.nivel}</CardParagraph>
-              <CardParagraph><strong>Modalidade:</strong> {certificacao.modalidade}</CardParagraph>
-              <CardParagraph><strong>Requisitos:</strong></CardParagraph>
+              <CardParagraph><strong>Topicos:</strong></CardParagraph>
               <CardList>
-                {certificacao.requisitos.map((requisito, reqIndex) => (
-                  <CardListItem key={reqIndex}>{requisito}</CardListItem>
+                {certificacao.topicos.map((topico, reqIndex) => (
+                  <CardListItem key={reqIndex}>{topico}</CardListItem>
                 ))}
               </CardList>
-              <Technologies>
-                {certificacao.tecnologias && certificacao.tecnologias.map((tech, techIndex) => (
-                  <span key={techIndex}>
-                    {tech === 'Python' && <SiPython />}
-                    {tech === 'SQLite' && <SiSqlite />}
-                    {tech === 'Qt' && <SiQt />}
-                    {tech === 'React' && <SiReact />}
-                    {tech === 'Expo' && <SiExpo />}
-                    {tech === 'Javascript' && <SiJavascript />}
-                    {tech === 'HTML5' && <SiHtml5 />}
-                    {tech === 'CSS3' && <SiCss3 />}
-                    {tech === 'Microsoft SQL Server' && <SiMicrosoftsqlserver />}
-                    {tech === 'FastAPI' && <SiFastapi />}
-                    {tech === 'C#' && <SiCsharp />}
-                  </span>
-                ))}
-              </Technologies>
               <Links>
                 {certificacao.link_certificacao && (
                   <a href={certificacao.link_certificacao} target="_blank" rel="noopener noreferrer">
