@@ -128,18 +128,33 @@ const CardContentRight = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    
+    overflow-y: auto; /* habilita o scroll vertical */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #888 transparent; /* Firefox */
+
+    /* Chrome, Edge e Safari */
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+    }
+
     @media (max-width: 700px) {
         width: 100%;
         height: 700px;
         flex-direction: column;
         margin-bottom: 20px;
         gap: 10px;
-        }
-
-    `
-
+        overflow-y: auto; /* mantém o scroll também em telas pequenas */
+    }
+`;
 
 
 
