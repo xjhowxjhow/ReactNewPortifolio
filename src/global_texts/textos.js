@@ -14,7 +14,7 @@ export const CardleftHomeSrc = {
 
 export const CardRightHomeSrc = {
     titulo: 'Sobre mim',
-    texto: 'Engenheiro de Dados com experiência em coleta, armazenamento e integração de dados. Atualmente, trabalho na NEXOCS/Vela Sustainability Technologies, onde meu foco diário é desenvolver soluções de DataLake/Lakehouse para integrações entre sistemas diversos. Sou formado em Análise e Desenvolvimento de Sistemas pela Universidade Estácio de Sá. <br><br>Seja bem-vindo ao meu portfólio!',
+    texto: 'Engenheiro de Dados com foco em cloud computing (Azure) e arquitetura DataLake/Lakehouse. Atualmente na NEXOCS/Vela Sustainability Technologies, desenho e implemento pipelines e plataformas de dados escaláveis no Azure Databricks, assegurando governança, segurança e alto desempenho. <br><br> Sou formado em Análise e Desenvolvimento de Sistemas pela Universidade Estácio de Sá. Minha rotina inclui a coleta, unificação e sincronização de dados de múltiplas fontes, além da automação de processos ETL/ELT com rastreabilidade ponta a ponta. <br><br>Seja bem-vindo ao meu portfólio!',
     imagem: '/repovideo/coffe-gif.gif',
     // random images from https://picsum.photos/
     image_background: '/repovideo/foot.gif',
@@ -38,9 +38,9 @@ export const CardleftCarrerSrc = {
     habilidades2: '',
     back_color2: 'radial-gradient(circle, #6f3768, #7a386a, #85396b, #903a6b, #9b3b6b)',
 
-    empresa3: 'Nexo CS EHS Software <br> nov de 2022 - Atualmente',
+    empresa3: 'Nexo EHS Software / Vela Sustainability Technologies <br> nov de 2022 - Atualmente',
     cargo3: 'Data Enginner Jr.',
-    texto3: '• Data Integration | Pentaho Data Integration | Apache Spark/Airflow/Hop <br>• Data Analytics | JupyterLab | Streamlit<br>• Data Flow Automation | ETL/ELT | WBS | SOAP | REST<br>•  RESTful API Development | FastAPI | Flask • POO Python | Object-Oriented Programming | Python | PyQt | PySide | Pandas <br>•  SQL Querying and Development | PL/SQL | Oracle',
+    texto3: "• Azure Databricks | Apache Spark | Lakehouse Architecture <br>• Azure Databricks Genie IA | Delta Live Tables (DLT) | Databricks Workflows <br>• Azure Databricks Apps (Streamlit, Flask) deployments <br>• DBFS | Delta Tables | Unity Catalog | Data Governance <br>• Databricks Mosaics | Delta Views & Functions <br>• Databricks MLflow | AutoML <br>• Delta Sharing | Data Lineage | Table ACLs | Row-Level Security (RLS) <br>• Structured Streaming | Autoloader | Change Data Feed (CDF) <br>• Performance Tuning: Z-Ordering | Optimize | Caching | Photon Engine <br>• Cluster & VM Management (Azure) | Autoscaling | Job Clusters | Serverless SQL warehouse <br>• Init Scripts | Metastore Permissions Management | Python .whl Deployment in Clusters <br><br>• Integration with ERPs: SAP SuccessFactors (OData v2/EC), SAP ECC (RFCs), Oracle Integration Cloud, Sankhya, Senior, ADP, TOTVS <br><br>• Data Integration (Legacy Support – Migration to Databricks): Pentaho (PDI), Hop <br>• Orchestration & Processing: Apache Airflow, Spark Jobs <br><br>• ETL/ELT | Data Pipelines | API Integration (REST/SOAP) <br>• Python Development: OOP, FastAPI, Flask, PyQt, PySide <br>• Data Analysis: Pandas, JupyterLab, Streamlit <br>• SQL & PL/SQL | Oracle <br>• Azure DevOps | Repos | Pipelines | CI/CD <br>• Power BI | Power BI Gateway",
     habilidades3: ' Azure DevOps · Airflow · Python · JavaScript · Pentaho · Hoop · PL/SQL · API REST · SOAP · Serviços Web RESTful · Git  ',
     fotoempresa3: 'https://attachments.gupy.io/production/companies/1924/career/2918/images/2021-03-04_16-23_logo.png',
     back_color3: 'radial-gradient(circle, #467e9f, #3e7092, #376285, #305578, #29486b)',
@@ -75,22 +75,32 @@ export const CardleftSkillsSrcRefatorado = {
                 text: (
 
                     <div style={{ textAlign: 'left', display: 'flex', gap: '2px', flexDirection: 'column', width: '100%', alignItems: 'flex-start' }}>
-                        <h1 style={{ fontSize: '35px' }}>FrameWorks:</h1>
+                        <h1 style={{ fontSize: '35px' }}>FrameWorks/ PaaS:</h1>
 
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
 
                             <h1 style={{ fontSize: '20px' }}>•  Azure Databricks (Spark | Pyspark) :</h1>
                             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '' }}>
-                                <h1 style={{ fontSize: '20px', fontWeight: 'lighter', wordWrap: 'inherit' }}>
-                                    - Trabalhando com processamento de dados em larga escala, normalmente utilizo para processamento de dados utilizando a linguagem Python com a api (Pyspark), processando dados em DataFrames, manipulando dados em RDDs, e tambem utilizando a API SQL para manipulacao de dados.
-                                    <br />
-                                    - Conhecimento nas principais soluções de ETL utilizando o Azure Databricks, como ingestão de dados, transformação de dados, e exportação de dados e recursos sendo:
-                                    <br />
-                                    - Azure Data Factory (ADF)
-                                    <br />
-                                    - Unit Catalog (UC)
-                                    <br />
-                                    - Configuração de Jobs e Clusters para processamento de dados em larga escala.
+                               <h1 style={{ fontSize: '20px', fontWeight: 'lighter', wordWrap: 'inherit' }}>
+                                - Trabalho com processamento de dados em larga escala utilizando Python com a API PySpark, manipulando dados em DataFrames, RDDs e também com SQL API para consultas e transformações.<br />
+                                - Experiência em arquitetura Lakehouse no Azure Databricks, incluindo ingestão, transformação e consumo de dados em pipelines modernos.<br />
+                                - Principais recursos e práticas que aplico no ambiente Databricks:<br />
+                                • Azure Databricks | Apache Spark | Lakehouse Architecture<br />
+                                • Azure Databricks Genie IA | Delta Live Tables (DLT) | Databricks Workflows<br />
+                                • Delta Tables | Unity Catalog | Data Governance<br />
+                                • Databricks Mosaics | Delta Views & Functions<br />
+                                • Databricks MLflow | AutoML | Feature Store<br />
+                                • Delta Sharing | Data Lineage | Table ACLs | Row-Level Security (RLS)<br />
+                                • Structured Streaming | Autoloader | Change Data Feed (CDF)<br />
+                                • Performance Tuning: Z-Ordering | Optimize | Caching | Photon Engine<br />
+                                • Cluster & VM Management (Azure) | Autoscaling | Job Clusters | Serverless SQL Warehouse<br />
+                                • Init Scripts | Metastore Permissions Management | Python .whl Deployment em Clusters<br /><br />
+                                - Integrações com ERPs: SAP SuccessFactors (OData v2/EC), SAP ECC (RFCs), Oracle Integration Cloud, Sankhya, Senior, ADP, TOTVS.<br />
+                                - Suporte a integrações legadas e migração para Databricks: Pentaho (PDI), Hop.<br />
+                                - Orquestração e processamento com Apache Airflow e Spark Jobs.<br />
+                                - Desenvolvimento em Python (OOP, FastAPI, Flask, PyQt, PySide) e análises com Pandas, JupyterLab, Streamlit.<br />
+                                - SQL & PL/SQL (Oracle) e integração com Azure DevOps (Repos, Pipelines, CI/CD).<br />
+                                - Dashboards e relatórios com Power BI e Power BI Gateway.
                                 </h1>
                             </div>
 
@@ -135,69 +145,98 @@ export const CardleftSkillsSrcRefatorado = {
                 skills: 'print("Hello Python 🐍")',
                 color: 'linear-gradient(-45deg, #4c4c4c, #262626, #000000, #4b4b4b)',
             },
-            {
-                item: 'SQL',
-                icon: 'https://img.icons8.com/color/48/000000/sql.png',
-                // right
-                text: (<div style={{ textAlign: 'left', display: 'flex', gap: '2px', flexDirection: 'column', width: '100%', alignItems: 'flex-start' }}>
+{
+            item: 'SQL',
+            icon: 'https://img.icons8.com/color/48/000000/sql.png',
+            text: (
+                <div
+                    style={{
+                        textAlign: 'left',
+                        display: 'flex',
+                        gap: '2px',
+                        flexDirection: 'column',
+                        width: '100%',
+                        alignItems: 'flex-start',
+                    }}
+                >
                     <h1 style={{ fontSize: '35px' }}>Banco de Dados:</h1>
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                        <h1 style={{ fontSize: '20px' }}>• Conhecimentos e Experiencias</h1>
-                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '' }}>
+                        <h1 style={{ fontSize: '20px' }}>• Conhecimentos e Experiências</h1>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                             <h1 style={{ fontSize: '20px', fontWeight: 'lighter', wordWrap: 'inherit' }}>
-                                Tenho experiência e conhecimento em gerenciamento de bancos de dados, com ênfase em sistemas tanto relacionais quanto não relacionais.
-                                Minha experiência abrange plataformas como Oracle 11G, MongoDB e SQLite, nas quais participei ativamente de diversos projetos de ETL utilizando a ferramenta Pentaho Data Integration.
-                                Hoje atuo diretamente com Oracle.
+                                Tenho experiência avançada em gerenciamento de bancos de dados relacionais e analíticos, com foco em
+                                Oracle 19c e Databricks Lakehouse. Atuo em pipelines complexos de ingestão, transformação e governança
+                                de dados, aplicando boas práticas de modelagem e otimização de consultas SQL.
                             </h1>
                         </div>
-                        <h1 style={{ fontSize: '20px' }}>• PL/SQL</h1>
-                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '' }}>
-                            <h1 style={{ fontSize: '20px', fontWeight: 'lighter', wordWrap: 'inherit' }}>
-                                - Possuo um breve conhecimento em desenvolvimento de Stored Procedurese e Functions, pois normalmente realizo apenas algumas revições de bancos legados, e aprimoramento da performance.
-                                <br />
-                                - Realização de chamadas de Procedures e Functions.
-                                <br />
-                                - Depuracao utilizando o PL/SQL Developer como DBMS Output, para analise de For Loops, blocos de codigo, etc.
-                                <br />
-                            </h1>
-                        </div>
-                        <h1 style={{ fontSize: '20px' }}>• Triggers | Views </h1>
-                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '' }}>
-                            <h1 style={{ fontSize: '20px', fontWeight: 'lighter', wordWrap: 'inherit' }}>
-                                - Normamente no meu dia a dia utilizado para Projetos ETL para integracoes | Exportacoes| Monitoramento | Desenvolvimento de dados no modelo 'Delta'.
-                                <br />
-                                - Criacao de Triggers para monitoramento de tabelas, e criacao de logs de alteracoes.
-                                <br />
-                                - Manutenção de Views para visualizacao de dados de forma mais simples e rapida.
-                                <br />
-                            </h1>
-                        </div>
-                        <h1 style={{ fontSize: '20px' }}>• Oracle + Pentaho Data Integration</h1>
-                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '' }}>
-                            <h1 style={{ fontSize: '20px', fontWeight: 'lighter', wordWrap: 'inherit' }}>
-                                Queria destacar a Ferramenta de ETL PDI (Pentaho Data Integration) pois é uma das ferramentas que mais utilizo no meu dia a dia, para construção de ETLs para integracao de dados, exportacao de dados, monitoramento de dados, etc.
-                                Hoje crio e dou manutencao em diversos projetos de ETLs para integracao de dados de diversas fontes ERP, CRM,algumas delas:
-                                <br />
-                                <br />
-                                - SAP SuccessFactors (HCM)
-                                <br />
-                                - Oracle Integration  Cloud
-                                <br />
-                                - Sankhya
-                                <br />
-                                - Senior
-                                <br />
-                                - TOTVS
-                                <br />
-                                <br />
-                                Em todos esses projetos, o SQL desempenha um papel fundamental, seja para integração de dados, desenvolvimento de softwares com microservices de dados ou definição de fluxos de regras de negócios para atender às variadas necessidades dos clientes.
 
+                        <h1 style={{ fontSize: '20px' }}>• PL/SQL Avançado</h1>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                            <h1 style={{ fontSize: '20px', fontWeight: 'lighter', wordWrap: 'inherit' }}>
+                                - Desenvolvimento avançado de <strong>Stored Procedures</strong>, <strong>Functions</strong> e
+                                <strong> Packages</strong> em Oracle 19c.<br />
+                                - Depuração e análise de desempenho via PL/SQL Developer (Jobs, Loops, blocos anônimos).<br />
+                                - Otimização de consultas complexas, análise de planos de execução e indexação inteligente.<br />
+                                - Integrações entre Oracle e Databricks via ODBC/JDBC para pipelines híbridos.
+                            </h1>
+                        </div>
+
+                        <h1 style={{ fontSize: '20px' }}>• Views | Views Materializadas | Triggers</h1>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                            <h1 style={{ fontSize: '20px', fontWeight: 'lighter', wordWrap: 'inherit' }}>
+                                - Criação e manutenção de <strong>views materializadas</strong> no Databricks para consultas otimizadas
+                                e redução de latência em workloads analíticos.<br />
+                                - Desenvolvimento de <strong>Triggers</strong> para auditoria e controle de alterações em tabelas Delta
+                                e Oracle.<br />
+                                - Criação de <strong>Delta Views</strong> e funções no Databricks para simplificar visualizações e
+                                relatórios.<br />
+                            </h1>
+                        </div>
+
+                        <h1 style={{ fontSize: '20px' }}>• Unity Catalog | Governança e Otimização</h1>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                            <h1 style={{ fontSize: '20px', fontWeight: 'lighter', wordWrap: 'inherit' }}>
+                                - Implementação e gestão de <strong>Unity Catalog</strong> com controle de acesso em nível de tabela,
+                                coluna e linha (RLS).<br />
+                                - Configuração de <strong>metastore</strong>, gerenciamento de permissões e integração com Active
+                                Directory.<br />
+                                - Uso das principais funções de otimização do Unity Catalog: lineage tracking, data discovery,
+                                auditabilidade e versionamento.<br />
+                                - Criação e manutenção de <strong>Delta Sharing</strong> para compartilhamento seguro de dados entre
+                                workspaces.<br />
+                            </h1>
+                        </div>
+
+                        <h1 style={{ fontSize: '20px' }}>• Clusters e SQL Warehouse</h1>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                            <h1 style={{ fontSize: '20px', fontWeight: 'lighter', wordWrap: 'inherit' }}>
+                                - Configuração e tuning de <strong>Job Clusters</strong>, <strong>All-purpose Clusters</strong> e
+                                <strong> Serverless SQL Warehouse</strong> no Azure Databricks.<br />
+                                - Monitoramento de performance com uso de <strong>Photon Engine</strong> e cache otimizado.<br />
+                                - Aplicação de boas práticas de <strong>Z-Ordering</strong>, <strong>Optimize</strong> e
+                                <strong> Vacuum</strong> para alto desempenho.<br />
+                            </h1>
+                        </div>
+
+                        <h1 style={{ fontSize: '20px' }}>• Oracle + Pentaho Data Integration</h1>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                            <h1 style={{ fontSize: '20px', fontWeight: 'lighter', wordWrap: 'inherit' }}>
+                                Utilizo o Pentaho (PDI) para construção e manutenção de ETLs integrando Oracle 19c e Databricks.
+                                Experiência com ingestão, transformação e exportação de dados entre diferentes ERPs:<br />
+                                - SAP SuccessFactors (EC / OData v2)<br />
+                                - Oracle Integration Cloud<br />
+                                - Sankhya<br />
+                                - Senior<br />
+                                - TOTVS<br /><br />
+                                O SQL é utilizado como base para integração, modelagem e construção de pipelines de dados escaláveis e
+                                de alta performance.
                             </h1>
                         </div>
                     </div>
-                </div>),
-                skills: 'DELETE FROM TABLE WHERE 1 = 0 -- Never;',
-                color: 'radial-gradient(circle, #467e9f, #3e7092, #376285, #305578, #29486b)',
+                </div>
+            ),
+            skills: 'DELETE FROM TABLE WHERE 1 = 0 -- Never;',
+            color: 'radial-gradient(circle, #467e9f, #3e7092, #376285, #305578, #29486b)',
             },
             {
                 item: 'Node.js',

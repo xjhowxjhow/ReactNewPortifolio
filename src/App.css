@@ -1,71 +1,56 @@
-
 /* fontes */
-/* Josefin Sans */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
-
-*{
-  font-family: 'Josefin Sans', sans-serif;
-  
+/* estilo global */
+* {
+  font-family: 'Segoe UI Symbol', 'Josefin Sans', sans-serif;
 }
-
-
 
 .App {
   text-align: center;
   max-width: 1920px;
   margin: 0 auto;
   zoom: 0.8;
-  
 }
 
-
-
-
-
-
-
-
 /* STYLE CAROUSEL MEDIAQUERY */
-
 @media (max-width: 768px) {
-  .App{
+  .App {
     zoom: 0.6;
   }
+
   .rec-arrow {
     display: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
   }
 
-  .rec  .rec-slider-container{
-    margin: 0px;
-    padding: 0px;
-   
+  .rec .rec-slider-container {
+    margin: 0;
+    padding: 0;
   }
-  .card-repo-query{
+
+  .card-repo-query {
     width: 100%;
     height: 100%;
     background-image: none;
   }
-  
 }
 
-@media  screen and (max-width: 1366px) {
-    /* insert styles here */
-    .App{
-        zoom: 0.6;
-      }
-      .rec-arrow {
-        margin: 0px;
-        padding: 0px;
-      }
-    
-      .rec  .rec-slider-container{
-        margin: 0px;
-        padding: 0px;
-       
-      }    
+@media screen and (max-width: 1366px) {
+  .App {
+    zoom: 0.6;
+  }
+
+  .rec-arrow {
+    margin: 0;
+    padding: 0;
+  }
+
+  .rec .rec-slider-container {
+    margin: 0;
+    padding: 0;
+  }
 }
-/* dark Mode */
+

@@ -383,7 +383,7 @@ function CardGroupSkills() {
             case 'Python':
                 newState = {
                     title: CardleftSkillsSrcRefatorado.backend.items[0].item,
-                    subTitle: '',
+                    subTitle: 'Azure Databricks| Spark | Pyspark',
                     text: CardleftSkillsSrcRefatorado.backend.items[0].text,
                     skills: CardleftSkillsSrcRefatorado.backend.items[0].skills,
                     bkg_img: '',

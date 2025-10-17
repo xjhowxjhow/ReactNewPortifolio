@@ -123,32 +123,43 @@ const CardContentLeft = styled.div`
         margin: 20px;
     }
     `
-
-
-
-
-
-
-
 //  RIGHT SIDE
 
 const CardContentRight = styled.div`
     width: 70%;
-    height: 100%;
+    height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    overflow-y: auto;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #6c63ff transparent; /* Firefox */
+
+    /* Chrome, Edge, Safari */
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #6c63ff;
+        border-radius: 10px;
+        border: 2px solid transparent;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #4a47a3;
+    }
 
     @media (max-width: 700px) {
-        height: 600px;
         width: 90%;
-
-
-        }
-    `
-
-
+        height: 600px;
+    }
+`;
 
 
 const CardTitle = styled.h1`    
@@ -318,7 +329,7 @@ function CardGroupRepo({ title, text, image, image_background }) {
                 <CardContentLeft>
                     <MyGallery images={imgrepo1} />
                 </CardContentLeft>
-                <CardContentRight>
+                <CardContentRight style={{overflowY:'auto'}} >
                     <CardTitle>{textsrepo1.titulo}</CardTitle>
                     <CardSubDescription>{textsrepo1.texto1}</CardSubDescription>
                     <CardSubObjectives>{textsrepo1.texto2}</CardSubObjectives>
@@ -347,7 +358,7 @@ function CardGroupRepo({ title, text, image, image_background }) {
                 <CardContentLeft>
                     <MyGallery images={imgrepo8} />
                 </CardContentLeft>
-                <CardContentRight>
+                <CardContentRight style={{overflowY:'auto'}} >
                     <CardTitle>{textsrepo8.titulo}</CardTitle>
                     <CardSubDescription>{parse(textsrepo8.texto1)}</CardSubDescription>
                     <CardSubTechnologies>
@@ -465,7 +476,7 @@ function CardGroupRepo({ title, text, image, image_background }) {
                     <MyGallery images={imgrepo5} />
                 </CardContentLeft>
                 {/* ocultta ao sair ovberflor */}
-                <CardContentRight style={{overflowY:'scroll', height:'500px',justifyContent:'flex-start'}} >
+                <CardContentRight>
                     <CardTitle style={{color:'black'}}>{textsrepo5.titulo}</CardTitle>
                     <CardSubDescription style={{color:'black',fontWeight:'400'}}>{textsrepo5.texto1}</CardSubDescription>
                     <CardSubObjectives style={{color:'black',fontWeight:'400'}}>{textsrepo5.texto2}</CardSubObjectives>

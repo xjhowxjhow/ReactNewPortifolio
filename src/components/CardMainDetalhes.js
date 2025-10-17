@@ -54,7 +54,7 @@ const CardText = styled.p`
     color:#fff;
     text-align: left;
     width: 80%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 10px;
     border-radius: 10px;
     &:hover {
