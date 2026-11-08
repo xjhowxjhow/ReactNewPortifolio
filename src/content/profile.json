@@ -3,9 +3,13 @@
   "headline": "Engenharia de Dados, Integrações e IA Aplicada",
   "tagline": "A arquitetura por trás das conexões",
   "summary": "Projeto conexões entre sistemas, dados e operações. Desenvolvo integrações, ferramentas e automações que transformam complexidade em soluções.",
-  "location": "Itapevi, SP",
+  "location": "26 anos - Itapevi, SP",
   "photo": "/images/jhonatan-deni.jpg",
   "photoAlt": "Retrato de Jhonatan Deni",
+  "careerStart": {
+    "it": 2018,
+    "data": 2022
+  },
   "about": [
     "Faço sistemas corporativos conversarem. Integro plataformas como ADP, TOTVS Datasul, SAP ECC/S/4HANA, SAP SuccessFactors, Senior e Oracle HCM aos sistemas que dependem desses dados, com contratos respeitados e cargas rastreáveis.",
     "Hoje trabalho no ecossistema Databricks de ponta a ponta — Workflows, Delta Lake e Unity Catalog — com Python, Spark e SQL, numa plataforma que provisiono e opero há anos e na qual tenho acreditações oficiais. Já usei Airflow, Azure Data Factory e Microsoft Fabric, além de Pentaho, Apache Hop e Apache NiFi. Também construo plataformas analíticas que tiram a carga dos bancos transacionais e entregam indicadores confiáveis no Power BI, a partir do lakehouse.",
@@ -35,6 +39,5 @@
     "email": "jhonatan.deni@outlook.com"
   },
   "siteUrl": "https://jhonatandeni.netlify.app/",
-  "careerStart": { "it": 2018, "data": 2022 },
   "updatedAt": "2026-11"
 }
