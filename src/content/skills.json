@@ -1,0 +1,102 @@
+{
+  "layers": [
+    {
+      "id": "observabilidade",
+      "code": "L0",
+      "name": "Observabilidade e auditoria",
+      "summary": "O pilar que sustenta todas as outras camadas: provar o que aconteceu e agir antes do incidente.",
+      "items": [
+        { "name": "Datadog", "use": "Dashboards, monitores e alertas para pipelines, jobs e APIs, com logs centralizados.", "evidence": "documentado" },
+        { "name": "Auditoria por execução", "use": "Cada carga registra origem, volume, duração, erros e resposta do destino.", "evidence": "documentado" },
+        { "name": "Logs estruturados", "use": "Eventos em JSON/JSONL correlacionados por execução e por lote.", "evidence": "documentado" },
+        { "name": "Alertas e monitores", "use": "Falhas, atrasos e volumes fora do padrão viram alerta antes de virar chamado.", "evidence": "documentado" },
+        { "name": "Reconciliação origem × destino", "use": "Contagens e chaves comparadas entre sistemas para provar que o dado chegou íntegro.", "evidence": "documentado" },
+        { "name": "Rastreabilidade de agentes", "use": "Toda ação de um agente de IA fica registrada em trilha de auditoria.", "evidence": "documentado" }
+      ]
+    },
+    {
+      "id": "dados",
+      "code": "L1",
+      "name": "Dados",
+      "summary": "Processamento, modelagem de carga e persistência de estado.",
+      "items": [
+        { "name": "Python e PySpark", "use": "Transformações e regras de negócio em notebooks e bibliotecas.", "evidence": "documentado" },
+        { "name": "Spark SQL e Delta Lake", "use": "MERGE/upsert e controle de estado entre execuções.", "evidence": "documentado" },
+        { "name": "Azure Databricks", "use": "Jobs parametrizados por ambiente e bibliotecas distribuídas como pacote.", "evidence": "documentado" },
+        { "name": "BI corporativo com Power BI", "use": "Modelos semânticos e painéis alimentados pelo lakehouse, com uma definição única por indicador.", "evidence": "documentado" },
+        { "name": "Orquestração com Airflow e Azure Data Factory", "use": "Experiência com DAGs e pipelines agendados, inclusive Airflow com Celery e Kubernetes.", "evidence": "documentado" },
+        { "name": "Microsoft Fabric", "use": "Lakehouse, pipelines e relatórios na plataforma unificada de dados da Microsoft.", "evidence": "documentado" },
+        { "name": "Pentaho, Apache Hop e Apache NiFi", "use": "Fluxos visuais de ETL e ingestão, e migração de transformações para Databricks.", "evidence": "documentado" },
+        { "name": "SQL e PL/SQL (Oracle)", "use": "Consultas, rotinas e investigação de dados.", "evidence": "experiencia" },
+        { "name": "Qualidade e reconciliação de dados", "use": "Validação de cargas, detecção de duplicidades e análise de históricos.", "evidence": "documentado" }
+      ]
+    },
+    {
+      "id": "integracoes",
+      "code": "L2",
+      "name": "Integrações",
+      "summary": "Contratos entre sistemas corporativos e os destinos que consomem os dados.",
+      "items": [
+        { "name": "Sistemas corporativos", "use": "ADP, TOTVS Datasul, SAP ECC/S/4HANA, SAP SuccessFactors, Senior e Oracle HCM.", "evidence": "documentado" },
+        { "name": "APIs REST e SOAP", "use": "Autenticação, lotes, timeout e validação de resposta.", "evidence": "documentado" },
+        { "name": "OData", "use": "Filtros e paginação conforme o contrato de cada serviço.", "evidence": "documentado" },
+        { "name": "SFTP", "use": "Troca de arquivos com autenticação por chave.", "evidence": "documentado" },
+        { "name": "Transformação de contratos", "use": "De-para entre modelos de origem e destino e normalização de dados.", "evidence": "documentado" }
+      ]
+    },
+    {
+      "id": "software",
+      "code": "L3",
+      "name": "Software",
+      "summary": "Componentes reutilizáveis, testes e ferramentas.",
+      "items": [
+        { "name": "Bibliotecas Python", "use": "Conectores, autenticação, logging e auditoria compartilhados entre integrações.", "evidence": "documentado" },
+        { "name": "Processamento assíncrono", "use": "Concorrência limitada, lotes e timeout em chamadas a APIs.", "evidence": "documentado" },
+        { "name": "Testes automatizados", "use": "Cenários locais com Spark/Delta e mocks de serviços.", "evidence": "documentado" },
+        { "name": "Ferramentas de operação", "use": "Scripts e utilitários que reduzem passos manuais.", "evidence": "experiencia" },
+        { "name": "Git e Azure DevOps", "use": "Branches, revisão de código, Boards e Wiki.", "evidence": "documentado" },
+        { "name": "Documentação técnica e funcional", "use": "Contratos de API, fluxos, erros e procedimentos explicados para equipe e clientes.", "evidence": "documentado" },
+        { "name": "Organização de entregas", "use": "Etapas, dependências e critérios de aceite registrados no Azure Boards.", "evidence": "documentado" }
+      ]
+    },
+    {
+      "id": "cloud",
+      "code": "L4",
+      "name": "Cloud e operações",
+      "summary": "Ambientes, segredos, automação e diagnóstico.",
+      "items": [
+        { "name": "Provisionamento Databricks", "use": "Vasta experiência provisionando e operando ambientes Azure Databricks: workspaces, clusters, jobs, permissões e configuração por ambiente.", "evidence": "documentado" },
+        { "name": "Configuração por ambiente", "use": "Parâmetros separados para homologação e produção.", "evidence": "documentado" },
+        { "name": "Azure Key Vault", "use": "Credenciais fora do código.", "evidence": "documentado" },
+        { "name": "Azure Blob Storage", "use": "Armazenamento de arquivos e diagnóstico de permissões.", "evidence": "documentado" },
+        { "name": "Automação Oracle", "use": "Operações de banco automatizadas com SSH e Data Pump.", "evidence": "documentado" },
+        { "name": "Diagnóstico de conectividade", "use": "Rede, rotas, VPN e firewall entre aplicações e bancos.", "evidence": "documentado" },
+        { "name": "Investigação de incidentes", "use": "Análise de falhas e comunicação entre desenvolvimento, infraestrutura e negócio.", "evidence": "experiencia" },
+        { "name": "Plataforma Databricks", "use": "Administração, rede, segurança e integrações com a nuvem, conforme a acreditação Platform Architect.", "evidence": "complementar" }
+      ]
+    },
+    {
+      "id": "ia",
+      "code": "L5",
+      "name": "IA aplicada",
+      "summary": "Agentes e ferramentas que aplicam IA ao trabalho de engenharia, sem treinamento de modelos próprios.",
+      "items": [
+        { "name": "Agentes e skills", "use": "Hub de skills e agentes para GitHub Copilot e Codex, com roteamento de pedidos em linguagem natural.", "evidence": "documentado" },
+        { "name": "MCP", "use": "Agentes conectados a Azure DevOps, Boards e Wiki, com fallback para CLI.", "evidence": "documentado" },
+        { "name": "Guardrails para agentes", "use": "Sem deleções, PRs em rascunho, confirmação antes de escrita e logs de auditoria.", "evidence": "documentado" },
+        { "name": "Contexto compartilhado", "use": "Fonte única de instruções para a equipe.", "evidence": "documentado" },
+        { "name": "Automação de engenharia", "use": "Diagnóstico, revisão e documentação técnica.", "evidence": "documentado" }
+      ]
+    }
+  ],
+  "complementary": [
+    "Unity Catalog",
+    "Lakehouse e arquitetura Medallion",
+    "Data Warehouse, OLAP e MDX",
+    "SQL Server",
+    "FastAPI e Flask",
+    "PySide / Qt",
+    "Node.js",
+    "React e React Native"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "id": "atual",
+      "company": "Nexo EHS Software / Vela Sustainability Technologies",
+      "role": "Engenheiro e Arquiteto de Dados",
+      "start": "2022-11",
+      "end": "",
+      "summary": "Integrações corporativas, pipelines em Azure Databricks e ferramentas de engenharia.",
+      "highlights": [
+        "Integrações com ERPs e HCMs como ADP, TOTVS Datasul, SAP, SuccessFactors, Senior e Oracle HCM",
+        "Provisionamento e operação de ambientes Azure Databricks",
+        "Plataforma analítica sobre o lakehouse, do banco transacional aos painéis em Power BI",
+        "Observabilidade com Datadog e auditoria por execução em pipelines e APIs",
+        "Desenvolvimento de componentes Python reutilizáveis",
+        "Experiência com Airflow, Azure Data Factory e Microsoft Fabric; ETL com Pentaho, Apache Hop e Apache NiFi",
+        "Automação de operações e ferramentas de IA aplicada à engenharia"
+      ]
+    },
+    {
+      "id": "teleperformance",
+      "company": "Teleperformance",
+      "role": "Backoffice Suporte ao Cliente II",
+      "start": "2021-03",
+      "end": "2022-11",
+      "summary": "Suporte a clientes de Microsoft Visual Studio, Azure e Active Directory e a licenciamento por volume para empresas e instituições.",
+      "highlights": []
+    },
+    {
+      "id": "abai",
+      "company": "Parla! / Abai Group",
+      "role": "Suporte Técnico",
+      "start": "2019-05",
+      "end": "2021-01",
+      "summary": "Atendimento de suporte técnico omnichannel: chat, SMS, e-mail e URA.",
+      "highlights": []
+    }
+  ]
+}

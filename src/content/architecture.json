@@ -1,0 +1,119 @@
+{
+  "title": "Como os dados percorrem a arquitetura",
+  "lead": "Um mergulho em cada etapa: a câmera entra na estrutura e mostra as peças que fazem o dado chegar inteiro, rastreável e seguro.",
+  "note": "",
+  "steps": [
+    {
+      "code": "EXTRACT",
+      "title": "Fontes corporativas enviam dados",
+      "zoom": "Azure Key Vault e conectores",
+      "text": "ERPs, HCMs e outros sistemas entregam dados por APIs REST, SOAP, OData ou arquivos — cada um com seu contrato, sua paginação e sua forma de autenticar.",
+      "breakdown": [
+        { "label": "Autenticar", "text": "O segredo é lido do Azure Key Vault em tempo de execução: OAuth, certificado ou chave SSH, conforme a fonte." },
+        { "label": "Conectar", "text": "Um conector por protocolo, com timeout, retentativa e respeito aos limites da fonte." },
+        { "label": "Extrair", "text": "Carga completa, incremental ou histórica, página a página." },
+        { "label": "Carimbar", "text": "Cada lote ganha origem, horário e identificador de execução para a auditoria." }
+      ],
+      "tools": [
+        { "name": "Azure Key Vault", "role": "Cofre de segredos", "text": "Senhas, tokens e certificados ficam no cofre, separados por ambiente. O código só conhece o nome do segredo." },
+        { "name": "REST", "role": "APIs modernas", "text": "Paginação, filtros e autenticação por token, com tratamento de limites de requisição." },
+        { "name": "SOAP", "role": "Web services corporativos", "text": "Envelopes XML e WS-Security em sistemas que ainda falam essa língua." },
+        { "name": "SFTP", "role": "Arquivos", "text": "Troca de arquivos com fornecedores, autenticada por chave." }
+      ],
+      "decision": "Configuração e credenciais ficam fora do código, separadas por ambiente."
+    },
+    {
+      "code": "TRANSFORM",
+      "title": "Workflows transformam e validam",
+      "zoom": "Databricks Workflows · cluster Spark",
+      "text": "Um Databricks Workflow encadeia as tarefas da integração. O cluster Spark padroniza, valida e aplica as regras de negócio necessárias para o destino.",
+      "breakdown": [
+        { "label": "Orquestrar", "text": "Tarefas com dependências, parâmetros por ambiente e reexecução apenas do que falhou." },
+        { "label": "Validar", "text": "Esquema, tipos e campos obrigatórios conferidos antes de seguir." },
+        { "label": "Transformar", "text": "PySpark e Spark SQL aplicam de-para e regras parametrizadas." },
+        { "label": "Isolar", "text": "Regras específicas ficam em pontos de extensão; o núcleo é compartilhado." }
+      ],
+      "tools": [
+        { "name": "Databricks Workflows", "role": "Orquestração", "text": "Jobs multitarefa, agendamento, alertas de falha e repair só das tarefas com erro." },
+        { "name": "PySpark", "role": "Processamento distribuído", "text": "Transformações que escalam do lote pequeno ao histórico completo." },
+        { "name": "Python", "role": "Biblioteca compartilhada", "text": "Conectores, validação e logging empacotados como pacote reutilizável." },
+        { "name": "Apache Airflow", "role": "Orquestração alternativa", "text": "DAGs com Celery e Kubernetes quando o fluxo vive fora do Databricks." }
+      ],
+      "decision": "Regras específicas ficam isoladas do comportamento compartilhado."
+    },
+    {
+      "code": "STORE",
+      "title": "Camadas Delta consolidam o estado",
+      "zoom": "Delta Lake · medallion",
+      "text": "Camadas bronze, prata e ouro em Delta Lake guardam o dado bruto, o dado limpo e o estado consolidado — e permitem saber exatamente o que mudou entre execuções.",
+      "breakdown": [
+        { "label": "Bronze", "text": "O dado como chegou, para auditoria e reprocessamento." },
+        { "label": "Prata", "text": "Limpo, tipado e sem duplicidades." },
+        { "label": "Ouro", "text": "Estado consolidado, pronto para o destino e para o BI." },
+        { "label": "MERGE", "text": "Compara com a versão anterior e separa inclusões, alterações e exclusões." }
+      ],
+      "tools": [
+        { "name": "Delta Lake", "role": "Armazenamento transacional", "text": "ACID, histórico de versões e MERGE para enviar só o que mudou." },
+        { "name": "Unity Catalog", "role": "Governança", "text": "Catálogos, esquemas e permissões por ambiente." },
+        { "name": "Azure Blob Storage", "role": "Camada física", "text": "Arquivos e tabelas no armazenamento da Azure." },
+        { "name": "Power BI", "role": "Consumo analítico", "text": "A camada ouro alimenta os modelos semânticos do BI corporativo." }
+      ],
+      "decision": "O estado só é atualizado depois de uma carga bem-sucedida."
+    },
+    {
+      "code": "LOAD",
+      "title": "APIs distribuem aos destinos",
+      "zoom": "Gateway de carga em lotes",
+      "text": "A carga respeita o contrato do destino: lotes do tamanho certo, concorrência controlada, timeout por chamada e validação de cada resposta.",
+      "breakdown": [
+        { "label": "Agrupar", "text": "Registros em lotes no tamanho aceito pelo destino." },
+        { "label": "Controlar", "text": "Limite de requisições simultâneas e timeout por chamada." },
+        { "label": "Validar", "text": "O corpo da resposta é conferido item a item, não apenas o status HTTP." },
+        { "label": "Reconciliar", "text": "O estado só avança após confirmação; falhas ficam registradas para reenvio." }
+      ],
+      "tools": [
+        { "name": "REST", "role": "Carga", "text": "Envio em lotes com concorrência limitada e retentativa." },
+        { "name": "Processamento assíncrono", "role": "Vazão", "text": "Chamadas paralelas sem estourar o limite do destino." },
+        { "name": "Azure DevOps", "role": "Entrega", "text": "Versionamento, revisão por pull request e esteira de deploy." }
+      ],
+      "decision": "A resposta de cada operação é validada, não apenas o status HTTP."
+    },
+    {
+      "code": "OBSERVE",
+      "title": "Observabilidade e auditoria sustentam tudo",
+      "zoom": "Datadog · telemetria e trilha de auditoria",
+      "text": "O pilar que atravessa todas as camadas. Cada execução emite logs estruturados, métricas e eventos de auditoria; dashboards e monitores avisam antes que alguém precise reclamar.",
+      "breakdown": [
+        { "label": "Instrumentar", "text": "Logs estruturados com identificador de execução e de lote em todas as etapas." },
+        { "label": "Medir", "text": "Volume, duração, erros e latência de cada pipeline e de cada API." },
+        { "label": "Alertar", "text": "Monitores sobre sintomas: atraso, volume fora do padrão, taxa de erro." },
+        { "label": "Auditar", "text": "Trilha consultável de quem enviou o quê, quando e com qual resposta." }
+      ],
+      "tools": [
+        { "name": "Datadog", "role": "Observabilidade", "text": "Dashboards, monitores e logs centralizados de pipelines, jobs e APIs." },
+        { "name": "Logs estruturados", "role": "Correlação", "text": "Eventos em JSON/JSONL ligados por execução, lote e etapa." },
+        { "name": "Auditoria por execução", "role": "Prova", "text": "Origem, volume, duração e resposta do destino registrados em Delta Lake." },
+        { "name": "Alertas e monitores", "role": "Reação", "text": "O problema vira alerta antes de virar chamado." }
+      ],
+      "decision": "Se não dá para provar o que aconteceu, o pipeline não está pronto."
+    },
+    {
+      "code": "AGENTS · MCP",
+      "title": "Agentes de IA apoiam a operação",
+      "zoom": "Hub de agentes · MCP · guardrails",
+      "text": "Agentes com skills e MCP consultam as ferramentas de engenharia para diagnosticar, documentar e revisar — dentro de guardrails e com o engenheiro no controle.",
+      "breakdown": [
+        { "label": "Entender", "text": "O pedido em linguagem natural é roteado para a skill certa." },
+        { "label": "Consultar", "text": "Via MCP, o agente lê Azure DevOps, Databricks e documentação; sem MCP, usa a CLI." },
+        { "label": "Agir com limites", "text": "Nenhuma exclusão, pull requests em rascunho e confirmação antes de qualquer escrita." },
+        { "label": "Registrar", "text": "Cada ação vai para o log de auditoria em JSONL." }
+      ],
+      "tools": [
+        { "name": "GitHub Copilot", "role": "Agentes e skills", "text": "Skills e agentes especializados a partir de uma fonte única versionada." },
+        { "name": "MCP", "role": "Protocolo de ferramentas", "text": "Conecta os agentes a Azure DevOps, Boards, Wiki e Databricks." },
+        { "name": "Codex", "role": "Segundo host", "text": "As mesmas skills, compartilhadas entre os dois ambientes." }
+      ],
+      "decision": "A IA atua sobre procedimentos explícitos, com o engenheiro no controle."
+    }
+  ]
+}

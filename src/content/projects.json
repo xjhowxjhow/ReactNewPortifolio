@@ -1,0 +1,193 @@
+{
+  "checkedAt": "2026-11-07",
+  "items": [
+    {
+      "id": "home-application",
+      "name": "Home Application",
+      "type": "proprio",
+      "description": "Aplicação desktop para gestão de finanças pessoais, com interface em PySide2 e banco SQLite local.",
+      "details": "Software desktop de controle financeiro pessoal: lançamentos, categorias e visão geral das finanças numa interface direta, com os dados guardados localmente em SQLite. Nasceu como projeto de estudo na faculdade e virou meu primeiro produto completo.",
+      "stack": ["Python", "PySide2", "SQLite"],
+      "repo": "https://github.com/xjhowxjhow/HomeAplication1.0",
+      "demo": "https://homeapplication.netlify.app/",
+      "video": "https://youtu.be/8hCQ1AKJnbc",
+      "image": "/images/projects/home-application.jpg",
+      "gallery": [
+        "/gallery/home-application/01.webp",
+        "/gallery/home-application/02.webp",
+        "/gallery/home-application/03.webp",
+        "/gallery/home-application/04.webp",
+        "/gallery/home-application/05.webp",
+        "/gallery/home-application/06.webp",
+        "/gallery/home-application/07.webp",
+        "/gallery/home-application/08.webp"
+      ],
+      "featured": true
+    },
+    {
+      "id": "pdi-ws-security",
+      "name": "Pentaho + SOAP WS-Security",
+      "type": "conteudo",
+      "description": "Transformação no Pentaho Data Integration que gera Password Digest e Timestamp para autenticação WS-Security (UsernameToken) em chamadas SOAP.",
+      "stack": ["Pentaho PDI", "SOAP", "WS-Security"],
+      "repo": "https://github.com/xjhowxjhow/Pentaho-Data-Integration-SOAP-WS-Security",
+      "demo": "",
+      "video": "",
+      "featured": true
+    },
+    {
+      "id": "excel-template-validator",
+      "name": "Excel Template Validator",
+      "type": "proprio",
+      "description": "Validador e gerenciador de modelos de preenchimento em Excel, com processamento em threads e pandas.",
+      "stack": ["Python", "PySide", "pandas", "Threading"],
+      "repo": "https://github.com/xjhowxjhow/ExcelTemplateValidator",
+      "demo": "",
+      "video": "",
+      "featured": true
+    },
+    {
+      "id": "painel-host",
+      "name": "Painel de senhas",
+      "type": "proprio",
+      "description": "Gestão de filas de atendimento em rede local, com recepção, salas e chamadas de senha em tempo real.",
+      "details": "Sistema de senhas para clínicas e pequenos comércios: a recepção encaminha o cliente, as salas chamam e redirecionam, e o painel mostra a senha por número ou nome em tempo real. Roda na rede local e é acessado pelo navegador de qualquer máquina ou celular, com guichês configuráveis e ordem de chegada garantida.",
+      "stack": ["Node.js", "Express", "Handlebars", "Socket.io"],
+      "repo": "https://github.com/xjhowxjhow/PAINEL_HOST",
+      "demo": "",
+      "video": "",
+      "image": "/images/projects/painel-host.jpg",
+      "gallery": [
+        "/gallery/painel-host/01.webp",
+        "/gallery/painel-host/02.webp",
+        "/gallery/painel-host/03.webp",
+        "/gallery/painel-host/04.webp",
+        "/gallery/painel-host/05.webp",
+        "/gallery/painel-host/06.webp",
+        "/gallery/painel-host/07.webp",
+        "/gallery/painel-host/08.webp"
+      ],
+      "featured": false
+    },
+    {
+      "id": "gui-db-crud-boot",
+      "name": "Painel para bot de NFTs",
+      "type": "freelance",
+      "description": "Interface desktop para um cliente operar seu bot de NFTs na OpenSea: CRUD de coleções, configurações e dashboard.",
+      "details": "Projeto freelance. O cliente precisava enxergar e operar o banco do seu bot: criei uma página de CRUD das coleções-alvo integrada à API da OpenSea, uma página de configurações do bot em JSON e um dashboard com valores ganhos, vendidos e lucro, todos sincronizados em tempo real com o banco.",
+      "stack": ["Python", "PySide2", "SQLite", "OpenSea API"],
+      "repo": "https://github.com/xjhowxjhow/GuiDBCrudBoot-V1",
+      "demo": "",
+      "video": "",
+      "gallery": [
+        "/gallery/gui-db-crud-boot/01.webp",
+        "/gallery/gui-db-crud-boot/02.webp",
+        "/gallery/gui-db-crud-boot/03.webp",
+        "/gallery/gui-db-crud-boot/04.webp",
+        "/gallery/gui-db-crud-boot/05.webp",
+        "/gallery/gui-db-crud-boot/06.webp"
+      ],
+      "featured": false
+    },
+    {
+      "id": "yt-music",
+      "name": "YT Music Online",
+      "type": "estudo",
+      "description": "Player de música com busca online, usado para estudar threads em PySide2.",
+      "details": "Busca e toca músicas a partir do YouTube com yt_dlp e youtubesearchpython. Os áudios ficam em cache temporário e são apagados depois de tocados. O objetivo era dominar threads no PySide2 sem travar a interface.",
+      "stack": ["Python", "PySide2", "yt_dlp"],
+      "repo": "https://github.com/xjhowxjhow/YT-Music-Online---Pyside",
+      "demo": "",
+      "video": "",
+      "image": "/images/projects/yt-music.jpg",
+      "gallery": [
+        "/gallery/yt-music/01.webp",
+        "/gallery/yt-music/02.webp",
+        "/gallery/yt-music/03.webp",
+        "/gallery/yt-music/04.webp"
+      ],
+      "featured": false
+    },
+    {
+      "id": "interface-intel",
+      "name": "Interface Gráfica Intel",
+      "type": "estudo",
+      "description": "Recriação da interface do Centro de Controle de Gráficos da Intel em PySide2.",
+      "details": "Um dos meus primeiros layouts em PySide2: a interface do Centro de Controle de Gráficos da Intel refeita do zero, com funções básicas para alterar a resolução dos monitores.",
+      "stack": ["Python", "PySide2"],
+      "repo": "https://github.com/xjhowxjhow/interface_intel",
+      "demo": "",
+      "video": "",
+      "gallery": [
+        "/gallery/interface-intel/02.webp",
+        "/gallery/interface-intel/03.webp",
+        "/gallery/interface-intel/04.webp"
+      ],
+      "featured": false
+    },
+    {
+      "id": "facebook-dark-mode",
+      "name": "Facebook Dark Mode",
+      "type": "estudo",
+      "description": "Réplica responsiva do feed do Facebook em HTML e CSS puros.",
+      "details": "Treino de HTML e CSS: feed principal, postagens, menus laterais, Reels e lista de contatos online, tudo responsivo e sem frameworks.",
+      "stack": ["HTML", "CSS"],
+      "repo": "https://github.com/xjhowxjhow/FaceBook--DarkMode--Layout",
+      "demo": "https://xjhowxjhow.github.io/FaceBook--DarkMode--Layout/",
+      "video": "",
+      "gallery": [
+        "/gallery/facebook-dark-mode/01.webp",
+        "/gallery/facebook-dark-mode/02.webp",
+        "/gallery/facebook-dark-mode/03.webp",
+        "/gallery/facebook-dark-mode/04.webp"
+      ],
+      "featured": false
+    },
+    {
+      "id": "crud-csharp-ibge",
+      "name": "CRUD C# + SQL Server + API IBGE",
+      "type": "estudo",
+      "description": "CRUD em Windows Forms com widgets gerados a partir do banco e consumo da API do IBGE.",
+      "details": "Estudo de C#: a aplicação monta os componentes da tela dinamicamente a partir das tabelas do SQL Server e consome a API REST do IBGE.",
+      "stack": ["C#", "SQL Server", "REST"],
+      "repo": "https://github.com/xjhowxjhow/CRUD-C-with-SQLServer-API-IBGE",
+      "demo": "",
+      "video": "",
+      "gallery": ["/gallery/crud-csharp-ibge/01.webp", "/gallery/crud-csharp-ibge/02.webp"],
+      "featured": false
+    },
+    {
+      "id": "databricks-learning-plan",
+      "name": "Databricks Data Engineer — notas de estudo",
+      "type": "estudo",
+      "description": "Notas de aprendizado e desenvolvimento em notebooks sobre engenharia de dados com Databricks.",
+      "stack": ["Databricks", "Jupyter"],
+      "repo": "https://github.com/xjhowxjhow/Databricks-Data-Engineer-Learning-Plan",
+      "demo": "",
+      "video": "",
+      "featured": false
+    },
+    {
+      "id": "react-native-bank",
+      "name": "React Native Bank",
+      "type": "estudo",
+      "description": "Primeiro estudo de interface mobile, com autenticação biométrica e layout reorganizável por arrastar e soltar.",
+      "stack": ["React Native", "Expo"],
+      "repo": "https://github.com/xjhowxjhow/ReactNativeExpo-Bank6C",
+      "demo": "",
+      "video": "",
+      "featured": false
+    },
+    {
+      "id": "portfolio",
+      "name": "Este portfólio",
+      "type": "proprio",
+      "description": "Site em React com cena 3D em Three.js, conteúdo em JSON e painel de edição via Git.",
+      "stack": ["React", "Three.js", "Vite", "Decap CMS"],
+      "repo": "https://github.com/xjhowxjhow/ReactNewPortifolio",
+      "demo": "",
+      "video": "",
+      "featured": false
+    }
+  ]
+}

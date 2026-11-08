@@ -1,0 +1,29 @@
+{
+  "login": "xjhowxjhow",
+  "profileUrl": "https://github.com/xjhowxjhow",
+  "snapshot": {
+    "checkedAt": "2026-11-07",
+    "name": "Jhonatan Deni",
+    "bio": "Data Engineer | Azure Databricks | Python | Spark | PL/SQL",
+    "avatar": "https://avatars.githubusercontent.com/u/58306583?v=4",
+    "publicRepos": 14,
+    "followers": 17,
+    "createdAt": "2019-11-28",
+    "repos": [
+      { "name": "HomeAplication1.0", "stars": 119, "forks": 37, "language": "Python", "pushedAt": "2024-03-13", "fork": false },
+      { "name": "Databricks-Data-Engineer-Learning-Plan", "stars": 0, "forks": 0, "language": "Jupyter Notebook", "pushedAt": "2026-09-26", "fork": false },
+      { "name": "ExcelTemplateValidator", "stars": 1, "forks": 0, "language": "Python", "pushedAt": "2024-01-02", "fork": false },
+      { "name": "ReactNewPortifolio", "stars": 0, "forks": 0, "language": "JavaScript", "pushedAt": "2025-10-17", "fork": false },
+      { "name": "Pentaho-Data-Integration-SOAP-WS-Security", "stars": 1, "forks": 0, "language": null, "pushedAt": "2023-02-17", "fork": false },
+      { "name": "databricks_azure", "stars": 0, "forks": 0, "language": "Python", "pushedAt": "2024-02-28", "fork": false },
+      { "name": "YT-Music-Online---Pyside", "stars": 4, "forks": 0, "language": "Python", "pushedAt": "2023-09-10", "fork": false },
+      { "name": "PAINEL_HOST", "stars": 0, "forks": 0, "language": "JavaScript", "pushedAt": "2023-09-08", "fork": false },
+      { "name": "ReactNativeExpo-Bank6C", "stars": 0, "forks": 0, "language": "JavaScript", "pushedAt": "2023-07-08", "fork": false },
+      { "name": "FaceBook--DarkMode--Layout", "stars": 2, "forks": 0, "language": "HTML", "pushedAt": "2023-06-26", "fork": false },
+      { "name": "site-portifolio", "stars": 2, "forks": 0, "language": "HTML", "pushedAt": "2023-02-17", "fork": false },
+      { "name": "yt-search", "stars": 0, "forks": 0, "language": null, "pushedAt": "2023-01-18", "fork": true },
+      { "name": "CRUD-C-with-SQLServer-API-IBGE", "stars": 1, "forks": 0, "language": "C#", "pushedAt": "2022-10-12", "fork": false },
+      { "name": "interface_intel", "stars": 1, "forks": 1, "language": "Python", "pushedAt": "2022-10-22", "fork": false }
+    ]
+  }
+}

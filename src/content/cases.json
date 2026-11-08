@@ -1,0 +1,172 @@
+{
+  "items": [
+    {
+      "id": "integracoes-erp",
+      "title": "Integrações entre ERPs, HCMs e plataforma de dados",
+      "kicker": "Pipeline de integração",
+      "diagram": "pipeline",
+      "status": "continuo",
+      "statusLabel": "Atuação contínua",
+      "problem": "Cada sistema tem seu próprio contrato, protocolo e autenticação, enquanto o destino espera dados consistentes e sem duplicidade.",
+      "contribution": "Construo e mantenho integrações de entrada e saída, da extração à carga, respeitando o contrato de cada sistema.",
+      "architecture": [
+        "Configuração e credenciais separadas por ambiente",
+        "Extração por APIs ou arquivos",
+        "Transformação com regras de negócio",
+        "Comparação de estado em Delta Lake",
+        "Carga em lotes com validação da resposta"
+      ],
+      "decisions": [
+        "Separar configuração da lógica para reutilizar o fluxo entre ambientes.",
+        "Enviar apenas o que mudou desde a última carga bem-sucedida.",
+        "Isolar regras específicas do comportamento compartilhado."
+      ],
+      "quality": [
+        "Logs e auditoria por execução",
+        "Estado atualizado somente após carga bem-sucedida"
+      ],
+      "stack": ["Azure Databricks", "Python", "PySpark", "Delta Lake", "SQL", "REST", "SOAP", "OData", "SFTP"],
+      "evidence": [],
+      "result": "Padrão aplicado a integrações com diferentes ERPs e HCMs.",
+      "links": []
+    },
+    {
+      "id": "observabilidade",
+      "title": "Observabilidade e auditoria como pilar da plataforma",
+      "kicker": "Pilar de operação",
+      "diagram": "observability",
+      "status": "continuo",
+      "statusLabel": "Pilar contínuo",
+      "problem": "Sem visibilidade, uma falha de integração só aparece quando alguém reclama — e ninguém consegue provar o que foi enviado, quando e com qual resposta.",
+      "contribution": "Instrumento pipelines, jobs e APIs com logs estruturados, métricas e trilha de auditoria por execução, centralizados no Datadog com dashboards, monitores e alertas.",
+      "architecture": [
+        "Logs estruturados correlacionados por execução e por lote",
+        "Métricas de volume, duração, erro e latência",
+        "Dashboards e monitores no Datadog",
+        "Trilha de auditoria consultável em Delta Lake",
+        "Reconciliação entre origem e destino"
+      ],
+      "decisions": [
+        "Todo pipeline nasce com log, métrica e auditoria — não é etapa posterior.",
+        "Correlacionar eventos por execução para investigar em minutos, não em horas.",
+        "Alertar sobre sintomas (atraso, volume fora do padrão, erro) antes da falha total."
+      ],
+      "quality": ["Histórico de execuções auditável", "Alertas antes do incidente"],
+      "stack": ["Datadog", "Python", "Azure Databricks", "Delta Lake", "SQL"],
+      "evidence": [],
+      "result": "Falhas detectadas cedo e explicadas com rastro completo, do dado de origem à resposta do destino.",
+      "links": []
+    },
+    {
+      "id": "bi-corporativo",
+      "title": "BI corporativo sobre o lakehouse",
+      "kicker": "Plataforma analítica",
+      "diagram": "bi",
+      "status": "evolucao",
+      "statusLabel": "Em implantação",
+      "problem": "Relatórios espalhados, consultas pesadas direto no banco transacional e indicadores com definições diferentes entre áreas.",
+      "contribution": "Construo a esteira que leva os dados do banco transacional ao Databricks e dali ao Power BI, com camadas medallion, modelos semânticos únicos e IA apoiando análise e documentação.",
+      "architecture": [
+        "Extração incremental do Oracle sem pesar o transacional",
+        "Camadas bronze, prata e ouro em Delta Lake",
+        "Modelos semânticos únicos para todas as áreas",
+        "Relatórios Power BI por área de negócio",
+        "IA aplicada à documentação e à análise"
+      ],
+      "decisions": [
+        "Tirar a carga analítica do banco transacional.",
+        "Uma definição por indicador, usada por todas as áreas.",
+        "Observabilidade e auditoria desde a primeira carga."
+      ],
+      "quality": ["Reconciliação entre Oracle e lakehouse", "Monitoramento da atualização dos modelos"],
+      "stack": ["Oracle", "Azure Databricks", "Delta Lake", "PySpark", "SQL", "Power BI"],
+      "evidence": [],
+      "result": "Indicadores consistentes entre as áreas, sem consultas pesadas no banco transacional.",
+      "links": []
+    },
+    {
+      "id": "biblioteca-python",
+      "title": "Biblioteca Python reutilizável para integrações",
+      "kicker": "Componentes compartilhados",
+      "diagram": "framework",
+      "status": "continuo",
+      "statusLabel": "Evolução contínua",
+      "problem": "Integrações diferentes repetiam conectores, autenticação e controle de carga, com comportamentos ligeiramente diferentes entre si.",
+      "contribution": "Contribuo com componentes reutilizáveis de conexão, transformação e carga, acompanhados de testes automatizados.",
+      "architecture": [
+        "Conectores para APIs e arquivos",
+        "Utilitários de transformação e mapeamento",
+        "Upsert e controle de estado em Delta Lake",
+        "Distribuição como pacote para o Databricks"
+      ],
+      "decisions": [
+        "Centralizar comportamento repetido em vez de copiá-lo entre projetos.",
+        "Usar SQL parametrizado em vez de montar consultas com texto.",
+        "Acompanhar cada mudança com cenários de teste locais."
+      ],
+      "quality": [
+        "Testes locais com Spark/Delta e mocks de serviços"
+      ],
+      "stack": ["Python", "PySpark", "Delta Lake", "SQL"],
+      "evidence": [],
+      "result": "Componentes compartilhados entre integrações, validados com testes locais.",
+      "links": []
+    },
+    {
+      "id": "automacao-oracle",
+      "title": "Automação de operações em bancos Oracle",
+      "kicker": "Automação de operações",
+      "diagram": "oracle",
+      "status": "desenvolvimento",
+      "statusLabel": "Em construção",
+      "problem": "Operações de restauração de bancos dependiam de passos manuais, com risco de erro e pouca rastreabilidade.",
+      "contribution": "Participo da construção de um fluxo automatizado, com verificações prévias, aprovação humana e auditoria.",
+      "architecture": [
+        "Verificações antes de executar",
+        "Aprovação humana",
+        "Execução remota com Oracle Data Pump",
+        "Auditoria da execução"
+      ],
+      "decisions": [
+        "Manter uma pessoa aprovando antes de qualquer alteração no banco.",
+        "Impedir execuções simultâneas sobre o mesmo alvo."
+      ],
+      "quality": [
+        "Registro de eventos por execução"
+      ],
+      "stack": ["Oracle", "Data Pump", "SSH", "Azure"],
+      "evidence": [],
+      "result": "Execuções validadas em ambiente de homologação, com trilha de auditoria completa.",
+      "links": []
+    },
+    {
+      "id": "ia-engenharia",
+      "title": "IA aplicada à engenharia: skills, agentes e MCP",
+      "kicker": "Agentes conectados a ferramentas",
+      "diagram": "agents",
+      "status": "evolucao",
+      "statusLabel": "Em evolução",
+      "context": "Hub de IA para a equipe de engenharia de dados e integrações, compartilhado entre Codex e GitHub Copilot a partir de uma única fonte versionada.",
+      "problem": "Conhecimento e procedimentos técnicos ficavam espalhados entre pessoas, documentos e ferramentas, e tarefas recorrentes dependiam de passos manuais.",
+      "contribution": "Criei um hub de skills e agentes especializados, em constante expansão: um painel central entende o pedido em linguagem natural e direciona para o procedimento certo.",
+      "architecture": [
+        "Fonte única versionada, distribuída por vínculo de diretório para os dois hosts",
+        "Roteamento de pedidos em linguagem natural para a skill ou agente adequado",
+        "Análise de ambientes Databricks, repair apenas das tasks com falha e operações em massa em jobs",
+        "Scaffolding de projetos, migração assistida de Pentaho e revisão de código em lote",
+        "MCP com Azure DevOps, Boards e Wiki, com fallback para CLI",
+        "Geração de documentação técnica em HTML, DOCX e apresentações"
+      ],
+      "decisions": [
+        "Transformar procedimentos recorrentes em instruções explícitas antes de automatizá-los.",
+        "Guardrails fixos: nenhuma deleção, pull requests sempre em rascunho e confirmação antes de qualquer escrita.",
+        "Relatórios são recomendações; o engenheiro decide e aprova."
+      ],
+      "quality": ["Testes de setup e de regras críticas", "Logs de auditoria em JSONL por operação", "Registro de decisões com escopo e evidência"],
+      "stack": ["GitHub Copilot", "Codex", "MCP", "Azure DevOps", "Databricks", "Python"],
+      "evidence": [],
+      "result": "Procedimentos recorrentes viraram ferramentas reutilizáveis pela equipe. Não envolve treinamento de modelos próprios.",
+      "links": []
+    }
+  ]
+}

@@ -1,0 +1,336 @@
+# Painel de conteúdo (Sveltia CMS, compatível com Decap). Cada alteração vira um commit em main e a Netlify publica de novo.
+# Online: https://jhonatandeni.netlify.app/admin/ (login com GitHub via OAuth da Netlify).
+# Local: abra http://localhost:5173/admin/ no Chrome/Edge e use "Trabalhar com repositório local" — sem servidor extra.
+backend:
+  name: github
+  repo: xjhowxjhow/ReactNewPortifolio
+  branch: main
+  commit_messages:
+    create: 'conteudo: cria {{slug}}'
+    update: 'conteudo: atualiza {{slug}}'
+    delete: 'conteudo: remove {{slug}}'
+    uploadMedia: 'conteudo: envia {{path}}'
+    deleteMedia: 'conteudo: remove {{path}}'
+
+site_url: https://jhonatandeni.netlify.app
+display_url: https://jhonatandeni.netlify.app
+logo:
+  src: /favicon.svg
+
+media_folder: public/uploads
+public_folder: /uploads
+
+# Imagens enviadas pelo painel viram WebP leve automaticamente, no próprio navegador.
+media_libraries:
+  all:
+    slugify_filename: true
+    transformations:
+      raster_image:
+        format: webp
+        quality: 82
+        width: 1600
+        height: 1600
+      svg:
+        optimize: true
+
+collections:
+  - name: abertura
+    label: Abertura e perfil
+    icon: person
+    description: Nome, apresentação, anos de carreira, texto do Sobre e princípios.
+    editor: { preview: false }
+    files:
+      - name: profile
+        label: Perfil
+        file: src/content/profile.json
+        fields:
+          - { name: name, label: Nome, widget: string }
+          - { name: headline, label: Posicionamento, widget: string, hint: Aparece abaixo do nome na abertura. }
+          - { name: tagline, label: Frase de abertura, widget: string }
+          - { name: summary, label: Subtítulo, widget: text }
+          - { name: location, label: Localização, widget: string }
+          - { name: photo, label: Foto, widget: image }
+          - { name: photoAlt, label: Texto alternativo da foto, widget: string }
+          - name: careerStart
+            label: Início de carreira
+            hint: Os "+N anos" da abertura são calculados com o ano atual.
+            widget: object
+            fields:
+              - { name: it, label: Ano de início em TI, widget: number, value_type: int }
+              - { name: data, label: Ano de início em engenharia de dados, widget: number, value_type: int }
+          - { name: about, label: Sobre (parágrafos), widget: list, field: { name: paragraph, label: Parágrafo, widget: text } }
+          - name: principles
+            label: Como trabalho
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { name: title, label: Título, widget: string }
+              - { name: text, label: Texto, widget: text }
+          - name: links
+            label: Links
+            widget: object
+            fields:
+              - { name: linkedin, label: LinkedIn, widget: string }
+              - { name: github, label: GitHub, widget: string }
+              - { name: email, label: E-mail, widget: string }
+          - { name: siteUrl, label: URL do site, widget: string }
+          - { name: updatedAt, label: Conteúdo revisado em (AAAA-MM), widget: string, pattern: ['^\d{4}-\d{2}$', 'Use AAAA-MM'], hint: Mostrado no rodapé. }
+
+  - name: arquitetura
+    label: Arquitetura 3D
+    icon: deployed_code
+    description: As etapas do explorador com zoom na cena 3D.
+    editor: { preview: false }
+    files:
+      - name: architecture
+        label: Arquitetura em prática
+        file: src/content/architecture.json
+        fields:
+          - { name: title, label: Título, widget: string }
+          - { name: lead, label: Introdução, widget: text }
+          - { name: note, label: Nota (opcional), widget: text, required: false }
+          - name: steps
+            label: Etapas
+            hint: Exatamente 6, uma para cada mergulho da câmera na cena 3D, nesta ordem.
+            widget: list
+            min: 6
+            max: 6
+            summary: '{{fields.code}} · {{fields.title}}'
+            fields:
+              - { name: code, label: Código, widget: string }
+              - { name: title, label: Título, widget: string }
+              - { name: zoom, label: Alvo do zoom, widget: string }
+              - { name: text, label: Texto, widget: text }
+              - name: breakdown
+                label: Quebra da etapa
+                widget: list
+                summary: '{{fields.label}}'
+                fields:
+                  - { name: label, label: Passo, widget: string }
+                  - { name: text, label: Texto, widget: text }
+              - name: tools
+                label: Ferramentas a fundo
+                widget: list
+                summary: '{{fields.name}} — {{fields.role}}'
+                fields:
+                  - { name: name, label: Ferramenta, widget: string }
+                  - { name: role, label: Papel, widget: string }
+                  - { name: text, label: Como uso, widget: text }
+              - { name: decision, label: Decisão de arquitetura, widget: text }
+
+  - name: integracoes
+    label: Sistemas integrados
+    icon: hub
+    description: Plataformas do quadro de integrações, protocolos e ferramentas de orquestração.
+    editor: { preview: false }
+    files:
+      - name: integrations
+        label: Integrações
+        file: src/content/integrations.json
+        fields:
+          - name: systems
+            label: Sistemas
+            widget: list
+            min: 1
+            summary: '{{fields.name}} · {{fields.category}}'
+            fields:
+              - { name: id, label: ID, widget: string, hint: 'Sem espaços nem acentos, ex.: sap-ecc.' }
+              - { name: name, label: Nome, widget: string, hint: Use o nome oficial para o logo aparecer. }
+              - { name: category, label: Categoria, widget: string }
+              - { name: summary, label: Resumo, widget: text }
+              - { name: work, label: O que faço, widget: list, field: { name: item, label: Item, widget: string } }
+              - { name: channels, label: Canais, widget: list, field: { name: item, label: Canal, widget: string } }
+              - { name: evidence, label: Evidência, widget: hidden, default: documentado }
+              - { name: note, label: Observação, widget: string, required: false }
+          - name: protocols
+            label: Protocolos
+            widget: list
+            summary: '{{fields.name}}'
+            fields:
+              - { name: name, label: Nome, widget: string }
+              - { name: text, label: Texto, widget: text }
+          - name: orchestration
+            label: Orquestração, ingestão e observabilidade
+            widget: list
+            summary: '{{fields.name}}'
+            fields:
+              - { name: name, label: Nome, widget: string }
+              - { name: text, label: Texto, widget: text }
+
+  - name: projetos
+    label: Tipos de projeto
+    icon: account_tree
+    description: Os casos profissionais com problema, decisão, diagrama e resultado.
+    editor: { preview: false }
+    files:
+      - name: cases
+        label: Casos
+        file: src/content/cases.json
+        fields:
+          - name: items
+            label: Casos
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { name: id, label: ID, widget: string }
+              - { name: title, label: Título, widget: string }
+              - { name: kicker, label: Rótulo, widget: string }
+              - name: diagram
+                label: Diagrama
+                widget: select
+                options:
+                  - { label: Pipeline de integração, value: pipeline }
+                  - { label: Biblioteca compartilhada, value: framework }
+                  - { label: Automação Oracle, value: oracle }
+                  - { label: Agentes de IA, value: agents }
+                  - { label: BI corporativo, value: bi }
+                  - { label: Observabilidade, value: observability }
+              - { name: status, label: Situação, widget: hidden, default: continuo }
+              - { name: statusLabel, label: Texto da situação, widget: hidden, default: '' }
+              - { name: context, label: Contexto (opcional), widget: text, required: false }
+              - { name: problem, label: Problema, widget: text }
+              - { name: contribution, label: Minha contribuição, widget: text }
+              - { name: architecture, label: Arquitetura (passos), widget: list, field: { name: item, label: Passo, widget: string } }
+              - { name: decisions, label: Decisões técnicas, widget: list, field: { name: item, label: Decisão, widget: string } }
+              - { name: quality, label: Qualidade e operação, widget: list, required: false, field: { name: item, label: Item, widget: string } }
+              - { name: stack, label: Tecnologias, widget: list, field: { name: item, label: Tecnologia, widget: string } }
+              - { name: evidence, label: Evidências, widget: list, required: false, field: { name: item, label: Evidência, widget: string } }
+              - { name: result, label: Resultado, widget: text }
+              - name: links
+                label: Links públicos
+                widget: list
+                required: false
+                fields:
+                  - { name: label, label: Texto, widget: string }
+                  - { name: url, label: URL, widget: string }
+
+  - name: galeria
+    label: Galeria e GitHub
+    icon: photo_library
+    description: Repositórios, capturas de tela da galeria, demonstrações e vídeos.
+    editor: { preview: false }
+    files:
+      - name: projects
+        label: Projetos
+        file: src/content/projects.json
+        fields:
+          - { name: checkedAt, label: Revisado em (AAAA-MM-DD), widget: string }
+          - name: items
+            label: Projetos
+            widget: list
+            summary: '{{fields.name}} · {{fields.type}}'
+            fields:
+              - { name: id, label: ID, widget: string }
+              - { name: name, label: Nome, widget: string }
+              - name: type
+                label: Tipo
+                widget: select
+                options:
+                  - { label: Projeto próprio, value: proprio }
+                  - { label: Freelance, value: freelance }
+                  - { label: Estudo, value: estudo }
+                  - { label: Conteúdo técnico, value: conteudo }
+              - { name: description, label: Descrição curta, widget: text }
+              - { name: details, label: Descrição longa (galeria), widget: text, required: false }
+              - { name: stack, label: Tecnologias, widget: list, field: { name: item, label: Tecnologia, widget: string } }
+              - { name: repo, label: Repositório no GitHub, widget: string, pattern: ['^https://github\.com/', 'Use um link https://github.com/...'] }
+              - { name: demo, label: Demonstração, widget: string, required: false }
+              - { name: video, label: Vídeo, widget: string, required: false }
+              - { name: image, label: Imagem de capa (16:9), widget: image, required: false }
+              - name: gallery
+                label: Galeria (capturas de tela)
+                hint: Projetos com capturas aparecem na galeria em destaque. Arraste para reordenar.
+                widget: list
+                required: false
+                field: { name: shot, label: Captura, widget: image }
+              - { name: featured, label: Destaque na lista de repositórios, widget: boolean, default: false }
+
+  - name: competencias
+    label: Competências
+    icon: stacks
+    description: Camadas de competências e conhecimentos complementares.
+    editor: { preview: false }
+    files:
+      - name: skills
+        label: Competências
+        file: src/content/skills.json
+        fields:
+          - name: layers
+            label: Camadas
+            hint: A primeira camada da lista é a base da pilha e abre selecionada.
+            widget: list
+            summary: '{{fields.code}} · {{fields.name}}'
+            fields:
+              - { name: id, label: ID, widget: string }
+              - { name: code, label: Código, widget: string }
+              - { name: name, label: Nome, widget: string }
+              - { name: summary, label: Resumo, widget: text }
+              - name: items
+                label: Itens
+                widget: list
+                summary: '{{fields.name}}'
+                fields:
+                  - { name: name, label: Tecnologia, widget: string }
+                  - { name: use, label: Aplicação concreta, widget: text }
+                  - { name: evidence, label: Evidência, widget: hidden, default: documentado }
+          - { name: complementary, label: Conhecimentos complementares, widget: list, field: { name: item, label: Item, widget: string } }
+
+  - name: credenciais
+    label: Credenciais
+    icon: workspace_premium
+    description: Acreditações, certificações, trilhas e formação acadêmica.
+    editor: { preview: false }
+    files:
+      - name: credentials
+        label: Credenciais
+        file: src/content/credentials.json
+        fields:
+          - name: items
+            label: Credenciais
+            widget: list
+            summary: '{{fields.name}} — {{fields.issuer}}'
+            fields:
+              - { name: id, label: ID, widget: string }
+              - { name: name, label: Nome oficial, widget: string }
+              - { name: issuer, label: Emissor, widget: string }
+              - name: type
+                label: Tipo
+                widget: select
+                options:
+                  - { label: Certificação, value: certificacao }
+                  - { label: Acreditação, value: acreditacao }
+                  - { label: Formação / curso, value: formacao }
+                  - { label: Formação acadêmica, value: academica }
+              - { name: issuedAt, label: Conclusão (AAAA-MM-DD), widget: string, required: false }
+              - { name: validUntil, label: Válida até (AAAA-MM), widget: string, required: false }
+              - { name: verifyUrl, label: Link de verificação, widget: string, required: false, hint: 'Não use links que exponham CPF, RG ou data de nascimento.' }
+              - { name: badgeImage, label: Imagem oficial do badge, widget: image, required: false }
+              - { name: details, label: Detalhes, widget: text, required: false }
+              - { name: hours, label: Carga horária, widget: string, required: false }
+              - { name: topics, label: Competências, widget: list, required: false, field: { name: item, label: Competência, widget: string } }
+              - { name: courses, label: Cursos da trilha, widget: list, required: false, field: { name: item, label: Curso, widget: string } }
+              - { name: visible, label: Exibir no site, widget: boolean, default: true }
+
+  - name: trajetoria
+    label: Trajetória
+    icon: work_history
+    description: Cargo atual, destaques e posições anteriores.
+    editor: { preview: false }
+    files:
+      - name: experience
+        label: Experiência
+        file: src/content/experience.json
+        fields:
+          - name: items
+            label: Posições
+            hint: A primeira posição da lista é o cargo atual.
+            widget: list
+            summary: '{{fields.role}} · {{fields.company}}'
+            fields:
+              - { name: id, label: ID, widget: string }
+              - { name: company, label: Empresa, widget: string }
+              - { name: role, label: Cargo, widget: string }
+              - { name: start, label: Início (AAAA-MM), widget: string, pattern: ['^\d{4}-\d{2}$', 'Use AAAA-MM'] }
+              - { name: end, label: 'Fim (AAAA-MM, vazio = atual)', widget: string, required: false }
+              - { name: summary, label: Resumo, widget: text }
+              - { name: highlights, label: Destaques, widget: list, required: false, field: { name: item, label: Item, widget: string } }

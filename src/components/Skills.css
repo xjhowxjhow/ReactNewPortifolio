@@ -1,0 +1,249 @@
+.evidence-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  margin: 8px 0 0;
+}
+
+.evidence-legend div {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.evidence-legend dd {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.skills__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: start;
+}
+
+/* Layer stack: buttons over isometric plates. */
+.stack {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  perspective: 1400px;
+}
+
+.stack__layer {
+  --c: var(--cyan);
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-height: 74px;
+  padding: 0 22px;
+  border: 0;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  isolation: isolate;
+}
+
+.stack__layer--ia {
+  --c: var(--violet);
+}
+
+.stack__layer--observabilidade {
+  --c: var(--amber);
+}
+
+.stack__layer--software,
+.stack__layer--integracoes {
+  --c: var(--blue);
+}
+
+.stack__plate {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background:
+    linear-gradient(100deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0) 40%),
+    #0f1824;
+  transform: rotateX(28deg) translateZ(0);
+  transform-origin: center bottom;
+  box-shadow:
+    0 10px 0 -6px rgba(0, 0, 0, 0.45),
+    0 1px 0 rgba(255, 255, 255, 0.04) inset;
+  transition:
+    transform var(--mid) var(--ease-out),
+    border-color var(--mid),
+    box-shadow var(--mid),
+    background-color var(--mid);
+}
+
+.stack__plate::after {
+  /* Thickness edge below each plate. */
+  content: '';
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: -7px;
+  height: 7px;
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(180deg, #0b121b, #070b10);
+  border: 1px solid var(--line);
+  border-top: 0;
+}
+
+.stack__layer:hover .stack__plate {
+  transform: rotateX(18deg) translateY(-3px);
+  border-color: var(--line-strong);
+}
+
+.stack__layer[aria-pressed='true'] .stack__plate {
+  transform: rotateX(0deg) translateX(10px);
+  border-color: color-mix(in srgb, var(--c) 65%, transparent);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--c) 25%, transparent),
+    0 24px 50px -24px color-mix(in srgb, var(--c) 70%, transparent);
+}
+
+.stack__layer[aria-pressed='true'] {
+  transform: translateX(10px);
+  transition: transform var(--mid) var(--ease-out);
+}
+
+.stack__layer[aria-pressed='true'] .stack__plate {
+  transform: rotateX(0deg);
+}
+
+.stack__code {
+  font-size: 0.75rem;
+  color: var(--c);
+}
+
+.stack__name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.stack__count {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+/* Panel */
+.skill-panel {
+  --c: var(--cyan);
+  display: grid;
+  gap: 24px;
+  padding: clamp(22px, 3vw, 34px);
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) + 6px);
+  background: var(--surface);
+  min-height: 100%;
+  view-transition-name: skill-panel;
+}
+
+.skill-panel--ia {
+  --c: var(--violet);
+}
+
+.skill-panel--observabilidade {
+  --c: var(--amber);
+}
+
+.skill-panel--software,
+.skill-panel--integracoes {
+  --c: var(--blue);
+}
+
+.skill-panel__head {
+  display: grid;
+  gap: 8px;
+  animation: panel-in 420ms var(--ease-out);
+}
+
+.skill-panel__head .mono {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c);
+}
+
+.skill-panel__head h3 {
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  font-weight: 500;
+}
+
+.skill-items {
+  list-style: none;
+  display: grid;
+}
+
+.skill-items li {
+  display: grid;
+  gap: 6px;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  animation: panel-in 480ms var(--ease-out) both;
+  animation-delay: calc(var(--i) * 50ms);
+}
+
+.skill-items__top {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+}
+
+.skill-items h4 {
+  font-size: 1.05rem;
+}
+
+.skill-items p {
+  padding-left: 34px;
+  font-size: 0.93rem;
+  color: var(--text-2);
+}
+
+.complementary {
+  display: grid;
+  gap: 10px;
+  margin-top: clamp(40px, 6vw, 72px);
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.complementary h3 {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.complementary p {
+  font-size: 0.9rem;
+  color: var(--text-2);
+}
+
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@media (max-width: 900px) {
+  .skills__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .stack__layer[aria-pressed='true'] {
+    transform: none;
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "systems": [
+    {
+      "id": "adp",
+      "name": "ADP",
+      "category": "RH e folha",
+      "summary": "Integrações de entrada e saída entre o ADP e outras plataformas, com mapeamento de layouts e cargas históricas.",
+      "work": [
+        "Mapeamento e normalização de layouts",
+        "Cargas completas, incrementais e históricas"
+      ],
+      "channels": ["Arquivos via SFTP", "APIs"],
+      "evidence": "documentado",
+      "note": ""
+    },
+    {
+      "id": "datasul",
+      "name": "TOTVS Datasul",
+      "category": "ERP · Progress",
+      "summary": "Consumo de APIs do Datasul em Databricks, com fontes Progress organizadas e transformação para o modelo de destino.",
+      "work": [
+        "APIs REST paginadas publicadas no PASOE",
+        "Organização de fontes Progress e de-para entre modelos"
+      ],
+      "channels": ["REST", "Progress"],
+      "evidence": "documentado",
+      "note": ""
+    },
+    {
+      "id": "sap-ecc",
+      "name": "SAP ECC / S/4HANA",
+      "category": "ERP",
+      "summary": "Integração de dados do SAP com a plataforma de dados e a transformação para os sistemas de destino.",
+      "work": [
+        "Contratos de dados entre SAP e o ambiente de integração",
+        "Transformação para o modelo de destino"
+      ],
+      "channels": ["RFC", "APIs"],
+      "evidence": "experiencia",
+      "note": ""
+    },
+    {
+      "id": "successfactors",
+      "name": "SAP SuccessFactors",
+      "category": "HCM em nuvem",
+      "summary": "Consumo de serviços OData com autenticação corporativa e sincronização de dados com outras plataformas.",
+      "work": [
+        "Autenticação OAuth/SAML com certificados",
+        "Extração paginada com filtros"
+      ],
+      "channels": ["OData"],
+      "evidence": "documentado",
+      "note": ""
+    },
+    {
+      "id": "senior",
+      "name": "Senior",
+      "category": "HCM e gestão de pessoas",
+      "summary": "Integrações com os web services da Senior, tanto SOAP quanto REST.",
+      "work": [
+        "Consumo e envio de dados via web services",
+        "Tratamento de retornos e erros por operação"
+      ],
+      "channels": ["SOAP", "REST"],
+      "evidence": "documentado",
+      "note": ""
+    },
+    {
+      "id": "oracle-hcm",
+      "name": "Oracle HCM",
+      "category": "HCM em nuvem",
+      "summary": "Integrações de entrada e saída entre o Oracle HCM e outras plataformas.",
+      "work": [
+        "Fluxos de entrada e saída de dados",
+        "Manutenção de integrações existentes"
+      ],
+      "channels": ["APIs"],
+      "evidence": "experiencia",
+      "note": ""
+    }
+  ],
+  "protocols": [
+    {
+      "name": "Progress",
+      "text": "Fontes e APIs no ecossistema TOTVS Datasul."
+    },
+    {
+      "name": "OData",
+      "text": "Consultas com filtros, paginação e endereçamento de entidades."
+    },
+    {
+      "name": "REST",
+      "text": "Consumo e carga em lotes, com concorrência, timeout e validação de resposta."
+    },
+    {
+      "name": "SOAP",
+      "text": "Web services corporativos, incluindo autenticação WS-Security."
+    },
+    {
+      "name": "SFTP",
+      "text": "Troca de arquivos com fornecedores, com autenticação por chave."
+    }
+  ],
+  "orchestration": [
+    { "name": "Databricks Workflows", "text": "Jobs com tarefas dependentes, parâmetros por ambiente e reexecução só do que falhou." },
+    { "name": "Apache Airflow", "text": "DAGs agendadas, inclusive com Celery e Kubernetes." },
+    { "name": "Azure Data Factory", "text": "Pipelines de cópia e orquestração nativos da Azure." },
+    { "name": "Microsoft Fabric", "text": "Lakehouse, pipelines e relatórios numa plataforma unificada." },
+    { "name": "Apache NiFi", "text": "Fluxos de ingestão contínua com roteamento e rastreio de proveniência." },
+    { "name": "Apache Hop", "text": "Pipelines visuais de ETL, sucessor natural do Pentaho." },
+    { "name": "Pentaho", "text": "Transformações mantidas e migradas para Databricks." },
+    { "name": "Datadog", "text": "Cada integração monitorada com logs, métricas e alertas." }
+  ]
+}
