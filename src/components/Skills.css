@@ -70,7 +70,7 @@
   border-radius: 12px;
   background:
     linear-gradient(100deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0) 40%),
-    #0f1824;
+    var(--panel);
   transform: rotateX(28deg) translateZ(0);
   transform-origin: center bottom;
   box-shadow:
@@ -92,7 +92,7 @@
   bottom: -7px;
   height: 7px;
   border-radius: 0 0 10px 10px;
-  background: linear-gradient(180deg, #0b121b, #070b10);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel-deep));
   border: 1px solid var(--line);
   border-top: 0;
 }

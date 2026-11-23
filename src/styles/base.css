@@ -16,6 +16,21 @@
   --violet: #b4a2ff;
   --violet-soft: rgba(180, 162, 255, 0.14);
   --amber: #f2c46d;
+  --green: #5fd39a;
+  --coral: #ff8a65;
+  --pink: #ff7eb6;
+
+  /* Surfaces that were hard-coded dark; the light theme below swaps them. */
+  --bg-rgb: 9, 13, 19;
+  --panel: #0f1824;
+  --panel-2: #0b1119;
+  --panel-deep: #05080c;
+  --on-accent: #0a0f16;
+  --brand-ink: #e8eef6;
+  --grid-line: rgba(148, 178, 214, 0.035);
+  --hero-grad: linear-gradient(180deg, #ffffff 30%, #a9bbd0);
+  --shadow: rgba(0, 0, 0, 0.9);
+  --page-mist: none;
 
   --font-display: 'Space Grotesk Variable', 'Segoe UI', system-ui, sans-serif;
   --font-body: 'Inter Variable', 'Segoe UI', system-ui, sans-serif;
@@ -33,6 +48,47 @@
   --slow: 700ms;
 
   color-scheme: dark;
+}
+
+/* Light theme follows the operating system: blue mist, corporate contrast. */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #eef3f9;
+    --bg-2: #e6edf6;
+    --bg-3: #dce6f2;
+    --bg-rgb: 238, 243, 249;
+    --surface: rgba(255, 255, 255, 0.72);
+    --surface-2: rgba(255, 255, 255, 0.9);
+    --line: rgba(28, 58, 105, 0.13);
+    --line-strong: rgba(28, 58, 105, 0.24);
+    --text: #0e1b2d;
+    --text-2: #3b4e67;
+    --muted: #62748b;
+    --cyan: #0a7fa0;
+    --cyan-soft: rgba(10, 127, 160, 0.12);
+    --blue: #2457d6;
+    --blue-soft: rgba(36, 87, 214, 0.12);
+    --violet: #6a4fd6;
+    --violet-soft: rgba(106, 79, 214, 0.12);
+    --amber: #a86d12;
+    --green: #1b8f5a;
+    --coral: #c94f38;
+    --pink: #b83b78;
+    --panel: #ffffff;
+    --panel-2: #f2f6fb;
+    --panel-deep: #dfe7f1;
+    --on-accent: #ffffff;
+    --brand-ink: #1b2738;
+    --grid-line: rgba(36, 87, 214, 0.06);
+    --hero-grad: linear-gradient(180deg, #0e1b2d 30%, #2f5aa8);
+    --shadow: rgba(30, 60, 110, 0.22);
+    --page-mist:
+      radial-gradient(1100px 620px at 85% -8%, rgba(36, 87, 214, 0.14), transparent 62%),
+      radial-gradient(900px 560px at -5% 28%, rgba(10, 127, 160, 0.1), transparent 60%),
+      radial-gradient(1000px 700px at 50% 110%, rgba(36, 87, 214, 0.08), transparent 60%);
+
+    color-scheme: light;
+  }
 }
 
 *,
@@ -64,7 +120,8 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg);
+  background: var(--page-mist), var(--bg);
+  background-attachment: fixed;
   color: var(--text);
   font-family: var(--font-body);
   font-size: 1rem;
@@ -81,8 +138,8 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(148, 178, 214, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(148, 178, 214, 0.035) 1px, transparent 1px);
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size: 64px 64px;
   mask-image: radial-gradient(ellipse at 50% 0%, #000 0%, transparent 70%);
   z-index: -1;
@@ -130,7 +187,7 @@ ol {
 
 ::selection {
   background: rgba(79, 216, 235, 0.3);
-  color: #fff;
+  color: var(--text);
 }
 
 :focus-visible {
@@ -163,7 +220,7 @@ ol {
   z-index: 100;
   padding: 10px 16px;
   background: var(--cyan);
-  color: #04121a;
+  color: var(--on-accent);
   font-weight: 600;
   border-radius: 8px;
   text-decoration: none;
@@ -302,6 +359,30 @@ ol {
     0 0 0 1px rgba(79, 216, 235, 0.5),
     0 14px 36px -10px rgba(79, 216, 235, 0.7),
     inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+@media (prefers-color-scheme: light) {
+  .btn:hover {
+    border-color: rgba(36, 87, 214, 0.45);
+    background: rgba(36, 87, 214, 0.06);
+  }
+
+  .btn--primary {
+    --btn-bg: linear-gradient(180deg, #2f66e6, #2152c6);
+    color: #ffffff;
+    box-shadow:
+      0 0 0 1px rgba(36, 87, 214, 0.35),
+      0 10px 26px -12px rgba(36, 87, 214, 0.6),
+      inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  }
+
+  .btn--primary:hover {
+    background: linear-gradient(180deg, #3b72f0, #2457d6);
+    box-shadow:
+      0 0 0 1px rgba(36, 87, 214, 0.5),
+      0 14px 30px -12px rgba(36, 87, 214, 0.7),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
 }
 
 .text-link {

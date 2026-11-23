@@ -41,7 +41,7 @@ function brand(si) {
   const g = parseInt(hex.slice(2, 4), 16);
   const b = parseInt(hex.slice(4, 6), 16);
   const lum = (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
-  return { path: si.path, color: lum < 0.28 ? '#e8eef6' : `#${hex}`, kind: 'brand' };
+  return { path: si.path, color: lum < 0.28 ? 'var(--brand-ink)' : `#${hex}`, kind: 'brand' };
 }
 
 // Neutral line glyphs for concepts or products without a freely usable mark.
@@ -80,7 +80,7 @@ const G = {
   chart: 'M4 20V10M10 20V4M16 20v-7M22 20H2',
 };
 
-const C = { cyan: '#4fd8eb', blue: '#5b8cff', violet: '#b4a2ff', amber: '#f2c46d', green: '#5fd39a', coral: '#ff8a65', pink: '#ff7eb6' };
+const C = { cyan: 'var(--cyan)', blue: 'var(--blue)', violet: 'var(--violet)', amber: 'var(--amber)', green: 'var(--green)', coral: 'var(--coral)', pink: 'var(--pink)' };
 
 const ICONS = {
   python: brand(siPython),

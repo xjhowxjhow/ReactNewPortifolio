@@ -1,7 +1,6 @@
 import profile from './content/profile.json';
 import { useEffect } from 'react';
 import { useReveal } from './lib/reveal.js';
-import { formatMonth } from './lib/format.js';
 import SiteHeader from './components/SiteHeader.jsx';
 import ArchitectureStage, { ArchitectureFlow } from './components/ArchitectureStage.jsx';
 import TechMarquee from './components/TechMarquee.jsx';
@@ -52,9 +51,7 @@ export default function App() {
       </main>
       <footer className="site-footer">
         <div className="container site-footer__inner">
-          <p>
-            © {new Date().getFullYear()} {profile.name} · Conteúdo revisado em {formatMonth(profile.updatedAt)}
-          </p>
+          <p>© {new Date().getFullYear()} {profile.name}</p>
           <p>
             React, Three.js e Vite ·{' '}
             <a href="https://github.com/xjhowxjhow/ReactNewPortifolio" target="_blank" rel="noopener noreferrer">

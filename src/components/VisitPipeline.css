@@ -22,7 +22,7 @@
   padding: 0 8px 0 14px;
   border: 1px solid rgba(242, 196, 109, 0.4);
   border-radius: 999px;
-  background: rgba(10, 15, 23, 0.86);
+  background: rgba(var(--bg-rgb), 0.86);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   color: var(--text);
@@ -68,7 +68,7 @@
   padding: 10px 14px;
   border: 1px solid rgba(242, 196, 109, 0.35);
   border-radius: 12px 12px 4px 12px;
-  background: rgba(10, 15, 23, 0.92);
+  background: rgba(var(--bg-rgb), 0.92);
   font-size: 0.85rem;
   color: var(--text-2);
   animation: visit-in 500ms var(--ease-out) both;
@@ -86,10 +86,10 @@
   border-radius: calc(var(--radius) + 4px);
   background:
     radial-gradient(120% 50% at 100% 0%, rgba(242, 196, 109, 0.1), transparent 60%),
-    rgba(9, 13, 19, 0.95);
+    rgba(var(--bg-rgb), 0.95);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 40px 90px -40px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 40px 90px -40px var(--shadow);
   animation: visit-in 420ms var(--ease-out) both;
   overflow: hidden;
 }
