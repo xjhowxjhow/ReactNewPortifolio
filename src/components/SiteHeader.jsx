@@ -1,6 +1,19 @@
 import { useEffect, useState } from 'react';
-import { Close, Menu, Monogram } from './Icons.jsx';
+import { Close, Menu, Monogram, Moon, Sun } from './Icons.jsx';
 import './SiteHeader.css';
+
+function applyTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'light' ? '#eef3f9' : '#090d13');
+}
+
+function savedTheme() {
+  try {
+    return localStorage.getItem('theme');
+  } catch {
+    return null;
+  }
+}
 
 export const NAV = [
   { id: 'sobre', label: 'Sobre' },
@@ -17,6 +30,30 @@ export default function SiteHeader({ name }) {
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState('');
   const [scrolled, setScrolled] = useState(false);
+  const [theme, setTheme] = useState(() => document.documentElement.dataset.theme || 'dark');
+
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-color-scheme: light)');
+    const onSystem = () => {
+      if (savedTheme()) return;
+      const next = mq.matches ? 'light' : 'dark';
+      applyTheme(next);
+      setTheme(next);
+    };
+    mq.addEventListener('change', onSystem);
+    return () => mq.removeEventListener('change', onSystem);
+  }, []);
+
+  const toggleTheme = () => {
+    const next = theme === 'light' ? 'dark' : 'light';
+    applyTheme(next);
+    setTheme(next);
+    try {
+      localStorage.setItem('theme', next);
+    } catch {
+      /* private mode: the choice lasts only for this page */
+    }
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -71,6 +108,15 @@ export default function SiteHeader({ name }) {
         </nav>
 
         <div className="site-header__actions">
+          <button
+            type="button"
+            className="icon-btn theme-toggle"
+            aria-label={theme === 'light' ? 'Ativar tema escuro' : 'Ativar tema claro'}
+            title={theme === 'light' ? 'Tema escuro' : 'Tema claro'}
+            onClick={toggleTheme}
+          >
+            {theme === 'light' ? <Moon /> : <Sun />}
+          </button>
           <button
             type="button"
             className="icon-btn menu-toggle"

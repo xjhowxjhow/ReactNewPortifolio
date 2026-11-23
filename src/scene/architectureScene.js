@@ -203,13 +203,13 @@ export function createArchitectureScene(canvas, { lowPower = false, hud = null }
 
   const scene = new THREE.Scene();
   scene.fog = new THREE.Fog(0x090d13, 22, 46);
-  const themeQuery = window.matchMedia('(prefers-color-scheme: light)');
   const syncFog = () => {
     const bg = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim();
     scene.fog.color.set(bg || 0x090d13);
   };
   syncFog();
-  themeQuery.addEventListener('change', syncFog);
+  const themeObserver = new MutationObserver(syncFog);
+  themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
   const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 90);
 
   const disposables = [];
@@ -1351,7 +1351,7 @@ export function createArchitectureScene(canvas, { lowPower = false, hud = null }
       ro.disconnect();
       window.removeEventListener('pointermove', onPointer);
       document.removeEventListener('visibilitychange', onVisibility);
-      themeQuery.removeEventListener('change', syncFog);
+      themeObserver.disconnect();
       instanced.forEach((m) => m.dispose());
       disposables.forEach((d) => d.dispose?.());
       composer?.dispose();

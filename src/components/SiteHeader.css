@@ -124,6 +124,15 @@
   padding: 0;
 }
 
+.theme-toggle {
+  padding: 0;
+  color: var(--text-2);
+}
+
+.theme-toggle:hover {
+  color: var(--text);
+}
+
 @media (max-width: 1080px) {
   .motion-toggle__label {
     position: absolute;

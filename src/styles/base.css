@@ -50,9 +50,8 @@
   color-scheme: dark;
 }
 
-/* Light theme follows the operating system: blue mist, corporate contrast. */
-@media (prefers-color-scheme: light) {
-  :root {
+/* Light theme (blue mist, corporate contrast); data-theme is set in index.html from the saved choice or the system. */
+:root[data-theme='light'] {
     --bg: #eef3f9;
     --bg-2: #e6edf6;
     --bg-3: #dce6f2;
@@ -88,7 +87,6 @@
       radial-gradient(1000px 700px at 50% 110%, rgba(36, 87, 214, 0.08), transparent 60%);
 
     color-scheme: light;
-  }
 }
 
 *,
@@ -361,28 +359,26 @@ ol {
     inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
-@media (prefers-color-scheme: light) {
-  .btn:hover {
-    border-color: rgba(36, 87, 214, 0.45);
-    background: rgba(36, 87, 214, 0.06);
-  }
+[data-theme='light'] .btn:hover {
+  border-color: rgba(36, 87, 214, 0.45);
+  background: rgba(36, 87, 214, 0.06);
+}
 
-  .btn--primary {
-    --btn-bg: linear-gradient(180deg, #2f66e6, #2152c6);
-    color: #ffffff;
-    box-shadow:
-      0 0 0 1px rgba(36, 87, 214, 0.35),
-      0 10px 26px -12px rgba(36, 87, 214, 0.6),
-      inset 0 1px 0 rgba(255, 255, 255, 0.25);
-  }
+[data-theme='light'] .btn--primary {
+  --btn-bg: linear-gradient(180deg, #2f66e6, #2152c6);
+  color: #ffffff;
+  box-shadow:
+    0 0 0 1px rgba(36, 87, 214, 0.35),
+    0 10px 26px -12px rgba(36, 87, 214, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
 
-  .btn--primary:hover {
-    background: linear-gradient(180deg, #3b72f0, #2457d6);
-    box-shadow:
-      0 0 0 1px rgba(36, 87, 214, 0.5),
-      0 14px 30px -12px rgba(36, 87, 214, 0.7),
-      inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  }
+[data-theme='light'] .btn--primary:hover {
+  background: linear-gradient(180deg, #3b72f0, #2457d6);
+  box-shadow:
+    0 0 0 1px rgba(36, 87, 214, 0.5),
+    0 14px 30px -12px rgba(36, 87, 214, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .text-link {

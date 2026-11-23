@@ -9,8 +9,19 @@
       content="Engenheiro de dados com foco em integrações corporativas (ADP, TOTVS Datasul, SAP, SuccessFactors, Senior, Oracle HCM), Azure Databricks, Python, Spark e IA aplicada à engenharia."
     />
     <meta name="color-scheme" content="dark light" />
-    <meta name="theme-color" content="#090d13" media="(prefers-color-scheme: dark)" />
-    <meta name="theme-color" content="#eef3f9" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#090d13" />
+    <script>
+      // Applied before first paint: saved choice, otherwise the system theme.
+      (function () {
+        var t = null;
+        try {
+          t = localStorage.getItem('theme');
+        } catch (e) {}
+        if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        document.documentElement.dataset.theme = t;
+        document.querySelector('meta[name="theme-color"]').content = t === 'light' ? '#eef3f9' : '#090d13';
+      })();
+    </script>
     <link rel="canonical" href="https://jhonatandeni.netlify.app/" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
