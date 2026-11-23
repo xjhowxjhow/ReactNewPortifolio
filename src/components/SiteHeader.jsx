@@ -4,6 +4,7 @@ import './SiteHeader.css';
 
 export const NAV = [
   { id: 'sobre', label: 'Sobre' },
+  { id: 'arquitetura', label: 'Arquitetura' },
   { id: 'integracoes', label: 'Integrações' },
   { id: 'projetos', label: 'Projetos' },
   { id: 'github', label: 'Galeria' },

@@ -8,8 +8,8 @@ let snapshot = { version: 0, events: [] };
 
 export const SECTIONS = [
   ['inicio', 'Abertura', () => document.querySelector('.hero')],
-  ['arquitetura', 'Arquitetura', () => document.getElementById('arquitetura')],
   ['sobre', 'Sobre', () => document.getElementById('sobre')],
+  ['arquitetura', 'Arquitetura', () => document.querySelector('#arquitetura .flow')],
   ['integracoes', 'Integrações', () => document.getElementById('integracoes')],
   ['projetos', 'Projetos', () => document.getElementById('projetos')],
   ['github', 'Galeria e GitHub', () => document.getElementById('github')],

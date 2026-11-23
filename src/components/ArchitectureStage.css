@@ -121,6 +121,17 @@
   z-index: 1;
 }
 
+/* The architecture section starts below other content, so its scene fades in from the top too. */
+.stage--flow .stage__visual::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 22%;
+  z-index: 1;
+  background: linear-gradient(180deg, var(--bg), rgba(9, 13, 19, 0));
+  pointer-events: none;
+}
+
 /* Hero */
 .hero {
   min-height: calc(100vh / var(--zoom));

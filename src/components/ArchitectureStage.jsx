@@ -17,43 +17,13 @@ function toneOf(code) {
 }
 
 export default function ArchitectureStage({ profile, highlights }) {
-  const { paused } = useMotion();
-  const flowRef = useRef(null);
-  const [flowInView, setFlowInView] = useState(false);
-  const [step, setStep] = useState(0);
-  const [autoplay, setAutoplay] = useState(true);
-  const [hold, setHold] = useState(false);
-  const steps = architecture.steps;
-  const running = autoplay && !paused && flowInView && !hold;
-
-  useEffect(() => {
-    const el = flowRef.current;
-    const io = new IntersectionObserver(([e]) => setFlowInView(e.isIntersecting), { rootMargin: '-30% 0px -30% 0px' });
-    io.observe(el);
-    return () => io.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!running) return undefined;
-    const t = window.setTimeout(() => withTransition(() => setStep((s) => (s + 1) % steps.length)), STEP_MS);
-    return () => window.clearTimeout(t);
-  }, [running, step, steps.length]);
-
-  const select = (i) => {
-    setAutoplay(false);
-    withTransition(() => setStep(i));
-  };
-
-  const current = steps[step];
-  const tone = toneOf(current.code);
-
   return (
     <section className="stage" id="inicio" aria-labelledby="hero-title">
       <div className="stage__visual" aria-hidden="true">
-        <SceneCanvas stage={flowInView ? step : -1} />
+        <SceneCanvas stage={-1} />
         <div className="stage__readout mono">
           <span className="stage__dot" />
-          {flowInView ? `${String(step + 1).padStart(2, '0')} / ${String(steps.length).padStart(2, '0')} · ${current.code}` : 'Visão geral'}
+          Visão geral
         </div>
       </div>
 
@@ -102,16 +72,64 @@ export default function ArchitectureStage({ profile, highlights }) {
                 </a>
               </li>
             </ul>
-            <a className="hero__scroll mono" href="#arquitetura">
-              <ArrowDown /> Ver a arquitetura
+            <a className="hero__scroll mono" href="#sobre">
+              <ArrowDown /> Conhecer mais
             </a>
           </div>
         </header>
+      </div>
+    </section>
+  );
+}
 
-        <div className="flow" id="arquitetura" ref={flowRef}>
+export function ArchitectureFlow() {
+  const { paused } = useMotion();
+  const flowRef = useRef(null);
+  const [flowInView, setFlowInView] = useState(false);
+  const [step, setStep] = useState(0);
+  const [autoplay, setAutoplay] = useState(true);
+  const [hold, setHold] = useState(false);
+  const steps = architecture.steps;
+  const running = autoplay && !paused && flowInView && !hold;
+
+  useEffect(() => {
+    const el = flowRef.current;
+    const io = new IntersectionObserver(([e]) => setFlowInView(e.isIntersecting), { rootMargin: '-30% 0px -30% 0px' });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!running) return undefined;
+    const t = window.setTimeout(() => withTransition(() => setStep((s) => (s + 1) % steps.length)), STEP_MS);
+    return () => window.clearTimeout(t);
+  }, [running, step, steps.length]);
+
+  const select = (i) => {
+    setAutoplay(false);
+    withTransition(() => setStep(i));
+  };
+
+  const current = steps[step];
+  const tone = toneOf(current.code);
+
+  return (
+    <section className="stage stage--flow" id="arquitetura" aria-labelledby="arquitetura-title">
+      <div className="stage__visual" aria-hidden="true">
+        <SceneCanvas stage={flowInView ? step : -1} />
+        <div className="stage__readout mono">
+          <span className="stage__dot" />
+          {flowInView ? `${String(step + 1).padStart(2, '0')} / ${String(steps.length).padStart(2, '0')} · ${current.code}` : 'Visão geral'}
+        </div>
+      </div>
+
+      <div className="stage__content container">
+        <div className="flow" ref={flowRef}>
           <div className="flow__intro" data-reveal>
             <p className="eyebrow">Arquitetura em prática</p>
-            <h2 className="flow__title">{architecture.title}</h2>
+            <h2 id="arquitetura-title" className="flow__title">
+              {architecture.title}
+            </h2>
             {architecture.lead && <p className="flow__lead">{architecture.lead}</p>}
           </div>
 

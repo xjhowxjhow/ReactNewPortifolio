@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useReveal } from './lib/reveal.js';
 import { formatMonth } from './lib/format.js';
 import SiteHeader from './components/SiteHeader.jsx';
-import ArchitectureStage from './components/ArchitectureStage.jsx';
+import ArchitectureStage, { ArchitectureFlow } from './components/ArchitectureStage.jsx';
 import TechMarquee from './components/TechMarquee.jsx';
 import About from './components/About.jsx';
 import Integrations from './components/Integrations.jsx';
@@ -42,6 +42,7 @@ export default function App() {
         <ArchitectureStage profile={profile} highlights={HIGHLIGHTS} />
         <TechMarquee />
         <About profile={profile} />
+        <ArchitectureFlow />
         <Integrations />
         <Cases />
         <GitHubSection />
